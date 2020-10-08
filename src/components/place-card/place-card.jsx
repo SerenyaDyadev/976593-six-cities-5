@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
+import {TO_PERCENT} from "../../const";
 import {Link} from "react-router-dom";
 
 const PlaceCard = (props) => {
   const {offer, onHover} = props;
-  const TO_PERCENT = 20;
 
   const ratingOfferPercentege = Math.round(offer.rating) * TO_PERCENT;
 
