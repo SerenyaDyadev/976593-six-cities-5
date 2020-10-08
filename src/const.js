@@ -1,6 +1,1 @@
-export const PlaceType = {
-  APARTMENT: `Apartmen`,
-  ROOM: `Private room`,
-  HOUSE: `House`,
-  HOTEL: `Hotel`,
-};
+export const TO_PERCENT = 20;

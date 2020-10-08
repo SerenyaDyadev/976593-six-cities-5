@@ -4,32 +4,32 @@ import {Switch, Route, BrowserRouter} from "react-router-dom";
 import MainScreen from "../main-screen/main-screen";
 import AuthScreen from "../auth-screen/auth-screen";
 import FavoritesScreen from "../favorites-screen/favorites-screen";
-import PropertyScreen from "../property-screen/property-screen";
+import PropertyCard from "../property-screen/property-screen";
 
 const App = (props) => {
 
-  const {offersCount, offers} = props;
+  const {offers} = props;
 
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/"
-          render={({history}) => (
-            <MainScreen
-              onOfferButtonClick={() => history.push(`/offer/:id?`)}
-              offersCount={offersCount}
-              offers={offers}
-            />
-          )}
-        />
+        <Route exact path="/">
+          <MainScreen
+            offers={offers}
+          />
+        </Route>
         <Route exact path="/login">
           <AuthScreen />
         </Route>
         <Route exact path="/favorites">
-          <FavoritesScreen />
+          <FavoritesScreen
+            offers={offers}
+          />
         </Route>
         <Route exact path="/offer/:id?">
-          <PropertyScreen />
+          <PropertyCard
+            offer={offers[0]}
+          />
         </Route>
       </Switch>
     </BrowserRouter>
@@ -37,7 +37,6 @@ const App = (props) => {
 };
 
 App.propTypes = {
-  offersCount: PropTypes.number.isRequired,
   offers: PropTypes.array.isRequired,
 };
 

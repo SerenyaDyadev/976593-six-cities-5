@@ -19,10 +19,11 @@ const MONTHS = [
 export const generateReview = () => {
 
   return {
+    id: getRandomInteger(0, 30),
     name: getElementArray(NAMES),
     picture: `${AVATAR_URL}/${Math.random()}`,
-    rating: getRandomInteger(0, 5),
+    rating: Number(`${getRandomInteger(0, 4)}.${getRandomInteger(0, 9)}`),
     date: `${getElementArray(MONTHS)} ${getRandomInteger(1, 31)}`,
-    review: getElementArray(DESCRIPTION)
+    comment: getElementArray(DESCRIPTION)
   };
 };
