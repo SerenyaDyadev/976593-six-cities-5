@@ -8,14 +8,20 @@ import PropertyScreen from "../property-screen/property-screen";
 
 const App = (props) => {
 
-  const {offersCount} = props;
+  const {offersCount, offers} = props;
 
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/">
-          <MainScreen errorsCount={offersCount} />
-        </Route>
+        <Route exact path="/"
+          render={({history}) => (
+            <MainScreen
+              onOfferButtonClick={() => history.push(`/offer/:id?`)}
+              offersCount={offersCount}
+              offers={offers}
+            />
+          )}
+        />
         <Route exact path="/login">
           <AuthScreen />
         </Route>
@@ -32,6 +38,7 @@ const App = (props) => {
 
 App.propTypes = {
   offersCount: PropTypes.number.isRequired,
+  offers: PropTypes.array.isRequired,
 };
 
 export default App;
