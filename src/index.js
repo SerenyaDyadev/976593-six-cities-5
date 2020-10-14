@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./components/app/app";
 import {generateOffer} from "./mocks/offer";
 
+
 const Settings = {
   OFFERS_COUNT: 4
 };
