@@ -1,4 +1,4 @@
-import {PLACES, TITLES, THINGS, NAMES, DESCRIPTION, AVATAR_URL} from "./const.js";
+import {CITYES, CITY_COORDINATES, PLACES, TITLES, THINGS, NAMES, DESCRIPTION, AVATAR_URL, COORDINATES} from "./const.js";
 import {getRandomInteger, getElementArray} from "./utils.js";
 import {generateReview} from "./review";
 
@@ -41,6 +41,9 @@ export const generateOffer = () => {
       super: Boolean(getRandomInteger(0, 1)),
       picture: `${AVATAR_URL}/${Math.random()}`,
     },
-    reviews: new Array(getRandomInteger(1, 6)).fill().map(generateReview)
+    reviews: new Array(getRandomInteger(1, 6)).fill().map(generateReview),
+    coordinates: getElementArray(COORDINATES),
+    city: CITYES.AMSTERDAM,
+    cityCooridinates: CITY_COORDINATES.AMSTERDAM
   };
 };

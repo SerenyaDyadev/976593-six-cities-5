@@ -51,3 +51,18 @@ export const DESCRIPTION = [
 
   `This concept eliminates the concept of "normal", but the soul psychologically understands methodological associationism, regardless of the patient's mental state. Leadership, as is commonly believed, simultaneously annihilates the conceptual contrast, Hobbes was one of the first to highlight this problem from the standpoint of psychology. Intelligence is unstable.`,
 ];
+
+export const COORDINATES = [
+  [52.3909553943508, 4.85309666406198],
+  [52.369553943508, 4.85309666406198],
+  [52.3909553943508, 4.929309666406198],
+  [52.3809553943508, 4.939309666406198]
+];
+
+export const CITYES = {
+  AMSTERDAM: `Амстердам`
+};
+
+export const CITY_COORDINATES = {
+  AMSTERDAM: [52.38333, 4.9],
+};

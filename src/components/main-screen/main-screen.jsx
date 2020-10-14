@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ListCards from "../list-cards/list-cards";
+// import "leaflet/dist/leaflet.css";
+import Map from "../map/map";
 
 const MainScreen = (props) => {
 
@@ -106,11 +108,12 @@ const MainScreen = (props) => {
 
               </section>
               <div className="cities__right-section">
-                <section className="cities__map map"></section>
+                <Map
+                  offers={offers}
+                />
               </div>
             </div>
           }
-
         </div>
       </main>
     </div>
