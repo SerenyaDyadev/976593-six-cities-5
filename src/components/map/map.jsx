@@ -7,6 +7,9 @@ const CITY_COORDINATES = [52.38333, 4.9];
 class Map extends PureComponent {
 
   componentDidMount() {
+    const {offers} = this.props;
+
+    const coordinatesPlaces = offers.map((offer) => offer.coordinates);
 
     const icon = leaflet.icon({
       iconUrl: `img/pin.svg`,
@@ -30,10 +33,11 @@ class Map extends PureComponent {
       })
       .addTo(map);
 
-    // const offerCords = [52.3709553943508, 4.89309666406198];
-    // leaflet
-    //   .marker(offerCords, {icon})
-    //   .addTo(map);
+    coordinatesPlaces.forEach((coordinates) =>
+      leaflet
+        .marker(coordinates, {icon})
+        .addTo(map)
+    );
   }
 
   render() {
