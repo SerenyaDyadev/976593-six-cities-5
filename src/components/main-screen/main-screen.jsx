@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import ListCards from "../list-cards/list-cards";
+import PlacesList from "../places-list/places-list";
+
 
 import Map from "../map/map";
 
@@ -102,14 +103,17 @@ const MainScreen = (props) => {
                   </ul>
                 </form>
 
-                <ListCards
+                <PlacesList
                   offers={offers}
+                  classList={`cities__places-list tabs__content`}
+                  classCard={`cities__place-card`}
                 />
 
               </section>
               <div className="cities__right-section">
                 <Map
                   offers={offers}
+                  classMap={`cities__map`}
                 />
               </div>
             </div>

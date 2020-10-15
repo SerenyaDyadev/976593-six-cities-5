@@ -9,7 +9,6 @@ import PropertyCard from "../property-screen/property-screen";
 const App = (props) => {
 
   const {offers} = props;
-  const nearOffers = offers.slice(0, 3);
 
   return (
     <BrowserRouter>
@@ -29,8 +28,7 @@ const App = (props) => {
         </Route>
         <Route exact path="/offer/:id?">
           <PropertyCard
-            nearOffers={nearOffers}
-            offer={offers[0]}
+            offers={offers}
           />
         </Route>
       </Switch>

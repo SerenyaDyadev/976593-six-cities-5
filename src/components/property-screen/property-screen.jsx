@@ -3,12 +3,15 @@ import PropTypes from "prop-types";
 import ListReviews from "../list-reviews/list-reviews";
 import NewReviewForm from "../new-review-form/new-review-form";
 import NearPlacesList from "../near-places-list/near-places-list";
-import MapNear from "../map-near/map-near";
+import PlacesList from "../places-list/places-list";
+import Map from "../map/map";
 import {TO_PERCENT} from "../../const";
 
 const PropertyScreen = (props) => {
 
-  const {nearOffers, offer} = props;
+  const {offers} = props;
+  const offer = offers[0];
+  const nearOffers = offers.length > 3 ? offers.slice(0, 3) : offers;
 
   const ratingOfferPercent = Math.round(offer.rating) * TO_PERCENT;
 
@@ -139,8 +142,9 @@ const PropertyScreen = (props) => {
             </div>
           </div>
 
-          <MapNear
-            nearOffers={nearOffers}
+          <Map
+            offers={nearOffers}
+            classMap={`property__map`}
           />
 
         </section>
@@ -148,8 +152,10 @@ const PropertyScreen = (props) => {
           <section className="near-places places">
             <h2 className="near-places__title">Other places in the neighbourhood</h2>
 
-            <NearPlacesList
-              nearOffers={nearOffers}
+            <PlacesList
+              offers={nearOffers}
+              classList={`near-places__list`}
+              classCard={`near-places__card`}
             />
 
           </section>
@@ -160,8 +166,7 @@ const PropertyScreen = (props) => {
 };
 
 PropertyScreen.propTypes = {
-  offer: PropTypes.object.isRequired,
-  nearOffers: PropTypes.array.isRequired
+  offers: PropTypes.array.isRequired
 };
 
 export default PropertyScreen;
