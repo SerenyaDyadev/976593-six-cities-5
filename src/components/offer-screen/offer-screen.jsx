@@ -1,13 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import ListReviews from "../list-reviews/list-reviews";
+import ReviewList from "../review-list/review-list";
 import NewReviewForm from "../new-review-form/new-review-form";
-import NearPlacesList from "../near-places-list/near-places-list";
-import PlacesList from "../places-list/places-list";
+import OfferList from "../offer-list/offer-list";
 import Map from "../map/map";
 import {TO_PERCENT} from "../../const";
 
-const PropertyScreen = (props) => {
+const OfferScreen = (props) => {
 
   const {offers} = props;
   const offer = offers[0];
@@ -132,7 +131,7 @@ const PropertyScreen = (props) => {
               </div>
               <section className="property__reviews reviews">
                 <h2 className="reviews__title">Reviews &middot; <span className="reviews__amount">{offer.reviews.length}</span></h2>
-                <ListReviews
+                <ReviewList
                   reviews={offer.reviews}
                 />
                 <NewReviewForm
@@ -152,7 +151,7 @@ const PropertyScreen = (props) => {
           <section className="near-places places">
             <h2 className="near-places__title">Other places in the neighbourhood</h2>
 
-            <PlacesList
+            <OfferList
               offers={nearOffers}
               classList={`near-places__list`}
               classCard={`near-places__card`}
@@ -165,8 +164,8 @@ const PropertyScreen = (props) => {
   );
 };
 
-PropertyScreen.propTypes = {
+OfferScreen.propTypes = {
   offers: PropTypes.array.isRequired
 };
 
-export default PropertyScreen;
+export default OfferScreen;

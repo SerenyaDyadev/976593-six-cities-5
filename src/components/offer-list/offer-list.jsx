@@ -1,8 +1,8 @@
 import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
-import PlaceCard from "../place-card/place-card";
+import OfferCard from "../offer-card/offer-card";
 
-class ListNew extends PureComponent {
+class OfferList extends PureComponent {
   constructor(props) {
     super(props);
 
@@ -12,14 +12,15 @@ class ListNew extends PureComponent {
   }
 
   render() {
-    const {className, offers} = this.props;
+    const {offers, classList, classCard} = this.props;
 
     return (
-      <div className={`places__list ${className}`}>
+      <div className={`places__list ${classList}`}>
         {offers.map((offer) => (
-          <PlaceCard
+          <OfferCard
             key={offer.id}
             offer={offer}
+            classCard={classCard}
             onHover={() => {
               this.setState(() => ({
                 offerOpen: offer,
@@ -32,9 +33,10 @@ class ListNew extends PureComponent {
   }
 }
 
-export default ListNew;
-
-ListNew.propTypes = {
+OfferList.propTypes = {
   offers: PropTypes.array.isRequired,
-  className: PropTypes.string.isRequired,
+  classList: PropTypes.string.isRequired,
+  classCard: PropTypes.string.isRequired
 };
+
+export default OfferList;
