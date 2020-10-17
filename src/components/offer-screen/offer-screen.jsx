@@ -155,6 +155,7 @@ const OfferScreen = (props) => {
               offers={nearOffers}
               classList={`near-places__list`}
               classCard={`near-places__card`}
+              classImageWrapper={`near-places__image-wrapper`}
             />
 
           </section>

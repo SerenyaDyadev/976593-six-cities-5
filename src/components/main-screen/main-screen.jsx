@@ -107,6 +107,7 @@ const MainScreen = (props) => {
                   offers={offers}
                   classList={`cities__places-list tabs__content`}
                   classCard={`cities__place-card`}
+                  classImageWrapper={`cities__image-wrapper`}
                 />
 
               </section>
