@@ -4,7 +4,7 @@ import {Switch, Route, BrowserRouter} from "react-router-dom";
 import MainScreen from "../main-screen/main-screen";
 import AuthScreen from "../auth-screen/auth-screen";
 import FavoritesScreen from "../favorites-screen/favorites-screen";
-import PropertyCard from "../property-screen/property-screen";
+import OfferScreen from "../offer-screen/offer-screen";
 
 const App = (props) => {
 
@@ -27,8 +27,8 @@ const App = (props) => {
           />
         </Route>
         <Route exact path="/offer/:id?">
-          <PropertyCard
-            offer={offers[0]}
+          <OfferScreen
+            offers={offers}
           />
         </Route>
       </Switch>

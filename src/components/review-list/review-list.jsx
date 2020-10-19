@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Review from "../review/review";
 
-const ListReviews = (props) => {
+const ReviewList = (props) => {
 
   const {reviews} = props;
 
@@ -18,8 +18,8 @@ const ListReviews = (props) => {
   );
 };
 
-ListReviews.propTypes = {
+ReviewList.propTypes = {
   reviews: PropTypes.array.isRequired
 };
 
-export default ListReviews;
+export default ReviewList;

@@ -19,10 +19,10 @@ const getPicturesArr = () => {
   });
 };
 
-export const generateOffer = () => {
+export const generateOffer = (value, index) => {
 
   return {
-    id: getRandomInteger(0, 30),
+    id: index,
     isFavorite: Boolean(getRandomInteger(0, 1)),
     features: {
       type: getElementArray(PLACES),
@@ -42,7 +42,7 @@ export const generateOffer = () => {
       picture: `${AVATAR_URL}/${Math.random()}`,
     },
     reviews: new Array(getRandomInteger(1, 6)).fill().map(generateReview),
-    coordinates: getElementArray(COORDINATES),
+    coordinates: COORDINATES[index],
     city: CITYES.AMSTERDAM,
     cityCooridinates: CITY_COORDINATES.AMSTERDAM
   };

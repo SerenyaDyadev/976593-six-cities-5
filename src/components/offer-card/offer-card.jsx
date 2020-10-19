@@ -4,12 +4,15 @@ import {TO_PERCENT} from "../../const";
 import {Link} from "react-router-dom";
 
 const PlaceCard = (props) => {
-  const {offer, onHover} = props;
+  const {offer, onHover, classCard, classImageWrapper} = props;
 
   const ratingOfferPercentege = Math.round(offer.rating) * TO_PERCENT;
 
+  const widthImg = classCard !== `favorites__card` ? 260 : 150;
+  const heightImg = classCard !== `favorites__card` ? 200 : 110;
+
   return (
-    <article className="cities__place-card place-card"
+    <article className={`place-card ${classCard}`}
       onMouseOver={(evt) => {
         evt.preventDefault();
         onHover();
@@ -20,12 +23,12 @@ const PlaceCard = (props) => {
           <span>Premium</span>
         </div> :
         ``}
-      <div className="cities__image-wrapper place-card__image-wrapper">
+      <div className={`${classImageWrapper} place-card__image-wrapper`}>
         <a href="#">
-          <img className="place-card__image" src={offer.pictures[0].src} width="260" height="200" alt={offer.pictures[0].description} />
+          <img className="place-card__image" src={offer.pictures[0].src} width={widthImg} height={heightImg} alt={offer.pictures[0].description} />
         </a>
       </div>
-      <div className="place-card__info">
+      <div className={`${classCard === `favorites__card` ? `favorites__card-info` : ``} place-card__info`}>
         <div className="place-card__price-wrapper">
           <div className="place-card__price">
             <b className="place-card__price-value">&euro;{offer.price}</b>
@@ -66,6 +69,8 @@ const PlaceCard = (props) => {
 
 PlaceCard.propTypes = {
   onHover: PropTypes.func,
+  classCard: PropTypes.string.isRequired,
+  classImageWrapper: PropTypes.string.isRequired,
   offer: PropTypes.shape({
     id: PropTypes.number.isRequired,
     features: PropTypes.shape({

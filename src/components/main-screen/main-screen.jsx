@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import ListCards from "../list-cards/list-cards";
-// import "leaflet/dist/leaflet.css";
+import OfferList from "../offer-list/offer-list";
+
+
 import Map from "../map/map";
 
 const MainScreen = (props) => {
@@ -102,15 +103,21 @@ const MainScreen = (props) => {
                   </ul>
                 </form>
 
-                <ListCards
+                <OfferList
                   offers={offers}
+                  classList={`cities__places-list tabs__content`}
+                  classCard={`cities__place-card`}
+                  classImageWrapper={`cities__image-wrapper`}
                 />
 
               </section>
               <div className="cities__right-section">
+
                 <Map
                   offers={offers}
+                  classMap={`cities__map`}
                 />
+
               </div>
             </div>
           }
