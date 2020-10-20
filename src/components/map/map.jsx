@@ -2,12 +2,12 @@ import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
 import leaflet from "leaflet";
 
-const CITY_COORDINATES = [52.38333, 4.9];
-
 class Map extends PureComponent {
 
   componentDidMount() {
     const {offers} = this.props;
+
+    const CITY_COORDINATES = offers[0].cityCooridinates;
 
     const coordinatesPlaces = offers.map((offer) => offer.coordinates);
 

@@ -1,4 +1,5 @@
-import {CITYES, CITY_COORDINATES, PLACES, TITLES, THINGS, NAMES, DESCRIPTION, AVATAR_URL, COORDINATES} from "./const.js";
+import {CITY_COORDINATES, PLACES, TITLES, THINGS, NAMES, DESCRIPTION, AVATAR_URL, COORDINATES} from "./const";
+import {CITIES} from "../const";
 import {getRandomInteger, getElementArray} from "./utils.js";
 import {generateReview} from "./review";
 
@@ -43,7 +44,7 @@ export const generateOffer = (value, index) => {
     },
     reviews: new Array(getRandomInteger(1, 6)).fill().map(generateReview),
     coordinates: COORDINATES[index],
-    city: CITYES.AMSTERDAM,
-    cityCooridinates: CITY_COORDINATES.AMSTERDAM
+    city: CITIES.AMSTERDAM,
+    cityCooridinates: CITY_COORDINATES.AMSTERDAM,
   };
 };
