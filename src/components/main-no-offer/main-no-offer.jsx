@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import CityList from "../city-list/city-list";
 
 
-const NoOfferScreen = (props) => {
+const MainNoOffer = (props) => {
   const {cities, city} = props;
 
   return (
@@ -34,9 +34,9 @@ const NoOfferScreen = (props) => {
   );
 };
 
-NoOfferScreen.propTypes = {
+MainNoOffer.propTypes = {
   cities: PropTypes.array.isRequired,
   city: PropTypes.string.isRequired,
 };
 
-export default NoOfferScreen;
+export default MainNoOffer;

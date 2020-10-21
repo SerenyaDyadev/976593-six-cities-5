@@ -26,6 +26,10 @@ const reducer = (state = initialState, action) => {
       return extend(state, {
         offers
       });
+    case ActionType.SORT_OFFERS:
+      return extend(state, {
+        offers
+      });
   }
   return state;
 };
