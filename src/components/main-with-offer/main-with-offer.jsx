@@ -6,7 +6,7 @@ import Map from "../map/map";
 import Sort from "../sort/sort";
 
 
-const MainHaveOffer = (props) => {
+const MainWithOffer = (props) => {
   const {cities, city, offers} = props;
 
   return (
@@ -61,10 +61,10 @@ const MainHaveOffer = (props) => {
   );
 };
 
-MainHaveOffer.propTypes = {
+MainWithOffer.propTypes = {
   offers: PropTypes.array.isRequired,
   cities: PropTypes.array.isRequired,
   city: PropTypes.string.isRequired,
 };
 
-export default MainHaveOffer;
+export default MainWithOffer;

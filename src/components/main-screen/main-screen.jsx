@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import MainNoOffer from "../main-no-offer/main-no-offer";
-import MainHaveOffer from "../main-have-offer/main-have-offer";
+import MainWithOffer from "../main-with-offers/main-with-offers";
 import Header from "../header/header";
 import {connect} from 'react-redux';
 import {getCityOffers} from '../../utils';
@@ -21,7 +21,7 @@ const MainScreen = (props) => {
           city={city}
         />
         :
-        <MainHaveOffer
+        <MainWithOffer
           cities={cities}
           city={city}
           offers={offers}
