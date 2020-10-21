@@ -1,6 +1,8 @@
 import React from "react";
 
-const Header = () => {
+const Header = (props) => {
+
+  const login = props ? true : false;
 
   return (
     <header className="header">
@@ -14,11 +16,19 @@ const Header = () => {
           <nav className="header__nav">
             <ul className="header__nav-list">
               <li className="header__nav-item user">
-                <a className="header__nav-link header__nav-link--profile" href="/favorites">
-                  <div className="header__avatar-wrapper user__avatar-wrapper">
-                  </div>
-                  <span className="header__user-name user__name">Oliver.conner@gmail.com</span>
-                </a>
+                { login ?
+                  <a className="header__nav-link header__nav-link--profile" href="/favorites">
+                    <div className="header__avatar-wrapper user__avatar-wrapper">
+                    </div>
+                    <span className="header__user-name user__name">Oliver.conner@gmail.com</span>
+                  </a>
+                  :
+                  <a className="header__nav-link header__nav-link--profile" href="/login">
+                    <div className="header__avatar-wrapper user__avatar-wrapper">
+                    </div>
+                    <span className="header__login">Sign in</span>
+                  </a>
+                }
               </li>
             </ul>
           </nav>
