@@ -2,6 +2,7 @@ export const ActionType = {
   CHANGE_CITY: `CHANGE_CITY`,
   UPDATE_OFFERS: `UPDATE_OFFERS`,
   UPDATE_SORT: `UPDATE_SORT`,
+  OPEN_SORT: `OPEN_SORT`,
   HOVER_UPDATE_OFFER_ID: `HOVER_UPDATE_OFFER_ID`
 };
 
@@ -21,5 +22,9 @@ export const ActionCreator = {
   hoverUpdateOfferId: (id) => ({
     type: ActionType.HOVER_UPDATE_OFFER_ID,
     payload: id,
+  }),
+  openSortList: (openSort) => ({
+    type: ActionType.OPEN_SORT,
+    payload: openSort
   })
 };

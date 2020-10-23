@@ -10,11 +10,18 @@ import {getSortedOffers} from "../../utils";
 
 
 const MainWithOffer = (props) => {
-  const {cities, city, offers, currentSort, hoverOfferId, hoverUpdateOfferId} = props;
-  // console.log('hoverUpdateOfferId', hoverUpdateOfferId);
-
+  const {cities, city, offers, currentSort, hoverOfferId, hoverUpdateOfferId, openSort, openSortList} = props;
 
   const sortedOffers = getSortedOffers(currentSort, offers);
+
+  const getOpenSortList = (evt) => {
+    evt.preventDefault();
+    if (openSort) {
+      openSortList(false);
+    } else {
+      openSortList(true);
+    }
+  };
 
   return (
     <main className="page__main page__main--index">
@@ -36,7 +43,7 @@ const MainWithOffer = (props) => {
             <b className="places__found">{offers.length} places to stay in {city}</b>
             <form className="places__sorting" action="#" method="get">
               <span className="places__sorting-caption">Sort by</span>
-              <span className="places__sorting-type" tabIndex="0"> Popular
+              <span onClick={getOpenSortList} className="places__sorting-type" tabIndex="0"> {currentSort}
                 <svg className="places__sorting-arrow" width="7" height="4">
                   <use xlinkHref="#icon-arrow-select"></use>
                 </svg>
@@ -77,19 +84,25 @@ MainWithOffer.propTypes = {
   currentSort: PropTypes.string.isRequired,
   hoverOfferId: PropTypes.string.isRequired,
   hoverUpdateOfferId: PropTypes.func.isRequired,
+  openSort: PropTypes.bool.isRequired,
+  openSortList: PropTypes.func.isRequired,
 };
 
 
-const mapStateToProps = (({currentSort, hoverOfferId, hoverUpdateOfferId}) => ({
+const mapStateToProps = (({currentSort, openSort, hoverOfferId, hoverUpdateOfferId}) => ({
   currentSort,
   hoverOfferId,
-  hoverUpdateOfferId
+  hoverUpdateOfferId,
+  openSort
 }));
 
 const mapDispatchToProps = ((dispatch) => ({
   hoverUpdateOfferId(id) {
     dispatch(ActionCreator.hoverUpdateOfferId(id));
   },
+  openSortList(bool) {
+    dispatch(ActionCreator.openSortList(bool));
+  }
 }));
 
 export {MainWithOffer};
