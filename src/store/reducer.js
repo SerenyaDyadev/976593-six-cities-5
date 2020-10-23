@@ -15,6 +15,7 @@ const initialState = {
   city: CITIES.AMSTERDAM,
   offers,
   currentSort: SortType.POPULAR,
+  hoverOfferId: ``
 };
 
 const reducer = (state = initialState, action) => {
@@ -30,6 +31,10 @@ const reducer = (state = initialState, action) => {
     case ActionType.UPDATE_SORT:
       return extend(state, {
         currentSort: action.payload
+      });
+    case ActionType.HOVER_UPDATE_OFFER_ID:
+      return extend(state, {
+        hoverOfferId: action.payload
       });
   }
   return state;

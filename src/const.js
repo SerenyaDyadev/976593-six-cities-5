@@ -17,6 +17,6 @@ export const SortType = {
 };
 
 export const pins = {
-  pin: `img/pin.svg`,
-  pinActive: `img/pin-active.svg`
+  icon: `img/pin.svg`,
+  hoverIcon: `img/pin-active.svg`
 };

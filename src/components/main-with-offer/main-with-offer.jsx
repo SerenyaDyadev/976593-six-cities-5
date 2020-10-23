@@ -4,12 +4,15 @@ import OfferList from "../offer-list/offer-list";
 import CityList from "../city-list/city-list";
 import Map from "../map/map";
 import Sort from "../sort/sort";
+import {ActionCreator} from '../../store/action';
 import {connect} from 'react-redux';
 import {getSortedOffers} from "../../utils";
 
 
 const MainWithOffer = (props) => {
-  const {cities, city, offers, currentSort} = props;
+  const {cities, city, offers, currentSort, hoverOfferId, hoverUpdateOfferId} = props;
+  // console.log('hoverUpdateOfferId', hoverUpdateOfferId);
+
 
   const sortedOffers = getSortedOffers(currentSort, offers);
 
@@ -45,6 +48,7 @@ const MainWithOffer = (props) => {
 
             <OfferList
               offers={sortedOffers}
+              hoverUpdateOfferId={hoverUpdateOfferId}
               classList={`cities__places-list tabs__content`}
               classCard={`cities__place-card`}
               classImageWrapper={`cities__image-wrapper`}
@@ -54,8 +58,9 @@ const MainWithOffer = (props) => {
           <div className="cities__right-section">
 
             <Map
-              offers={offers}
+              offers={sortedOffers}
               classMap={`cities__map`}
+              hoverOfferId={hoverOfferId}
             />
 
           </div>
@@ -70,14 +75,24 @@ MainWithOffer.propTypes = {
   cities: PropTypes.array.isRequired,
   city: PropTypes.string.isRequired,
   currentSort: PropTypes.string.isRequired,
+  hoverOfferId: PropTypes.string.isRequired,
+  hoverUpdateOfferId: PropTypes.func.isRequired,
 };
 
 
-const mapStateToProps = (({currentSort}) => ({
-  currentSort
+const mapStateToProps = (({currentSort, hoverOfferId, hoverUpdateOfferId}) => ({
+  currentSort,
+  hoverOfferId,
+  hoverUpdateOfferId
+}));
+
+const mapDispatchToProps = ((dispatch) => ({
+  hoverUpdateOfferId(id) {
+    dispatch(ActionCreator.hoverUpdateOfferId(id));
+  },
 }));
 
 export {MainWithOffer};
-export default connect(mapStateToProps)(MainWithOffer);
+export default connect(mapStateToProps, mapDispatchToProps)(MainWithOffer);
 
 
