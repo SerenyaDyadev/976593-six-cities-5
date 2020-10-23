@@ -4,10 +4,14 @@ import OfferList from "../offer-list/offer-list";
 import CityList from "../city-list/city-list";
 import Map from "../map/map";
 import Sort from "../sort/sort";
+import {connect} from 'react-redux';
+import {getSortedOffers} from "../../utils";
 
 
 const MainWithOffer = (props) => {
-  const {cities, city, offers} = props;
+  const {cities, city, offers, currentSort} = props;
+
+  const sortedOffers = getSortedOffers(currentSort, offers);
 
   return (
     <main className="page__main page__main--index">
@@ -40,7 +44,7 @@ const MainWithOffer = (props) => {
             </form>
 
             <OfferList
-              offers={offers}
+              offers={sortedOffers}
               classList={`cities__places-list tabs__content`}
               classCard={`cities__place-card`}
               classImageWrapper={`cities__image-wrapper`}
@@ -65,6 +69,15 @@ MainWithOffer.propTypes = {
   offers: PropTypes.array.isRequired,
   cities: PropTypes.array.isRequired,
   city: PropTypes.string.isRequired,
+  currentSort: PropTypes.string.isRequired,
 };
 
-export default MainWithOffer;
+
+const mapStateToProps = (({currentSort}) => ({
+  currentSort
+}));
+
+export {MainWithOffer};
+export default connect(mapStateToProps)(MainWithOffer);
+
+

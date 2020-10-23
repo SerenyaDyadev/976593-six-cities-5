@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import MainNoOffer from "../main-no-offer/main-no-offer";
-import MainWithOffer from "../main-with-offers/main-with-offers";
+import MainWithOffer from "../main-with-offer/main-with-offer";
 import Header from "../header/header";
 import {connect} from 'react-redux';
 import {getCityOffers} from '../../utils';
 
 const MainScreen = (props) => {
 
-  const {offers, cities, city} = props;
+  const {city, offers, cities} = props;
 
   return (
     <div className="page page--gray page--main">
