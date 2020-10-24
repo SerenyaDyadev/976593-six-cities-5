@@ -1,7 +1,7 @@
 import {extend} from "../utils";
 import {ActionType} from "./action";
 import {generateOffer} from "../mocks/offer";
-import {CITIES} from "../const";
+import {CITIES, SortType} from "../const";
 
 
 const Settings = {
@@ -13,7 +13,10 @@ const offers = new Array(Settings.OFFERS_COUNT).fill().map(generateOffer);
 const initialState = {
   cities: Object.values(CITIES),
   city: CITIES.AMSTERDAM,
-  offers
+  offers,
+  currentSort: SortType.POPULAR,
+  openSort: false,
+  hoverOfferId: ``,
 };
 
 const reducer = (state = initialState, action) => {
@@ -25,6 +28,19 @@ const reducer = (state = initialState, action) => {
     case ActionType.UPDATE_OFFERS:
       return extend(state, {
         offers
+      });
+    case ActionType.UPDATE_SORT:
+      return extend(state, {
+        currentSort: action.payload,
+        openSort: false
+      });
+    case ActionType.HOVER_UPDATE_OFFER_ID:
+      return extend(state, {
+        hoverOfferId: action.payload
+      });
+    case ActionType.OPEN_SORT:
+      return extend(state, {
+        openSort: action.payload
       });
   }
   return state;

@@ -8,3 +8,15 @@ export const CITIES = {
   HUMBURG: `Hamburg`,
   DUSELDORF: `Dusseldorf`,
 };
+
+export const SortType = {
+  POPULAR: `Popular`,
+  PRICE_HIGH_TO_LOW: `Price: high to low`,
+  PRICE_LOW_TO_HIGH: `Price: low to high`,
+  RATING: `Top rated first`
+};
+
+export const pins = {
+  icon: `img/pin.svg`,
+  hoverIcon: `img/pin-active.svg`
+};

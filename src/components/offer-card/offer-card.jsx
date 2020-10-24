@@ -4,7 +4,7 @@ import {TO_PERCENT} from "../../const";
 import {Link} from "react-router-dom";
 
 const PlaceCard = (props) => {
-  const {offer, onHover, classCard, classImageWrapper} = props;
+  const {offer, classCard, classImageWrapper} = props;
 
   const ratingOfferPercentege = Math.round(offer.rating) * TO_PERCENT;
 
@@ -12,12 +12,7 @@ const PlaceCard = (props) => {
   const heightImg = classCard !== `favorites__card` ? 200 : 110;
 
   return (
-    <article className={`place-card ${classCard}`}
-      onMouseOver={(evt) => {
-        evt.preventDefault();
-        onHover();
-      }}
-    >
+    <article className={`place-card ${classCard}`} id={offer.id}>
       {offer.isPremium ?
         <div className="place-card__mark">
           <span>Premium</span>
