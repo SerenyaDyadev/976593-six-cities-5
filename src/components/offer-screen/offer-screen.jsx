@@ -11,6 +11,7 @@ import {TO_PERCENT} from "../../const";
 const OfferScreen = (props) => {
 
   const {offers} = props;
+
   const offer = offers[0];
   const nearOffers = offers.length > 3 ? offers.slice(0, 3) : offers;
 
