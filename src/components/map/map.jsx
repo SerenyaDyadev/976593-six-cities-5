@@ -1,6 +1,7 @@
 import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
 import leaflet from "leaflet";
+import {connect} from 'react-redux';
 import {pins} from "../../const";
 
 class Map extends PureComponent {
@@ -75,5 +76,11 @@ Map.propTypes = {
   hoverOfferId: PropTypes.string.isRequired,
 };
 
-export default Map;
+
+const mapStateToProps = (({hoverOfferId}) => ({
+  hoverOfferId,
+}));
+
+export {Map};
+export default connect(mapStateToProps)(Map);
 
