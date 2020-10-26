@@ -5,7 +5,6 @@ import withRewievForm from "../../hocs/with-feview-form/with-review-form";
 const NewReviewForm = (props) => {
 
   const {handleRatingChange, handleTextFieldChange, onSubmit} = props;
-  console.log(onSubmit);
 
   return (
     <form className="reviews__form form" action="#" method="post"

@@ -26,13 +26,13 @@ const withReviewForm = (Component) => {
 
     _handleRatingChange(evt) {
       this.setState({
-        rate: evt.target.value,
+        rating: evt.target.value,
       });
     }
 
     _handleTextFieldChange(evt) {
       this.setState({
-        comment: evt.target.value,
+        text: evt.target.value,
       });
     }
 
