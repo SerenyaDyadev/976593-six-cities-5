@@ -16,6 +16,7 @@ const MainWithOffer = (props) => {
     offers,
     currentSort,
     hoverUpdateOfferId,
+    hoverOfferId,
     openSort,
     openSortList} = props;
 
@@ -73,6 +74,7 @@ const MainWithOffer = (props) => {
 
             <Map
               offers={sortedOffers}
+              hoverOfferId={hoverOfferId}
               classMap={`cities__map`}
             />
 
@@ -97,8 +99,8 @@ MainWithOffer.propTypes = {
 
 const mapStateToProps = (({currentSort, openSort, hoverOfferId, hoverUpdateOfferId}) => ({
   currentSort,
-  hoverOfferId,
   hoverUpdateOfferId,
+  hoverOfferId,
   openSort
 }));
 

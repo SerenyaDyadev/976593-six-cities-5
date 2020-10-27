@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import {connect} from 'react-redux';
 import Header from "../header/header";
 import ReviewList from "../review-list/review-list";
-import reviewForm from "../review-form/review-form";
+import ReviewForm from "../review-form/review-form";
 import OfferList from "../offer-list/offer-list";
 import Map from "../map/map";
 import {TO_PERCENT} from "../../const";
@@ -117,7 +117,7 @@ const OfferScreen = (props) => {
                 <ReviewList
                   reviews={offer.reviews}
                 />
-                <reviewForm
+                <ReviewForm
                   reviews={offer.reviews}
                 />
               </section>
@@ -152,7 +152,7 @@ OfferScreen.propTypes = {
   offers: PropTypes.array.isRequired
 };
 
-const mapStateToProps = ((offers) => ({
+const mapStateToProps = (({offers}) => ({
   offers,
 }));
 
