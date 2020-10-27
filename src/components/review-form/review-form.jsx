@@ -1,10 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import withRewievForm from "../../hocs/with-feview-form/with-review-form";
+import withForm from "../../hocs/with-form/with-form";
 
-const NewReviewForm = (props) => {
+const reviewForm = (props) => {
 
-  const {onRatingChange, onTextFieldChange, onSubmit} = props;
+  const {
+    onRatingChange,
+    onTextFieldChange,
+    onSubmit} = props;
 
   return (
     <form className="reviews__form form" action="#" method="post"
@@ -64,10 +67,10 @@ const NewReviewForm = (props) => {
 };
 
 
-NewReviewForm.propTypes = {
+reviewForm.propTypes = {
   onRatingChange: PropTypes.func.isRequired,
   onTextFieldChange: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
 };
 
-export default withRewievForm(NewReviewForm);
+export default withForm(reviewForm);

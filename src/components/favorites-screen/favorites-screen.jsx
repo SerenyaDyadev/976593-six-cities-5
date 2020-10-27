@@ -32,12 +32,14 @@ const FavoritesScreen = (props) => {
                       </a>
                     </div>
                   </div>
+
                   <OfferList
                     offers={favoriteOffers}
                     classList={`favorites__places`}
                     classCard={`favorites__card`}
                     classImageWrapper={`favorites__image-wrapper`}
                   />
+
                 </li>
               </ul>
             </section>

@@ -10,7 +10,15 @@ import {getSortedOffers} from "../../utils";
 
 
 const MainWithOffer = (props) => {
-  const {cities, city, offers, currentSort, hoverUpdateOfferId, openSort, openSortList} = props;
+  const {
+    cities,
+    city,
+    offers,
+    currentSort,
+    hoverUpdateOfferId,
+    hoverOfferId,
+    openSort,
+    openSortList} = props;
 
   const sortedOffers = getSortedOffers(currentSort, offers);
 
@@ -66,6 +74,7 @@ const MainWithOffer = (props) => {
 
             <Map
               offers={sortedOffers}
+              hoverOfferId={hoverOfferId}
               classMap={`cities__map`}
             />
 
@@ -90,8 +99,8 @@ MainWithOffer.propTypes = {
 
 const mapStateToProps = (({currentSort, openSort, hoverOfferId, hoverUpdateOfferId}) => ({
   currentSort,
-  hoverOfferId,
   hoverUpdateOfferId,
+  hoverOfferId,
   openSort
 }));
 

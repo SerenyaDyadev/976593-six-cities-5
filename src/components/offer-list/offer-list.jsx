@@ -3,7 +3,12 @@ import PropTypes from "prop-types";
 import OfferCard from "../offer-card/offer-card";
 
 const OfferList = (props) => {
-  const {offers, hoverUpdateOfferId, classList, classCard, classImageWrapper} = props;
+  const {
+    offers,
+    hoverUpdateOfferId,
+    classList,
+    classCard,
+    classImageWrapper} = props;
 
   return (
     <div
