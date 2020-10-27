@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import withForm from "../../hocs/with-form/with-form";
 
-const NewReviewForm = (props) => {
+const reviewForm = (props) => {
 
   const {
     onRatingChange,
@@ -67,10 +67,10 @@ const NewReviewForm = (props) => {
 };
 
 
-NewReviewForm.propTypes = {
+reviewForm.propTypes = {
   onRatingChange: PropTypes.func.isRequired,
   onTextFieldChange: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
 };
 
-export default withForm(NewReviewForm);
+export default withForm(reviewForm);
