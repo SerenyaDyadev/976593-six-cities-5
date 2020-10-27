@@ -15,10 +15,14 @@ const CityList = (props) => {
   return (
     <ul className="locations__list tabs__list">
       {cities.map((city, i) => (
-        <City key={`${city}-${i}`}
-          city={city} onCityClick={onCityClick}
+
+        <City
+          key={`${city}-${i}`}
+          city={city}
+          onCityClick={onCityClick}
           isCurrent={currentCity === city}
         />
+
       ))}
     </ul>
   );

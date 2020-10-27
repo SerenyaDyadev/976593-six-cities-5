@@ -77,7 +77,7 @@ Map.propTypes = {
 };
 
 
-const mapStateToProps = (({hoverOfferId}) => ({
+const mapStateToProps = ((hoverOfferId) => ({
   hoverOfferId,
 }));
 

@@ -10,7 +10,14 @@ import {getSortedOffers} from "../../utils";
 
 
 const MainWithOffer = (props) => {
-  const {cities, city, offers, currentSort, hoverUpdateOfferId, openSort, openSortList} = props;
+  const {
+    cities,
+    city,
+    offers,
+    currentSort,
+    hoverUpdateOfferId,
+    openSort,
+    openSortList} = props;
 
   const sortedOffers = getSortedOffers(currentSort, offers);
 

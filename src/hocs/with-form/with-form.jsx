@@ -1,8 +1,8 @@
 import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
 
-const withReviewForm = (Component) => {
-  return class WithReviewForm extends PureComponent {
+const withForm = (Component) => {
+  return class WithForm extends PureComponent {
     constructor(props) {
       super(props);
 
@@ -48,8 +48,8 @@ const withReviewForm = (Component) => {
 };
 
 
-withReviewForm.propTypes = {
+withForm.propTypes = {
   reviews: PropTypes.array.isRequired,
 };
 
-export default withReviewForm;
+export default withForm;

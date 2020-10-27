@@ -8,7 +8,10 @@ import {getCityOffers} from '../../utils';
 
 const MainScreen = (props) => {
 
-  const {city, offers, cities} = props;
+  const {
+    city,
+    offers,
+    cities} = props;
 
   return (
     <div className="page page--gray page--main">
