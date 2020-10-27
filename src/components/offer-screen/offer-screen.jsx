@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import {connect} from 'react-redux';
 import Header from "../header/header";
 import ReviewList from "../review-list/review-list";
-import reviewForm from "../new-review-form/new-review-form";
+import reviewForm from "../review-form/review-form";
 import OfferList from "../offer-list/offer-list";
 import Map from "../map/map";
 import {TO_PERCENT} from "../../const";
