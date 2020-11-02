@@ -20,3 +20,8 @@ export const pins = {
   icon: `img/pin.svg`,
   hoverIcon: `img/pin-active.svg`
 };
+
+export const AuthorizationStatus = {
+  AUTH: `AUTH`,
+  NO_AUTH: `NO_AUTH`,
+};
