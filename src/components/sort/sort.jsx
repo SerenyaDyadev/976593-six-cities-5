@@ -31,9 +31,9 @@ Sort.propTypes = {
   openSort: PropTypes.bool.isRequired,
 };
 
-const mapStateToProps = (({currentSort, openSort}) => ({
-  currentSort,
-  openSort
+const mapStateToProps = (({ACTIONS}) => ({
+  currentSort: ACTIONS.currentSort,
+  openSort: ACTIONS.openSort
 }));
 
 const mapDispatchToProps = ((dispatch) => ({

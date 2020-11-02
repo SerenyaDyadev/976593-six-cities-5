@@ -29,9 +29,9 @@ const CityList = (props) => {
 
 };
 
-const mapStateToProps = (({city, cities}) => ({
-  currentCity: city,
-  cities
+const mapStateToProps = (({CITIES}) => ({
+  currentCity: CITIES.city,
+  cities: CITIES.cities
 }));
 
 const mapDispatchToProps = ((dispatch) => ({

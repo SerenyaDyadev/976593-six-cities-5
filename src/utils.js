@@ -5,6 +5,8 @@ export const extend = (a, b) => {
 };
 
 export const getCityOffers = (offers, city) => {
+  console.log('offers', offers);
+
   const cityOffers = offers.slice().filter((offer) => offer.city === city);
 
   return cityOffers;
@@ -30,4 +32,51 @@ export const getSortedOffers = (sortType, offers) => {
       });
   }
   return sortedOffers;
+};
+
+export const adaptOfferToApp = (offer) => {
+  const adaptedOffer = {
+    id: offer.id,
+    city: offer.city.name,
+    isFavorite: offer.is_favorite,
+    isPremium: offer.is_premium,
+    coordinates: [offer.city.location.latitude, offer.city.location.longitude],
+    сityZoom: offer.city.location.zoom,
+    description: offer.description,
+    detailsMapZoom: offer.location.zoom,
+    features: {
+      type: offer.type,
+      badrooms: offer.bedrooms,
+      adults: offer.max_adults
+    },
+    price: offer.price,
+    name: offer.title,
+    pictures: offer.images,
+    previewPictures: offer.preview_image,
+    reviews: [],
+    rating: offer.rating,
+    owner: {
+      name: offer.host.name,
+      id: offer.host.id,
+      picture: offer.host.avatar_url,
+      super: offer.host.is_pro
+    },
+    things: offer.goods,
+  };
+
+  return adaptedOffer;
+};
+
+export const adaptReviewToApp = (comment) => {
+  const adaptedReview = {
+    id: comment.id,
+    picture: comment.user.avatar_url,
+    name: comment.user.name,
+    rating: comment.rating,
+    comment: comment.comment,
+    date: comment.date,
+    super: comment.user.is_pro
+  };
+
+  return adaptedReview;
 };

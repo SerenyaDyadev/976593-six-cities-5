@@ -97,10 +97,10 @@ MainWithOffer.propTypes = {
 };
 
 
-const mapStateToProps = (({currentSort, openSort, hoverOfferId}) => ({
-  currentSort,
-  hoverOfferId,
-  openSort
+const mapStateToProps = (({ACTIONS}) => ({
+  currentSort: ACTIONS.currentSort,
+  hoverOfferId: ACTIONS.hoverOfferId,
+  openSort: ACTIONS.openSort
 }));
 
 const mapDispatchToProps = ((dispatch) => ({
