@@ -1,17 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {ActionCreator} from '../../store/action';
+import {updateSort} from '../../store/action';
 import {connect} from 'react-redux';
 import {SortType} from "../../const";
 
 
 const Sort = (props) => {
 
-  const {currentSort, updateSort, openSort} = props;
+  const {currentSort, updateSortAction, openSort} = props;
 
   const onSortClick = (evt) => {
     evt.preventDefault();
-    updateSort(evt.target.textContent);
+    updateSortAction(evt.target.textContent);
   };
 
   return (
@@ -26,7 +26,7 @@ const Sort = (props) => {
 
 
 Sort.propTypes = {
-  updateSort: PropTypes.func.isRequired,
+  updateSortAction: PropTypes.func.isRequired,
   currentSort: PropTypes.string.isRequired,
   openSort: PropTypes.bool.isRequired,
 };
@@ -37,8 +37,8 @@ const mapStateToProps = (({currentSort, openSort}) => ({
 }));
 
 const mapDispatchToProps = ((dispatch) => ({
-  updateSort(sort) {
-    dispatch(ActionCreator.updateSort(sort));
+  updateSortAction(sort) {
+    dispatch(updateSort(sort));
   },
 }));
 

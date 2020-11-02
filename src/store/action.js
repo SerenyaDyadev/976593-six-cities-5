@@ -5,26 +5,27 @@ export const ActionType = {
   OPEN_SORT: `OPEN_SORT`,
   HOVER_UPDATE_OFFER_ID: `HOVER_UPDATE_OFFER_ID`
 };
+export const changeCity = (city) => ({
+  type: ActionType.CHANGE_CITY,
+  payload: city,
+});
 
-export const ActionCreator = {
-  changeCity: (city) => ({
-    type: ActionType.CHANGE_CITY,
-    payload: city,
-  }),
-  updateOffers: () => ({
-    type: ActionType.UPDATE_OFFERS,
-    payload: []
-  }),
-  updateSort: (sortType) => ({
-    type: ActionType.UPDATE_SORT,
-    payload: sortType,
-  }),
-  hoverUpdateOfferId: (id) => ({
-    type: ActionType.HOVER_UPDATE_OFFER_ID,
-    payload: id,
-  }),
-  openSortList: (openSort) => ({
-    type: ActionType.OPEN_SORT,
-    payload: openSort
-  })
-};
+export const updateOffers = () => ({
+  type: ActionType.UPDATE_OFFERS,
+  payload: []
+});
+
+export const updateSort = (sortType) => ({
+  type: ActionType.UPDATE_SORT,
+  payload: sortType,
+});
+
+export const hoverUpdateOfferId = (id) => ({
+  type: ActionType.HOVER_UPDATE_OFFER_ID,
+  payload: id,
+});
+
+export const openSortList = (openSort) => ({
+  type: ActionType.OPEN_SORT,
+  payload: openSort
+});

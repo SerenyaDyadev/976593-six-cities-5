@@ -4,7 +4,7 @@ import OfferList from "../offer-list/offer-list";
 import CityList from "../city-list/city-list";
 import Map from "../map/map";
 import Sort from "../sort/sort";
-import {ActionCreator} from '../../store/action';
+import {hoverUpdateOfferId, openSortList} from '../../store/action';
 import {connect} from 'react-redux';
 import {getSortedOffers} from "../../utils";
 
@@ -15,19 +15,19 @@ const MainWithOffer = (props) => {
     city,
     offers,
     currentSort,
-    hoverUpdateOfferId,
+    hoverUpdateOfferIdAction,
     hoverOfferId,
     openSort,
-    openSortList} = props;
+    openSortListAction} = props;
 
   const sortedOffers = getSortedOffers(currentSort, offers);
 
   const getOpenSortList = (evt) => {
     evt.preventDefault();
     if (openSort) {
-      openSortList(false);
+      openSortListAction(false);
     } else {
-      openSortList(true);
+      openSortListAction(true);
     }
   };
 
@@ -63,7 +63,7 @@ const MainWithOffer = (props) => {
 
             <OfferList
               offers={sortedOffers}
-              hoverUpdateOfferId={hoverUpdateOfferId}
+              hoverUpdateOfferIdAction={hoverUpdateOfferIdAction}
               classList={`cities__places-list tabs__content`}
               classCard={`cities__place-card`}
               classImageWrapper={`cities__image-wrapper`}
@@ -91,25 +91,24 @@ MainWithOffer.propTypes = {
   city: PropTypes.string.isRequired,
   currentSort: PropTypes.string.isRequired,
   hoverOfferId: PropTypes.string.isRequired,
-  hoverUpdateOfferId: PropTypes.func.isRequired,
+  hoverUpdateOfferIdAction: PropTypes.func.isRequired,
   openSort: PropTypes.bool.isRequired,
-  openSortList: PropTypes.func.isRequired,
+  openSortListAction: PropTypes.func.isRequired,
 };
 
 
-const mapStateToProps = (({currentSort, openSort, hoverOfferId, hoverUpdateOfferId}) => ({
+const mapStateToProps = (({currentSort, openSort, hoverOfferId}) => ({
   currentSort,
-  hoverUpdateOfferId,
   hoverOfferId,
   openSort
 }));
 
 const mapDispatchToProps = ((dispatch) => ({
-  hoverUpdateOfferId(id) {
-    dispatch(ActionCreator.hoverUpdateOfferId(id));
+  hoverUpdateOfferIdAction(id) {
+    dispatch(hoverUpdateOfferId(id));
   },
-  openSortList(bool) {
-    dispatch(ActionCreator.openSortList(bool));
+  openSortListAction(bool) {
+    dispatch(openSortList(bool));
   }
 }));
 
