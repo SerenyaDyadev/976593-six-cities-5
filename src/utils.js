@@ -40,7 +40,7 @@ export const adaptOfferToApp = (offer) => {
     сityZoom: offer.city.location.zoom,
     isFavorite: offer.is_favorite,
     isPremium: offer.is_premium,
-    coordinates: [offer.city.location.latitude, offer.city.location.longitude],
+    coordinates: [offer.location.latitude, offer.location.longitude],
     description: offer.description,
     detailsMapZoom: offer.location.zoom,
     features: {
@@ -78,7 +78,7 @@ export const adaptReviewToApp = (comment) => {
     date: comment.date,
     super: comment.user.is_pro
   };
-  console.log('adaptedReview', adaptedReview);
+  // console.log('adaptedReview', adaptedReview);
 
   return adaptedReview;
 };

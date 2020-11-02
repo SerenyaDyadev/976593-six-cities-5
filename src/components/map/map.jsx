@@ -10,7 +10,6 @@ class Map extends PureComponent {
 
     const hoverOffers = offers.slice().filter((item) => item.id === +hoverOfferId);
     const otherOffers = offers.slice().filter((item) => item.id !== +hoverOfferId);
-    console.log('otherOffers', otherOffers);
 
     const icon = leaflet.icon({
       iconUrl: pins.icon,

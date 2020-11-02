@@ -6,7 +6,6 @@ import {Link} from "react-router-dom";
 const OfferCard = (props) => {
 
   const {offer, classCard, classImageWrapper} = props;
-  console.log('offer', offer);
 
   const ratingOfferPercentege = Math.round(offer.rating) * TO_PERCENT;
 
