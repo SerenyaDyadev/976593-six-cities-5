@@ -5,8 +5,6 @@ export const extend = (a, b) => {
 };
 
 export const getCityOffers = (offers, city) => {
-  console.log('offers', offers);
-
   const cityOffers = offers.slice().filter((offer) => offer.city === city);
 
   return cityOffers;
@@ -38,10 +36,11 @@ export const adaptOfferToApp = (offer) => {
   const adaptedOffer = {
     id: offer.id,
     city: offer.city.name,
+    cityCoordinates: [offer.city.location.latitude, offer.city.location.longitude],
+    сityZoom: offer.city.location.zoom,
     isFavorite: offer.is_favorite,
     isPremium: offer.is_premium,
     coordinates: [offer.city.location.latitude, offer.city.location.longitude],
-    сityZoom: offer.city.location.zoom,
     description: offer.description,
     detailsMapZoom: offer.location.zoom,
     features: {
@@ -50,7 +49,7 @@ export const adaptOfferToApp = (offer) => {
       adults: offer.max_adults
     },
     price: offer.price,
-    name: offer.title,
+    title: offer.title,
     pictures: offer.images,
     previewPictures: offer.preview_image,
     reviews: [],
@@ -63,6 +62,8 @@ export const adaptOfferToApp = (offer) => {
     },
     things: offer.goods,
   };
+
+  // console.log('adaptedOffer', adaptedOffer);
 
   return adaptedOffer;
 };
@@ -77,6 +78,7 @@ export const adaptReviewToApp = (comment) => {
     date: comment.date,
     super: comment.user.is_pro
   };
+  console.log('adaptedReview', adaptedReview);
 
   return adaptedReview;
 };

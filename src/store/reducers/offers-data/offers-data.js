@@ -7,7 +7,7 @@ const initialState = {
 
 const offersData = (state = initialState, action) => {
   switch (action.type) {
-    case ActionType.UPDATE_OFFERS:
+    case ActionType.GET_OFFERS:
       return extend(state, {
         offers: action.payload,
       });

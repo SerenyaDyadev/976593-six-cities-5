@@ -16,7 +16,6 @@ const MainWithOffer = (props) => {
     offers,
     currentSort,
     hoverUpdateOfferIdAction,
-    hoverOfferId,
     openSort,
     openSortListAction} = props;
 
@@ -74,8 +73,9 @@ const MainWithOffer = (props) => {
 
             <Map
               offers={sortedOffers}
-              hoverOfferId={hoverOfferId}
               classMap={`cities__map`}
+              cityCoordinates={sortedOffers[0].cityCoordinates}
+              cityZoom={sortedOffers[0].сityZoom}
             />
 
           </div>
@@ -90,7 +90,6 @@ MainWithOffer.propTypes = {
   cities: PropTypes.array.isRequired,
   city: PropTypes.string.isRequired,
   currentSort: PropTypes.string.isRequired,
-  hoverOfferId: PropTypes.string.isRequired,
   hoverUpdateOfferIdAction: PropTypes.func.isRequired,
   openSort: PropTypes.bool.isRequired,
   openSortListAction: PropTypes.func.isRequired,
