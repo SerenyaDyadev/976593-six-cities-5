@@ -3,7 +3,7 @@ export const ActionType = {
   UPDATE_OFFERS: `UPDATE_OFFERS`,
   UPDATE_SORT: `UPDATE_SORT`,
   OPEN_SORT: `OPEN_SORT`,
-  HOVER_UPDATE_OFFER_ID: `HOVER_UPDATE_OFFER_ID`,
+  UPDATE_ACTIVE_OFFER_ID: `UPDATE_ACTIVE_OFFER_ID`,
   GET_OFFERS: `GET_OFFERS`,
   GET_NEAR_OFFERS: `GET_NEAR_OFFERS:`,
   GET_REVIEWS: `GET_REVIEWS`,
@@ -25,8 +25,8 @@ export const updateSort = (sortType) => ({
   payload: sortType,
 });
 
-export const hoverUpdateOfferId = (id) => ({
-  type: ActionType.HOVER_UPDATE_OFFER_ID,
+export const updateActiveOfferId = (id) => ({
+  type: ActionType.UPDATE_ACTIVE_OFFER_ID,
   payload: id,
 });
 

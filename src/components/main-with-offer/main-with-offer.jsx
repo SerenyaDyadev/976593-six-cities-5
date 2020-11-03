@@ -4,7 +4,7 @@ import OfferList from "../offer-list/offer-list";
 import CityList from "../city-list/city-list";
 import Map from "../map/map";
 import Sort from "../sort/sort";
-import {hoverUpdateOfferId, openSortList} from '../../store/action';
+import {updateActiveOfferId, openSortList} from '../../store/action';
 import {connect} from 'react-redux';
 import {getSortedOffers} from "../../utils";
 
@@ -15,7 +15,7 @@ const MainWithOffer = (props) => {
     city,
     offers,
     currentSort,
-    hoverUpdateOfferIdAction,
+    updateActiveOfferIdAction,
     openSort,
     openSortListAction} = props;
 
@@ -62,7 +62,7 @@ const MainWithOffer = (props) => {
 
             <OfferList
               offers={sortedOffers}
-              hoverUpdateOfferIdAction={hoverUpdateOfferIdAction}
+              updateActiveOfferIdAction={updateActiveOfferIdAction}
               classList={`cities__places-list tabs__content`}
               classCard={`cities__place-card`}
               classImageWrapper={`cities__image-wrapper`}
@@ -90,7 +90,7 @@ MainWithOffer.propTypes = {
   cities: PropTypes.array.isRequired,
   city: PropTypes.string.isRequired,
   currentSort: PropTypes.string.isRequired,
-  hoverUpdateOfferIdAction: PropTypes.func.isRequired,
+  updateActiveOfferIdAction: PropTypes.func.isRequired,
   openSort: PropTypes.bool.isRequired,
   openSortListAction: PropTypes.func.isRequired,
 };
@@ -98,13 +98,12 @@ MainWithOffer.propTypes = {
 
 const mapStateToProps = (({ACTIONS}) => ({
   currentSort: ACTIONS.currentSort,
-  hoverOfferId: ACTIONS.hoverOfferId,
   openSort: ACTIONS.openSort
 }));
 
 const mapDispatchToProps = ((dispatch) => ({
-  hoverUpdateOfferIdAction(id) {
-    dispatch(hoverUpdateOfferId(id));
+  updateActiveOfferIdAction(id) {
+    dispatch(updateActiveOfferId(id));
   },
   openSortListAction(bool) {
     dispatch(openSortList(bool));

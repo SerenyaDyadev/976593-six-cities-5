@@ -6,10 +6,10 @@ import {pins} from "../../const";
 
 class Map extends PureComponent {
   _dataMap() {
-    const {offers, cityCoordinates, cityZoom, hoverOfferId} = this.props;
+    const {offers, cityCoordinates, cityZoom, activeOfferId} = this.props;
 
-    const hoverOffers = offers.slice().filter((item) => item.id === +hoverOfferId);
-    const otherOffers = offers.slice().filter((item) => item.id !== +hoverOfferId);
+    const hoverOffers = offers.slice().filter((item) => item.id === +activeOfferId);
+    const otherOffers = offers.slice().filter((item) => item.id !== +activeOfferId);
 
     const icon = leaflet.icon({
       iconUrl: pins.icon,
@@ -76,11 +76,11 @@ Map.propTypes = {
   classMap: PropTypes.string.isRequired,
   cityZoom: PropTypes.number.isRequired,
   cityCoordinates: PropTypes.array.isRequired,
-  hoverOfferId: PropTypes.string.isRequired,
+  activeOfferId: PropTypes.string.isRequired,
 };
 
 const mapStateToProps = ({ACTIONS}) => ({
-  hoverOfferId: ACTIONS.hoverOfferId,
+  activeOfferId: ACTIONS.activeOfferId,
 });
 
 export {Map};

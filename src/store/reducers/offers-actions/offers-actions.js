@@ -5,7 +5,7 @@ import {SortType} from "../../../const";
 const initialState = {
   currentSort: SortType.POPULAR,
   openSort: false,
-  hoverOfferId: ``,
+  activeOfferId: ``,
   reviews: [],
   nearOffers: []
 };
@@ -17,9 +17,9 @@ const offersActions = (state = initialState, action) => {
         currentSort: action.payload,
         openSort: false
       });
-    case ActionType.HOVER_UPDATE_OFFER_ID:
+    case ActionType.UPDATE_ACTIVE_OFFER_ID:
       return extend(state, {
-        hoverOfferId: action.payload
+        activeOfferId: action.payload
       });
     case ActionType.OPEN_SORT:
       return extend(state, {

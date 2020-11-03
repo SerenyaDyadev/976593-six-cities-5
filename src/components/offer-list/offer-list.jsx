@@ -5,7 +5,7 @@ import OfferCard from "../offer-card/offer-card";
 const OfferList = (props) => {
   const {
     offers,
-    hoverUpdateOfferIdAction,
+    updateActiveOfferIdAction,
     classList,
     classCard,
     classImageWrapper} = props;
@@ -13,12 +13,12 @@ const OfferList = (props) => {
   return (
     <div
       onMouseOver={(evt) => {
-        if (typeof hoverUpdateOfferIdAction === `function`) {
+        if (typeof updateActiveOfferIdAction === `function`) {
           if (!evt.target.closest(`.place-card`)) {
             return;
           }
           const offerId = evt.target.closest(`.place-card`).id;
-          hoverUpdateOfferIdAction(offerId);
+          updateActiveOfferIdAction(offerId);
         }
       }}
       className={`${classList} ${classList !== `favorites__places` ? `places__list` : ``}`}>
@@ -36,7 +36,7 @@ const OfferList = (props) => {
 
 OfferList.propTypes = {
   offers: PropTypes.array.isRequired,
-  hoverUpdateOfferIdAction: PropTypes.func.isRequired,
+  updateActiveOfferIdAction: PropTypes.func.isRequired,
   classList: PropTypes.string.isRequired,
   classCard: PropTypes.string.isRequired,
   classImageWrapper: PropTypes.string.isRequired
