@@ -2,46 +2,30 @@ import React from "react";
 import PropTypes from "prop-types";
 import Header from "../header/header";
 import NoFavoritesScreen from "../no-favorites-screen/no-favorites-screen";
+import FavoriteList from "../favorite-list/favorite-list";
 import Footer from "../footer/footer";
-import OfferList from "../offer-list/offer-list";
+import {getFavoriteOffers} from '../../utils';
 import {connect} from 'react-redux';
 
 
 const FavoritesScreen = (props) => {
-  const {offers, city} = props;
-  const favoriteOffers = offers.slice().filter((offer) => offer.isFavorite);
+  const {offers} = props;
 
   return (
     <div className="page">
 
       <Header />
 
-      {favoriteOffers.length === 0 ?
+      {offers.length === 0 ?
         <NoFavoritesScreen />
         :
         <main className="page__main page__main--favorites">
           <div className="page__favorites-container container">
             <section className="favorites">
               <h1 className="favorites__title">Saved listing</h1>
-              <ul className="favorites__list">
-                <li className="favorites__locations-items">
-                  <div className="favorites__locations locations locations--current">
-                    <div className="locations__item">
-                      <a className="locations__item-link" href="#">
-                        <span>{city}</span>
-                      </a>
-                    </div>
-                  </div>
-
-                  <OfferList
-                    offers={favoriteOffers}
-                    classList={`favorites__places`}
-                    classCard={`favorites__card`}
-                    classImageWrapper={`favorites__image-wrapper`}
-                  />
-
-                </li>
-              </ul>
+              <FavoriteList
+                offers={offers}
+              />
             </section>
           </div>
         </main>
@@ -53,14 +37,10 @@ const FavoritesScreen = (props) => {
 
 FavoritesScreen.propTypes = {
   offers: PropTypes.array.isRequired,
-  city: PropTypes.array.isRequired,
-  authorizationStatus: PropTypes.string.isRequired,
 };
 
-const mapStateToProps = (({CITIES, OFFERS, USER}) => ({
-  city: CITIES.city,
-  offers: OFFERS.offers,
-  authorizationStatus: USER.authorizationStatus,
+const mapStateToProps = (({OFFERS}) => ({
+  offers: getFavoriteOffers(OFFERS.offers),
 }));
 
 export {FavoritesScreen};

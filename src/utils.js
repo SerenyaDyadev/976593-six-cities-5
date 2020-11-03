@@ -10,6 +10,12 @@ export const getCityOffers = (offers, city) => {
   return cityOffers;
 };
 
+export const getFavoriteOffers = (offers) => {
+  const favoriteOffers = offers.slice().filter((offer) => offer.isFavorite);
+
+  return favoriteOffers;
+};
+
 export const getSortedOffers = (sortType, offers) => {
 
   const sortedOffers = offers.slice();
