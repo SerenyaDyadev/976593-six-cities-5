@@ -52,7 +52,6 @@ export const adaptOfferToApp = (offer) => {
     title: offer.title,
     pictures: offer.images,
     previewPictures: offer.preview_image,
-    reviews: [],
     rating: offer.rating,
     owner: {
       name: offer.host.name,
@@ -62,8 +61,6 @@ export const adaptOfferToApp = (offer) => {
     },
     things: offer.goods,
   };
-
-  // console.log('adaptedOffer', adaptedOffer);
 
   return adaptedOffer;
 };
@@ -78,7 +75,6 @@ export const adaptReviewToApp = (comment) => {
     date: comment.date,
     super: comment.user.is_pro
   };
-  // console.log('adaptedReview', adaptedReview);
 
   return adaptedReview;
 };

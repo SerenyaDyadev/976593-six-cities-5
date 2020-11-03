@@ -35,8 +35,8 @@ const OfferList = (props) => {
 };
 
 OfferList.propTypes = {
-  offers: PropTypes.array.isRequired,
-  updateActiveOfferIdAction: PropTypes.func.isRequired,
+  offers: PropTypes.array,
+  updateActiveOfferIdAction: PropTypes.func,
   classList: PropTypes.string.isRequired,
   classCard: PropTypes.string.isRequired,
   classImageWrapper: PropTypes.string.isRequired

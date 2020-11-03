@@ -7,6 +7,7 @@ import ReviewForm from "../review-form/review-form";
 import {getCityOffers} from '../../utils';
 import OfferList from "../offer-list/offer-list";
 import Map from "../map/map";
+import {fetchNearbyOffersList, fetchReviewsList} from "../../store/api-actions";
 import {TO_PERCENT} from "../../const";
 
 class OfferScreen extends PureComponent {
@@ -14,17 +15,16 @@ class OfferScreen extends PureComponent {
     super(props);
   }
 
+  componentWillMount() {
+    const {getNearbyOffers, getReviewsAction, activeOfferId} = this.props;
+    getNearbyOffers(activeOfferId);
+    getReviewsAction(activeOfferId);
+  }
 
   render() {
-    const {offers, activeOfferId} = this.props;
-    console.log('offers', offers);
+    const {offers, reviews, activeOfferId, nearbyOffers} = this.props;
 
-    // console.log(this.props);
-    // console.log(window.location.search);
     const offer = offers.find((item) => item.id === +activeOfferId);
-    // const offer = offers[0];
-
-    // const nearOffers = offers.length > 3 ? offers.slice(0, 3) : offers;
 
     const ratingOfferPercent = Math.round(offer.rating) * TO_PERCENT;
 
@@ -124,9 +124,9 @@ class OfferScreen extends PureComponent {
                   </div>
                 </div>
                 <section className="property__reviews reviews">
-                  <h2 className="reviews__title">Reviews &middot; <span className="reviews__amount">{offer.reviews.length}</span></h2>
+                  <h2 className="reviews__title">Reviews &middot; <span className="reviews__amount">{reviews.length}</span></h2>
                   <ReviewList
-                    reviews={offer.reviews}
+                    reviews={reviews}
                   />
                   <ReviewForm
                     reviews={offer.reviews}
@@ -135,42 +135,58 @@ class OfferScreen extends PureComponent {
               </div>
             </div>
 
-            {/* <Map
-            offers={nearOffers}
-            classMap={`property__map`}
-          /> */}
+            <Map
+              offers={nearbyOffers}
+              classMap={`property__map`}
+              cityCoordinates={offer.cityCoordinates}
+              cityZoom={offer.сityZoom}
+            />
 
           </section>
           <div className="container">
             <section className="near-places places">
               <h2 className="near-places__title">Other places in the neighbourhood</h2>
 
-              {/* <OfferList
-              offers={nearOffers}
-              classList={`near-places__list`}
-              classCard={`near-places__card`}
-              classImageWrapper={`near-places__image-wrapper`}
-            /> */}
+              <OfferList
+                offers={nearbyOffers}
+                classList={`near-places__list`}
+                classCard={`near-places__card`}
+                classImageWrapper={`near-places__image-wrapper`}
+              />
 
             </section>
           </div>
         </main>
       </div>
     );
-  };
+  }
 }
 
 OfferScreen.propTypes = {
   offers: PropTypes.array.isRequired,
+  nearbyOffers: PropTypes.array.isRequired,
   activeOfferId: PropTypes.string.isRequired,
+  reviews: PropTypes.array.isRequired,
+  getNearbyOffers: PropTypes.func.isRequired,
+  getReviewsAction: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (({OFFERS, CITIES, ACTIONS}) => ({
   offers: getCityOffers(OFFERS.offers, CITIES.city),
+  nearbyOffers: ACTIONS.nearbyOffers,
+  activeOfferId: ACTIONS.activeOfferId,
+  reviews: ACTIONS.reviews,
+}));
 
-  activeOfferId: ACTIONS.activeOfferId
+const mapDispatchToProps = ((dispatch) => ({
+  getNearbyOffers(offerId) {
+    dispatch(fetchNearbyOffersList(offerId));
+  },
+  getReviewsAction(offerId) {
+    dispatch(fetchReviewsList(offerId));
+  },
 }));
 
 export {OfferScreen};
-export default connect(mapStateToProps)(OfferScreen);
+export default connect(mapStateToProps, mapDispatchToProps)(OfferScreen);
 
