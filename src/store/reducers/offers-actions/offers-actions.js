@@ -7,7 +7,7 @@ const initialState = {
   openSort: false,
   activeOfferId: ``,
   reviews: [],
-  nearOffers: []
+  nearbyOffers: []
 };
 
 const offersActions = (state = initialState, action) => {
@@ -29,9 +29,9 @@ const offersActions = (state = initialState, action) => {
       return extend(state, {
         reviews: action.payload
       });
-    case ActionType.GET_NEAR_OFFERS:
+    case ActionType.GET_NEARBY_OFFERS:
       return extend(state, {
-        nearOffers: action.payload
+        nearbyOffers: action.payload
       });
   }
   return state;

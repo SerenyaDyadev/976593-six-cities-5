@@ -5,7 +5,7 @@ export const ActionType = {
   OPEN_SORT: `OPEN_SORT`,
   UPDATE_ACTIVE_OFFER_ID: `UPDATE_ACTIVE_OFFER_ID`,
   GET_OFFERS: `GET_OFFERS`,
-  GET_NEAR_OFFERS: `GET_NEAR_OFFERS:`,
+  GET_NEARBY_OFFERS: `GET_NEARBY_OFFERS:`,
   GET_REVIEWS: `GET_REVIEWS`,
   REQUIRED_AUTHORIZATION: `REQUIRED_AUTHORIZATION`
 };
@@ -45,8 +45,8 @@ export const getReviews = (reviews) => ({
   payload: reviews,
 });
 
-export const getNearOffers = (offers) => ({
-  type: ActionType.GET_NEAR_OFFERS,
+export const getNearbyOffers = (offers) => ({
+  type: ActionType.GET_NEARBY_OFFERS,
   payload: offers,
 });
 

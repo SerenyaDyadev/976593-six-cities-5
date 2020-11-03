@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import Header from "../header/header";
 import ReviewList from "../review-list/review-list";
 import ReviewForm from "../review-form/review-form";
+import {getCityOffers} from '../../utils';
 import OfferList from "../offer-list/offer-list";
 import Map from "../map/map";
 import {TO_PERCENT} from "../../const";
@@ -16,8 +17,10 @@ class OfferScreen extends PureComponent {
 
   render() {
     const {offers, activeOfferId} = this.props;
+    console.log('offers', offers);
 
-    console.log(activeOfferId);
+    // console.log(this.props);
+    // console.log(window.location.search);
     const offer = offers.find((item) => item.id === +activeOfferId);
     // const offer = offers[0];
 
@@ -162,8 +165,9 @@ OfferScreen.propTypes = {
   activeOfferId: PropTypes.string.isRequired,
 };
 
-const mapStateToProps = (({OFFERS, ACTIONS}) => ({
-  offers: OFFERS.offers,
+const mapStateToProps = (({OFFERS, CITIES, ACTIONS}) => ({
+  offers: getCityOffers(OFFERS.offers, CITIES.city),
+
   activeOfferId: ACTIONS.activeOfferId
 }));
 
