@@ -13,15 +13,15 @@ class Map extends PureComponent {
 
     const icon = leaflet.icon({
       iconUrl: pins.icon,
-      iconSize: [30, 30]
+      iconSize: [27, 39]
     });
 
     const hoverIcon = leaflet.icon({
       iconUrl: pins.hoverIcon,
-      iconSize: [30, 30]
+      iconSize: [27, 39]
     });
 
-    this._map.setView(cityCoordinates, cityZoom);
+    this._map.flyTo(cityCoordinates, cityZoom);
 
     otherOffers.forEach((offer) =>
       leaflet

@@ -8,7 +8,7 @@ import {connect} from 'react-redux';
 
 
 const FavoritesScreen = (props) => {
-  const {offers} = props;
+  const {offers, city} = props;
   const favoriteOffers = offers.slice().filter((offer) => offer.isFavorite);
 
   return (
@@ -28,7 +28,7 @@ const FavoritesScreen = (props) => {
                   <div className="favorites__locations locations locations--current">
                     <div className="locations__item">
                       <a className="locations__item-link" href="#">
-                        <span>Amsterdam</span>
+                        <span>{city}</span>
                       </a>
                     </div>
                   </div>
@@ -53,10 +53,14 @@ const FavoritesScreen = (props) => {
 
 FavoritesScreen.propTypes = {
   offers: PropTypes.array.isRequired,
+  city: PropTypes.array.isRequired,
+  authorizationStatus: PropTypes.string.isRequired,
 };
 
-const mapStateToProps = (({OFFERS}) => ({
-  offers: OFFERS.offers
+const mapStateToProps = (({CITIES, OFFERS, USER}) => ({
+  city: CITIES.city,
+  offers: OFFERS.offers,
+  authorizationStatus: USER.authorizationStatus,
 }));
 
 export {FavoritesScreen};
