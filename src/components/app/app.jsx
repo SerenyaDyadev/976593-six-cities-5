@@ -4,7 +4,7 @@ import MainScreen from "../main-screen/main-screen";
 import AuthScreen from "../auth-screen/auth-screen";
 import FavoritesScreen from "../favorites-screen/favorites-screen";
 import OfferScreen from "../offer-screen/offer-screen";
-import history from "../../history";
+import history from "../../browser-history";
 import PrivateRoute from "../private-route/private-route";
 
 
