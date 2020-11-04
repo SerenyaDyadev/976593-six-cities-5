@@ -55,8 +55,8 @@ FavoritesScreen.propTypes = {
   offers: PropTypes.array.isRequired,
 };
 
-const mapStateToProps = (({offers}) => ({
-  offers
+const mapStateToProps = (({OFFERS}) => ({
+  offers: OFFERS.offers
 }));
 
 export {FavoritesScreen};

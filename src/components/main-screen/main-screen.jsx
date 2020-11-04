@@ -41,10 +41,10 @@ MainScreen.propTypes = {
 };
 
 
-const mapStateToProps = (({city, offers, cities}) => ({
-  city,
-  offers: getCityOffers(offers, city),
-  cities
+const mapStateToProps = (({CITIES, OFFERS}) => ({
+  city: CITIES.city,
+  cities: CITIES.cities,
+  offers: getCityOffers(OFFERS.offers, CITIES.city)
 }));
 
 export {MainScreen};

@@ -4,7 +4,7 @@ import OfferList from "../offer-list/offer-list";
 import CityList from "../city-list/city-list";
 import Map from "../map/map";
 import Sort from "../sort/sort";
-import {ActionCreator} from '../../store/action';
+import {updateActiveOfferId, openSortList} from '../../store/action';
 import {connect} from 'react-redux';
 import {getSortedOffers} from "../../utils";
 
@@ -15,19 +15,18 @@ const MainWithOffer = (props) => {
     city,
     offers,
     currentSort,
-    hoverUpdateOfferId,
-    hoverOfferId,
+    updateActiveOfferIdAction,
     openSort,
-    openSortList} = props;
+    openSortListAction} = props;
 
   const sortedOffers = getSortedOffers(currentSort, offers);
 
   const getOpenSortList = (evt) => {
     evt.preventDefault();
     if (openSort) {
-      openSortList(false);
+      openSortListAction(false);
     } else {
-      openSortList(true);
+      openSortListAction(true);
     }
   };
 
@@ -63,7 +62,7 @@ const MainWithOffer = (props) => {
 
             <OfferList
               offers={sortedOffers}
-              hoverUpdateOfferId={hoverUpdateOfferId}
+              updateActiveOfferIdAction={updateActiveOfferIdAction}
               classList={`cities__places-list tabs__content`}
               classCard={`cities__place-card`}
               classImageWrapper={`cities__image-wrapper`}
@@ -74,8 +73,9 @@ const MainWithOffer = (props) => {
 
             <Map
               offers={sortedOffers}
-              hoverOfferId={hoverOfferId}
               classMap={`cities__map`}
+              cityCoordinates={sortedOffers[0].cityCoordinates}
+              cityZoom={sortedOffers[0].сityZoom}
             />
 
           </div>
@@ -90,26 +90,23 @@ MainWithOffer.propTypes = {
   cities: PropTypes.array.isRequired,
   city: PropTypes.string.isRequired,
   currentSort: PropTypes.string.isRequired,
-  hoverOfferId: PropTypes.string.isRequired,
-  hoverUpdateOfferId: PropTypes.func.isRequired,
+  updateActiveOfferIdAction: PropTypes.func.isRequired,
   openSort: PropTypes.bool.isRequired,
-  openSortList: PropTypes.func.isRequired,
+  openSortListAction: PropTypes.func.isRequired,
 };
 
 
-const mapStateToProps = (({currentSort, openSort, hoverOfferId, hoverUpdateOfferId}) => ({
-  currentSort,
-  hoverUpdateOfferId,
-  hoverOfferId,
-  openSort
+const mapStateToProps = (({ACTIONS}) => ({
+  currentSort: ACTIONS.currentSort,
+  openSort: ACTIONS.openSort
 }));
 
 const mapDispatchToProps = ((dispatch) => ({
-  hoverUpdateOfferId(id) {
-    dispatch(ActionCreator.hoverUpdateOfferId(id));
+  updateActiveOfferIdAction(id) {
+    dispatch(updateActiveOfferId(id));
   },
-  openSortList(bool) {
-    dispatch(ActionCreator.openSortList(bool));
+  openSortListAction(bool) {
+    dispatch(openSortList(bool));
   }
 }));
 
