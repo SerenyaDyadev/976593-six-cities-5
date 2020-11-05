@@ -2,6 +2,7 @@ import React, {PureComponent, createRef} from "react";
 import PropTypes from "prop-types";
 import withForm from "../../hocs/with-form/with-form";
 import {connect} from "react-redux";
+import {ReviewLength} from "../../const";
 import {sendReview} from "../../store/api-actions";
 import {updateErrorStatus} from '../../store/action';
 
@@ -28,7 +29,7 @@ class reviewForm extends PureComponent {
   }
 
   render() {
-    const {rating, onRatingChange, onTextFieldChange,
+    const {rating, review, onRatingChange, onTextFieldChange,
       isErrorToSubmit, updateErrorStatusAction} = this.props;
 
     if (isErrorToSubmit) {
@@ -140,7 +141,12 @@ class reviewForm extends PureComponent {
           <p className="reviews__help">
             To submit review please make sure to set <span className="reviews__star">rating</span> and describe your stay with at least <b className="reviews__text-amount">50 characters</b>.
           </p>
-          <button className="reviews__submit form__submit button" type="submit" disabled={!rating ? true : false}>Submit</button>
+          <button
+            className="reviews__submit form__submit button"
+            type="submit"
+            disabled={review.length < ReviewLength.MIN || review.length >= ReviewLength.MAX || !rating || !review ? true : false}>
+              Submit
+          </button>
         </div>
       </form>
     );

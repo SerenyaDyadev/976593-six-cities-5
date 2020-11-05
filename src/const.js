@@ -25,3 +25,8 @@ export const AuthorizationStatus = {
   AUTH: `AUTH`,
   NO_AUTH: `NO_AUTH`,
 };
+
+export const ReviewLength = {
+  MIN: 10,
+  MAX: 300
+};

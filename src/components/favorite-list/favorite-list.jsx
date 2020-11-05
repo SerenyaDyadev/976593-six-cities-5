@@ -6,7 +6,6 @@ import OfferList from "../offer-list/offer-list";
 
 const FavoriteList = (props) => {
   const {offers} = props;
-  console.log(offers);
 
   const cities = [...new Set(offers.map((offer) => offer.city))];
 
