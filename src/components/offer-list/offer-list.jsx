@@ -1,5 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
+import {connect} from 'react-redux';
+import {changeFavorite} from "../../store/api-actions";
+import {checkFavorite} from "../../utils";
 import OfferCard from "../offer-card/offer-card";
 
 const OfferList = (props) => {
@@ -8,7 +11,18 @@ const OfferList = (props) => {
     updateActiveOfferIdAction,
     classList,
     classCard,
-    classImageWrapper} = props;
+    classImageWrapper,
+    changeFavoriteStatusAction
+  } = props;
+
+  const onFavoriteButtonClick = (evt) => {
+    const offer = evt.target.closest(`.place-card`);
+    if (!offer) {
+      return;
+    }
+
+    changeFavoriteStatusAction(offer.id, checkFavorite(offer.isFavorite));
+  };
 
   return (
     <div
@@ -28,6 +42,7 @@ const OfferList = (props) => {
           offer={offer}
           classCard={classCard}
           classImageWrapper={classImageWrapper}
+          onFavoriteButtonClick={onFavoriteButtonClick}
         />
       ))}
     </div>
@@ -39,7 +54,15 @@ OfferList.propTypes = {
   updateActiveOfferIdAction: PropTypes.func,
   classList: PropTypes.string.isRequired,
   classCard: PropTypes.string.isRequired,
-  classImageWrapper: PropTypes.string.isRequired
+  classImageWrapper: PropTypes.string.isRequired,
+  changeFavoriteStatusAction: PropTypes.func.isRequired,
 };
 
-export default OfferList;
+const mapDispatchToProps = ((dispatch) => ({
+  changeFavoriteStatusAction(id, bool) {
+    dispatch(changeFavorite(id, bool));
+  }
+}));
+
+export {OfferList};
+export default connect(null, mapDispatchToProps)(OfferList);

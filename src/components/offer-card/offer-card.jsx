@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {TO_PERCENT} from "../../const";
+import {connect} from 'react-redux';
 import {Link} from "react-router-dom";
+import {TO_PERCENT, AuthorizationStatus} from "../../const";
 
 const OfferCard = (props) => {
 
-  const {offer, classCard, classImageWrapper} = props;
+  const {offer, classCard, classImageWrapper, onFavoriteButtonClick, authorizationStatus} = props;
 
   const ratingOfferPercentege = Math.round(offer.rating) * TO_PERCENT;
 
@@ -31,12 +32,16 @@ const OfferCard = (props) => {
             <b className="place-card__price-value">&euro;{offer.price}</b>
             <span className="place-card__price-text">&#47;&nbsp;  night</span>
           </div>
-          <button className={`place-card__bookmark-button button ${offer.isFavorite ? `place-card__bookmark-button--active` : ``}`} type="button">
-            <svg className="place-card__bookmark-icon" width="18" height="19">
-              <use xlinkHref="#icon-bookmark"></use>
-            </svg>
-            <span className="visually-hidden">In bookmarks</span>
-          </button>
+
+          {authorizationStatus === AuthorizationStatus.AUTH ?
+            <button onClick={onFavoriteButtonClick} className={`place-card__bookmark-button button ${offer.isFavorite ? `place-card__bookmark-button--active` : ``}`} type="button">
+              <svg className="place-card__bookmark-icon" width="18" height="19">
+                <use xlinkHref="#icon-bookmark"></use>
+              </svg>
+              <span className="visually-hidden">In bookmarks</span>
+            </button>
+            : ``}
+
         </div>
         <div className="place-card__rating rating">
           <div className="place-card__stars rating__stars">
@@ -57,6 +62,8 @@ const OfferCard = (props) => {
 
 OfferCard.propTypes = {
   onHover: PropTypes.func,
+  authorizationStatus: PropTypes.string.isRequired,
+  onFavoriteButtonClick: PropTypes.func.isRequired,
   classCard: PropTypes.string.isRequired,
   classImageWrapper: PropTypes.string.isRequired,
   offer: PropTypes.shape({
@@ -73,4 +80,10 @@ OfferCard.propTypes = {
   }).isRequired
 };
 
-export default OfferCard;
+
+const mapStateToProps = ({USER}) => ({
+  authorizationStatus: USER.authorizationStatus
+});
+
+export {OfferCard};
+export default connect(mapStateToProps)(OfferCard);

@@ -40,6 +40,11 @@ export const login = ({login: email, password}) => (dispatch, _getState, api) =>
     .then(() => dispatch(redirectToRoute(`/`)))
 );
 
+export const fetchFavoriteOffersList = () => (dispatch, _getState, api) => (
+  api.get(`/favorite`)
+    .then(({data}) => dispatch(getFavoriteOffers(data.map(adaptOfferToApp))))
+);
+
 export const changeFavorite = (offerId, status) => (dispatch, _getState, api) => {
   api.post(`/favorite/${offerId}/${status}`)
   .then(api.get(`/hotels`)
