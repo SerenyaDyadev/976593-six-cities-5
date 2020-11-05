@@ -4,11 +4,14 @@ import MainScreen from "../main-screen/main-screen";
 import AuthScreen from "../auth-screen/auth-screen";
 import FavoritesScreen from "../favorites-screen/favorites-screen";
 import OfferScreen from "../offer-screen/offer-screen";
+import history from "../../browser-history";
+import PrivateRoute from "../private-route/private-route";
+
 
 const App = () => {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter history={history}>
       <Switch>
         <Route exact path="/">
           <MainScreen />
@@ -16,9 +19,14 @@ const App = () => {
         <Route exact path="/login">
           <AuthScreen />
         </Route>
-        <Route exact path="/favorites">
-          <FavoritesScreen />
-        </Route>
+        <PrivateRoute
+          exact path={`/favorites`}
+          render={() => {
+            return (
+              <FavoritesScreen />
+            );
+          }}
+        />
         <Route exact path="/offer/:id">
           <OfferScreen />
         </Route>
