@@ -28,9 +28,7 @@ export const getSortedOffers = (sortType, offers) => {
   return sortedOffers;
 };
 
-export const checkFavorite = (isFavorite) => {
-  console.log(isFavorite);
-}
+export const checkFavorite = (active) => active === -1 ? 1 : 0;
 
 export const adaptOfferToApp = (offer) => {
   const adaptedOffer = {

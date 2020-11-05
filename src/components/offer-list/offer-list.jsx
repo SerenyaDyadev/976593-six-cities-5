@@ -17,11 +17,15 @@ const OfferList = (props) => {
 
   const onFavoriteButtonClick = (evt) => {
     const offer = evt.target.closest(`.place-card`);
+    // console.log('offer', offer);
+
     if (!offer) {
       return;
     }
 
-    changeFavoriteStatusAction(offer.id, checkFavorite(offer.isFavorite));
+    const isActive = evt.target.closest(`.place-card__bookmark-button`).classList.value.indexOf(`place-card__bookmark-button--active`);
+
+    changeFavoriteStatusAction(offer.id, checkFavorite(isActive));
   };
 
   return (
