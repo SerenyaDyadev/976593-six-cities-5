@@ -77,7 +77,7 @@ export const adaptReviewToApp = (comment) => {
     picture: comment.user.avatar_url,
     name: comment.user.name,
     rating: comment.rating,
-    comment: comment.comment,
+    review: comment.comment,
     date: comment.date,
     super: comment.user.is_pro
   };
