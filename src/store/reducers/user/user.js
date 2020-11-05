@@ -2,8 +2,10 @@ import {AuthorizationStatus} from "../../../const";
 import {ActionType} from "../../action";
 
 const initialState = {
-  authorizationStatus: AuthorizationStatus.NO_AUTH,
-  email: ``
+  // authorizationStatus: AuthorizationStatus.NO_AUTH,
+  authorizationStatus: AuthorizationStatus.AUTH,
+  email: `test@tes.ru`,
+  isErrorToSubmit: false
 };
 
 const user = (state = initialState, action) => {
@@ -15,6 +17,10 @@ const user = (state = initialState, action) => {
     case ActionType.SAVE_EMAIL:
       return Object.assign({}, state, {
         email: action.payload,
+      });
+    case ActionType.UPDATE_ERROR_STATUS:
+      return Object.assign({}, state, {
+        isErrorToSubmit: action.payload,
       });
   }
 

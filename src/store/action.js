@@ -9,7 +9,11 @@ export const ActionType = {
   GET_REVIEWS: `GET_REVIEWS`,
   REQUIRED_AUTHORIZATION: `REQUIRED_AUTHORIZATION`,
   REDIRECT_TO_ROUTE: `REDIRECT_TO_ROUTE`,
-  SAVE_EMAIL: `SAVE_EMAIL`
+  SAVE_EMAIL: `SAVE_EMAIL`,
+  GET_FAVORITE_OFFERS: `GET_FAVORITE_OFFERS`,
+  CHANGE_FAVORITE_STATUS: `CHANGE_FAVORITE_STATUS`,
+  SEND_REVIEW: `SEND_REVIEW`,
+  UPDATE_ERROR_STATUS: `UPDATE_ERROR_STATUS`
 };
 
 export const changeCity = (city) => ({
@@ -65,4 +69,24 @@ export const redirectToRoute = (url) => ({
 export const saveUserEmail = (email) => ({
   type: ActionType.SAVE_EMAIL,
   payload: email,
+});
+
+export const getFavoriteOffers = (offers) => ({
+  type: ActionType.GET_FAVORITE_OFFERS,
+  payload: offers,
+});
+
+export const changeFavoriteStatus = (id, status) => ({
+  type: ActionType.CHANGE_FAVORITE_STATUS,
+  payload: id, status
+});
+
+export const sendReview = (reviewData, id) => ({
+  type: ActionType.SEND_REVIEW,
+  payload: reviewData, id
+});
+
+export const updateErrorStatus = (answer) => ({
+  type: ActionType.UPDATE_ERROR_STATUS,
+  payload: answer
 });
