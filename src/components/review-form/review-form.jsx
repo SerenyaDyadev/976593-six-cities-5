@@ -19,7 +19,7 @@ class reviewForm extends PureComponent {
     evt.preventDefault();
 
     onReviewSubmit({
-      review,
+      comment: review,
       rating
     }, offerId);
 
@@ -165,8 +165,8 @@ const mapStateToProps = ({ACTIONS, USER}) => ({
 });
 
 const mapDispatchToProps = ((dispatch) => ({
-  onReviewSubmit(reviewData, offerId, answer) {
-    dispatch(sendReview(reviewData, offerId, answer));
+  onReviewSubmit(reviewData, offerId) {
+    dispatch(sendReview(reviewData, offerId));
   },
   updateErrorStatusAction(answer) {
     dispatch(updateErrorStatus(answer));

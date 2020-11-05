@@ -25,7 +25,7 @@ const Review = (props) => {
           </div>
         </div>
         <p className="reviews__text">
-          {review.comment}
+          {review.review}
         </p>
         <time className="reviews__time" dateTime="2019-04-24">{review.date}</time>
       </div>

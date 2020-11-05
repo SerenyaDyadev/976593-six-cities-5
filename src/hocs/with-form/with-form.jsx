@@ -6,7 +6,7 @@ const withForm = (Component) => {
       super(props);
 
       this.state = {
-        rating: ``,
+        rating: `0`,
         review: ``
       };
 
@@ -23,13 +23,13 @@ const withForm = (Component) => {
 
     _handleTextFieldChange(evt) {
       this.setState({
-        text: evt.target.value,
+        review: evt.target.value,
       });
     }
 
     _resetState() {
       this.setState({
-        rating: ``,
+        rating: `0`,
         review: ``
       });
     }

@@ -48,8 +48,8 @@ export const changeFavorite = (offerId, status) => (dispatch, _getState, api) =>
       .then(({data}) => dispatch(getFavoriteOffers(data.map(adaptOfferToApp)))));
 };
 
-export const sendComment = ({review, rating}, offerId) => (dispatch, _getState, api) => {
-  api.post(`/comments/${offerId}`, {review, rating})
+export const sendReview = ({comment, rating}, offerId) => (dispatch, _getState, api) => {
+  api.post(`/comments/${offerId}`, {comment, rating})
     .then(({data}) => dispatch(getReviews(data.map(adaptReviewToApp))))
   .catch((err) => {
     dispatch(updateErrorStatus(true));

@@ -2,9 +2,9 @@ import {AuthorizationStatus} from "../../../const";
 import {ActionType} from "../../action";
 
 const initialState = {
-  // authorizationStatus: AuthorizationStatus.NO_AUTH,
-  authorizationStatus: AuthorizationStatus.AUTH,
-  email: `test@tes.ru`,
+  authorizationStatus: AuthorizationStatus.NO_AUTH,
+  // authorizationStatus: AuthorizationStatus.AUTH,
+  email: ``,
   isErrorToSubmit: false
 };
 
