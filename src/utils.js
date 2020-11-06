@@ -11,8 +11,10 @@ export const dateFormat = (date) => {
 
 export const getCityOffers = (offers, city) => offers.slice().filter((offer) => offer.city === city);
 
-export const getSortedOffers = (sortType, offers) => {
+export const getWidthIconFavorite = (classCard) => classCard === `place-card` ? `18` : `31`;
+export const getHeightIconFavorite = (classCard) => classCard === `place-card` ? `19` : `33`;
 
+export const getSortedOffers = (sortType, offers) => {
   const sortedOffers = offers.slice();
   switch (sortType) {
     case (SortType.POPULAR):
@@ -30,10 +32,11 @@ export const getSortedOffers = (sortType, offers) => {
         return offerB.rating - offerA.rating;
       });
   }
+
   return sortedOffers;
 };
 
-export const checkFavorite = (active) => active === -1 ? 1 : 0;
+export const checkFavorite = (active) => active ? 1 : 0;
 
 export const adaptOfferToApp = (offer) => {
   const adaptedOffer = {

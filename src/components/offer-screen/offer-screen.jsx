@@ -2,6 +2,7 @@ import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
 import {connect} from 'react-redux';
 import Header from "../header/header";
+import FavoriteButton from "../favorite-button/favorute-button";
 import ReviewList from "../review-list/review-list";
 import ReviewForm from "../review-form/review-form";
 import {getCityOffers} from '../../utils';
@@ -56,21 +57,12 @@ class OfferScreen extends PureComponent {
                   <h1 className="property__name">
                     {offer.title}
                   </h1>
-                  {offer.isFavorite ?
-                    <button className="property__bookmark-button place-bookmark-button--active button" type="button">
-                      <svg className="place-card__bookmark-button--active" width="31" height="33">
-                        <use xlinkHref="#icon-bookmark"></use>
-                      </svg>
-                      <span className="visually-hidden">In bookmarks</span>
-                    </button>
-                    :
-                    <button className="property__bookmark-button button" type="button">
-                      <svg className="property__bookmark-icon" width="31" height="33">
-                        <use xlinkHref="#icon-bookmark"></use>
-                      </svg>
-                      <span className="visually-hidden">To bookmarks</span>
-                    </button>
-                  }
+
+                  <FavoriteButton
+                    offer={offer}
+                    classCard={`property`}
+                  />
+
                 </div>
                 <div className="property__rating rating">
                   <div className="property__stars rating__stars">
