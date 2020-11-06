@@ -15,7 +15,7 @@ class OfferScreen extends PureComponent {
     super(props);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const {getNearbyOffers, getReviewsAction, activeOfferId} = this.props;
     getNearbyOffers(activeOfferId);
     getReviewsAction(activeOfferId);
@@ -139,6 +139,7 @@ class OfferScreen extends PureComponent {
             </div>
 
             <Map
+              mainOffer={offer}
               offers={nearbyOffers}
               classMap={`property__map`}
               cityCoordinates={offer.cityCoordinates}

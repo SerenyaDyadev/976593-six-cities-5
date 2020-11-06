@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import {dateFormat} from "../../utils";
 import {TO_PERCENT} from "../../const";
 
 
@@ -27,7 +28,7 @@ const Review = (props) => {
         <p className="reviews__text">
           {review.review}
         </p>
-        <time className="reviews__time" dateTime="2019-04-24">{review.date}</time>
+        <time className="reviews__time" dateTime="2019-04-24">{dateFormat(review.date)}</time>
       </div>
     </li>
   );

@@ -15,17 +15,16 @@ const OfferList = (props) => {
     changeFavoriteStatusAction
   } = props;
 
+
   const onFavoriteButtonClick = (evt) => {
     const offer = evt.target.closest(`.place-card`);
-    // console.log('offer', offer);
+    const isActiveFavorite = evt.target.closest(`.place-card__bookmark-button`).classList.value.indexOf(`place-card__bookmark-button--active`);
 
-    if (!offer) {
+    if (!offer || !isActiveFavorite) {
       return;
     }
 
-    const isActive = evt.target.closest(`.place-card__bookmark-button`).classList.value.indexOf(`place-card__bookmark-button--active`);
-
-    changeFavoriteStatusAction(offer.id, checkFavorite(isActive));
+    changeFavoriteStatusAction(offer.id, checkFavorite(isActiveFavorite));
   };
 
   return (

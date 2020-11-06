@@ -18,7 +18,7 @@ export const SortType = {
 
 export const pins = {
   icon: `img/pin.svg`,
-  hoverIcon: `img/pin-active.svg`
+  activeIcon: `img/pin-active.svg`
 };
 
 export const AuthorizationStatus = {

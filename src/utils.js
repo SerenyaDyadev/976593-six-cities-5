@@ -1,7 +1,12 @@
+import moment from 'moment';
 import {SortType} from "./const";
 
 export const extend = (a, b) => {
   return Object.assign({}, a, b);
+};
+
+export const dateFormat = (date) => {
+  return moment(date).format(`MMMM DD`);
 };
 
 export const getCityOffers = (offers, city) => offers.slice().filter((offer) => offer.city === city);
