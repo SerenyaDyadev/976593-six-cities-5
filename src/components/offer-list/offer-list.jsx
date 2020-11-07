@@ -8,7 +8,8 @@ const OfferList = (props) => {
     updateActiveOfferIdAction,
     classList,
     classCard,
-    classImageWrapper} = props;
+    classImageWrapper
+  } = props;
 
   return (
     <div

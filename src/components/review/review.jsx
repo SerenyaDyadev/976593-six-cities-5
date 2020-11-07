@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import {dateFormat} from "../../utils";
 import {TO_PERCENT} from "../../const";
 
 
@@ -25,22 +26,16 @@ const Review = (props) => {
           </div>
         </div>
         <p className="reviews__text">
-          {review.comment}
+          {review.review}
         </p>
-        <time className="reviews__time" dateTime="2019-04-24">{review.date}</time>
+        <time className="reviews__time" dateTime="2019-04-24">{dateFormat(review.date)}</time>
       </div>
     </li>
   );
 };
 
 Review.propTypes = {
-  review: PropTypes.shape({
-    rating: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    date: PropTypes.string.isRequired,
-    comment: PropTypes.string.isRequired,
-    picture: PropTypes.string.isRequired,
-  }).isRequired
+  review: PropTypes.object.isRequired
 };
 
 export default Review;

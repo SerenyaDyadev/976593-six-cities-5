@@ -1,5 +1,4 @@
 import React, {PureComponent} from "react";
-import PropTypes from "prop-types";
 
 const withForm = (Component) => {
   return class WithForm extends PureComponent {
@@ -7,21 +6,13 @@ const withForm = (Component) => {
       super(props);
 
       this.state = {
-        id: null,
-        name: `Max`,
-        picture: `img/avatar-max.jpg`,
-        rating: null,
-        text: null,
-        date: new Date(),
+        rating: `0`,
+        review: ``
       };
 
       this._handleRatingChange = this._handleRatingChange.bind(this);
       this._handleTextFieldChange = this._handleTextFieldChange.bind(this);
-      this._handleSubmit = this._handleSubmit.bind(this);
-    }
-
-    _handleSubmit(evt) {
-      evt.preventDefault();
+      this._resetState = this._resetState.bind(this);
     }
 
     _handleRatingChange(evt) {
@@ -32,24 +23,29 @@ const withForm = (Component) => {
 
     _handleTextFieldChange(evt) {
       this.setState({
-        text: evt.target.value,
+        review: evt.target.value,
+      });
+    }
+
+    _resetState() {
+      this.setState({
+        rating: `0`,
+        review: ``
       });
     }
 
     render() {
+      const {rating, review} = this.state;
       return <Component
         {...this.props}
-        onSubmit={this._handleSubmit}
+        rating={rating}
+        review={review}
+        resetState={this._resetState}
         onRatingChange={this._handleRatingChange}
         onTextFieldChange={this._handleTextFieldChange}
       />;
     }
   };
-};
-
-
-withForm.propTypes = {
-  reviews: PropTypes.array.isRequired,
 };
 
 export default withForm;

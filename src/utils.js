@@ -1,23 +1,20 @@
+import moment from 'moment';
 import {SortType} from "./const";
 
 export const extend = (a, b) => {
   return Object.assign({}, a, b);
 };
 
-export const getCityOffers = (offers, city) => {
-  const cityOffers = offers.slice().filter((offer) => offer.city === city);
-
-  return cityOffers;
+export const dateFormat = (date) => {
+  return moment(date).format(`MMMM DD`);
 };
 
-export const getFavoriteOffers = (offers) => {
-  const favoriteOffers = offers.slice().filter((offer) => offer.isFavorite);
+export const getCityOffers = (offers, city) => offers.slice().filter((offer) => offer.city === city);
 
-  return favoriteOffers;
-};
+export const getWidthIconFavorite = (classCard) => classCard === `place-card` ? `18` : `31`;
+export const getHeightIconFavorite = (classCard) => classCard === `place-card` ? `19` : `33`;
 
 export const getSortedOffers = (sortType, offers) => {
-
   const sortedOffers = offers.slice();
   switch (sortType) {
     case (SortType.POPULAR):
@@ -35,8 +32,11 @@ export const getSortedOffers = (sortType, offers) => {
         return offerB.rating - offerA.rating;
       });
   }
+
   return sortedOffers;
 };
+
+export const checkFavorite = (active) => active ? 1 : 0;
 
 export const adaptOfferToApp = (offer) => {
   const adaptedOffer = {
@@ -77,7 +77,7 @@ export const adaptReviewToApp = (comment) => {
     picture: comment.user.avatar_url,
     name: comment.user.name,
     rating: comment.rating,
-    comment: comment.comment,
+    review: comment.comment,
     date: comment.date,
     super: comment.user.is_pro
   };

@@ -1,14 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {TO_PERCENT} from "../../const";
+import {connect} from 'react-redux';
 import {Link} from "react-router-dom";
+import FavoriteButton from "../favorite-button/favorute-button";
+import {TO_PERCENT} from "../../const";
 
 const OfferCard = (props) => {
 
   const {offer, classCard, classImageWrapper} = props;
 
   const ratingOfferPercentege = Math.round(offer.rating) * TO_PERCENT;
-
   const widthImg = classCard !== `favorites__card` ? 260 : 150;
   const heightImg = classCard !== `favorites__card` ? 200 : 110;
 
@@ -31,12 +32,12 @@ const OfferCard = (props) => {
             <b className="place-card__price-value">&euro;{offer.price}</b>
             <span className="place-card__price-text">&#47;&nbsp;  night</span>
           </div>
-          <button className={`place-card__bookmark-button button ${offer.isFavorite ? `place-card__bookmark-button--active` : ``}`} type="button">
-            <svg className="place-card__bookmark-icon" width="18" height="19">
-              <use xlinkHref="#icon-bookmark"></use>
-            </svg>
-            <span className="visually-hidden">In bookmarks</span>
-          </button>
+
+          <FavoriteButton
+            offer={offer}
+            classCard={`place-card`}
+          />
+
         </div>
         <div className="place-card__rating rating">
           <div className="place-card__stars rating__stars">
@@ -73,4 +74,10 @@ OfferCard.propTypes = {
   }).isRequired
 };
 
-export default OfferCard;
+
+const mapStateToProps = ({USER}) => ({
+  authorizationStatus: USER.authorizationStatus
+});
+
+export {OfferCard};
+export default connect(mapStateToProps)(OfferCard);

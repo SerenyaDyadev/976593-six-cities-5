@@ -1,53 +1,64 @@
-import React from "react";
+import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
 import Header from "../header/header";
 import {Link} from "react-router-dom";
 import NoFavoritesScreen from "../no-favorites-screen/no-favorites-screen";
 import FavoriteList from "../favorite-list/favorite-list";
-import {getFavoriteOffers} from '../../utils';
+import {fetchFavoriteOffersList} from "../../store/api-actions";
 import {connect} from 'react-redux';
 
 
-const FavoritesScreen = (props) => {
-  const {offers} = props;
+class FavoritesScreen extends PureComponent {
+  constructor(props) {
+    super(props);
+  }
 
-  return (
-    <div className="page">
+  componentDidMount() {
+    const {getFavoriteOffers} = this.props;
 
-      <Header />
+    getFavoriteOffers();
+  }
 
-      {offers.length === 0 ?
-        <NoFavoritesScreen />
-        :
-        <main className="page__main page__main--favorites">
-          <div className="page__favorites-container container">
-            <section className="favorites">
-              <h1 className="favorites__title">Saved listing</h1>
+  render() {
+    const {favoriteOffers, getFavoriteOffers} = this.props;
 
-              <FavoriteList
-                offers={offers}
-              />
+    return (
+      <div className="page">
 
-            </section>
-          </div>
-        </main>
-      }
-      <footer className="footer container">
-        <Link to="/login" className="footer__logo-link" href="/">
-          <img className="footer__logo" src="img/logo.svg" alt="6 cities logo" width="64" height="33" />
-        </Link>
-      </footer>
-    </div>
-  );
-};
+        <Header />
+
+        {favoriteOffers.length === 0 ?
+          <NoFavoritesScreen />
+          :
+          <FavoriteList
+            offers={favoriteOffers}
+            getFavoriteOffers={getFavoriteOffers}
+          />
+        }
+        <footer className="footer container">
+          <Link to="/login" className="footer__logo-link" href="/">
+            <img className="footer__logo" src="img/logo.svg" alt="6 cities logo" width="64" height="33" />
+          </Link>
+        </footer>
+      </div>
+    );
+  }
+}
 
 FavoritesScreen.propTypes = {
-  offers: PropTypes.array.isRequired,
+  favoriteOffers: PropTypes.array.isRequired,
+  getFavoriteOffers: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = (({OFFERS}) => ({
-  offers: getFavoriteOffers(OFFERS.offers),
+const mapStateToProps = ({ACTIONS}) => ({
+  favoriteOffers: ACTIONS.favoriteOffers
+});
+
+const mapDispatchToProps = ((dispatch) => ({
+  getFavoriteOffers() {
+    dispatch(fetchFavoriteOffersList());
+  }
 }));
 
 export {FavoritesScreen};
-export default connect(mapStateToProps)(FavoritesScreen);
+export default connect(mapStateToProps, mapDispatchToProps)(FavoritesScreen);

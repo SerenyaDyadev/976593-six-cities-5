@@ -6,18 +6,20 @@ import {pins} from "../../const";
 
 class Map extends PureComponent {
   _dataMap() {
-    const {offers, cityCoordinates, cityZoom, activeOfferId} = this.props;
+    const {mainOffer, offers, cityCoordinates, cityZoom, activeOfferId} = this.props;
 
     const hoverOffers = offers.slice().filter((item) => item.id === +activeOfferId);
     const otherOffers = offers.slice().filter((item) => item.id !== +activeOfferId);
+
+    const activeOffer = mainOffer ? mainOffer : hoverOffers[0];
 
     const icon = leaflet.icon({
       iconUrl: pins.icon,
       iconSize: [27, 39]
     });
 
-    const hoverIcon = leaflet.icon({
-      iconUrl: pins.hoverIcon,
+    const activeIcon = leaflet.icon({
+      iconUrl: pins.activeIcon,
       iconSize: [27, 39]
     });
 
@@ -29,9 +31,9 @@ class Map extends PureComponent {
         .addTo(this._map)
     );
 
-    if (hoverOffers.length) {
+    if (activeOffer) {
       leaflet
-        .marker(hoverOffers[0].coordinates, {icon: hoverIcon})
+        .marker(activeOffer.coordinates, {icon: activeIcon})
         .addTo(this._map);
     }
   }
@@ -72,6 +74,7 @@ class Map extends PureComponent {
 }
 
 Map.propTypes = {
+  mainOffer: PropTypes.object,
   offers: PropTypes.array.isRequired,
   classMap: PropTypes.string.isRequired,
   cityZoom: PropTypes.number.isRequired,
