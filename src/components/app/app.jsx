@@ -35,6 +35,4 @@ const App = () => {
   );
 };
 
-App.propTypes = {};
-
 export default App;

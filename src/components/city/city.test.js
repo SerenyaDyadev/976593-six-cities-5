@@ -4,7 +4,7 @@ import City from "./city";
 
 describe(`City render`, () => {
   it(`Should City render correctly`, () => {
-    const tree = renderer
+    const component = renderer
       .create(<City
         city={`Amsterdam`}
         isCurrent={true}
@@ -12,6 +12,6 @@ describe(`City render`, () => {
       />)
       .toJSON();
 
-    expect(tree).toMatchSnapshot();
+    expect(component).toMatchSnapshot();
   });
 });
