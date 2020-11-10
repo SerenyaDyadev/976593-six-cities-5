@@ -40,7 +40,6 @@ class Map extends PureComponent {
 
   componentDidMount() {
     const {cityCoordinates, cityZoom} = this.props;
-
     this._map = leaflet.map(`map`, {
       center: cityCoordinates,
       zoom: cityZoom,

@@ -27,7 +27,7 @@ export const offers = [
     coordinates: [52.3909553943508, 4.85309666406198],
     сityZoom: 10,
     city: `Amsterdam`,
-    cityCooridinates: [52.38333, 4.9],
+    cityCoordinates: [52.38333, 4.9],
   },
   {
     id: 2,
@@ -55,7 +55,7 @@ export const offers = [
     coordinates: [52.3909553943508, 4.85309666406190],
     сityZoom: 10,
     city: `Amsterdam`,
-    cityCooridinates: [52.38333, 4.9],
+    cityCoordinates: [52.38333, 4.9],
   },
   {
     id: 3,
@@ -83,7 +83,7 @@ export const offers = [
     coordinates: [52.3909553943510, 4.85309666406201],
     сityZoom: 10,
     city: `Amsterdam`,
-    cityCooridinates: [52.38333, 4.9],
+    cityCoordinates: [52.38333, 4.9],
   },
   {
     id: 4,
@@ -111,7 +111,7 @@ export const offers = [
     coordinates: [52.3909553943515, 4.85309666406196],
     сityZoom: 10,
     city: `Amsterdam`,
-    cityCooridinates: [52.38333, 4.9],
+    cityCoordinates: [52.38333, 4.9],
   },
 ];
 
