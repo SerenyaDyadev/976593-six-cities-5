@@ -43,7 +43,7 @@ export const adaptOfferToApp = (offer) => {
     id: offer.id,
     city: offer.city.name,
     cityCoordinates: [offer.city.location.latitude, offer.city.location.longitude],
-    сityZoom: offer.city.location.zoom,
+    mapZoom: offer.city.location.zoom,
     isFavorite: offer.is_favorite,
     isPremium: offer.is_premium,
     coordinates: [offer.location.latitude, offer.location.longitude],

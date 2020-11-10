@@ -9,10 +9,9 @@ describe(`Map render`, () => {
     const tree = renderer.create(
         <Map
           offers={offers}
-          nearbyOffers={offers}
           activeOfferId={`0`}
           cityCoordinates={[52.3909553943508, 4.85309666406198]}
-          cityZoom={8}
+          mapZoom={8}
           classMap={`cities__map`}
         />,
         {

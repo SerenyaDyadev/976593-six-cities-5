@@ -1,37 +1,40 @@
 import React from "react";
 import renderer from "react-test-renderer";
+import {BrowserRouter} from "react-router-dom";
 import {FavoritesScreen} from "./favorites-screen";
 import {offers} from "../../mocks/data";
 
 const noop = () => {};
+jest.mock(`../header/header`, () => `Header`);
+jest.mock(`../favorite-list/favorite-list`, () => `FavoriteList`);
+jest.mock(`../no-favorites-screen/no-favorites-screen`, () => `NoFavoritesScreen`);
 
 describe(`FavoritesScreen render`, () => {
   it(`Should FavoritesScreen render correctly`, () => {
     const tree = renderer
-    .create(<FavoritesScreen
-      favoriteOffers={offers}
-      getFavoriteOffers={noop}
-    >
-    </FavoritesScreen>, {
-      createNodeMock: () => {
-        return {};
-      }
-    }
+    .create(
+        <BrowserRouter>
+          <FavoritesScreen
+            favoriteOffers={offers}
+            getFavoriteOffers={noop}
+          >
+          </FavoritesScreen>
+        </BrowserRouter>
     )
+
     .toJSON();
 
     expect(tree).toMatchSnapshot();
   });
   it(`Should FavoritesScreen without offers render correctly`, () => {
     const tree = renderer
-    .create(<FavoritesScreen
-      favoriteOffers={[]}
-      getFavoriteOffers={noop}
-    />, {
-      createNodeMock: () => {
-        return {};
-      }
-    }
+    .create(
+        <BrowserRouter>
+          <FavoritesScreen
+            favoriteOffers={[]}
+            getFavoriteOffers={noop}
+          />
+        </BrowserRouter>
     )
     .toJSON();
 

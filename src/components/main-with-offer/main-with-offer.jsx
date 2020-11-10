@@ -75,7 +75,7 @@ const MainWithOffer = (props) => {
               offers={sortedOffers}
               classMap={`cities__map`}
               cityCoordinates={sortedOffers[0].cityCoordinates}
-              сityZoom={sortedOffers[0].сityZoom}
+              mapZoom={sortedOffers[0].mapZoom}
             />
 
           </div>

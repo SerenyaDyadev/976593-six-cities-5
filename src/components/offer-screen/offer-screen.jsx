@@ -135,7 +135,7 @@ class OfferScreen extends PureComponent {
               offers={nearbyOffers}
               classMap={`property__map`}
               cityCoordinates={offer.cityCoordinates}
-              cityZoom={offer.сityZoom}
+              mapZoom={offer.mapZoom}
             />
 
           </section>
