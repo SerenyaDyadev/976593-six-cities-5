@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`City render Should City render correctly 1`] = `
+exports[`City render 1`] = `
 <li
   className="locations__item"
 >

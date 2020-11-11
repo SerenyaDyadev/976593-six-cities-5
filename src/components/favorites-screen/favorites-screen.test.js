@@ -7,7 +7,6 @@ import {offers} from "../../mocks/data";
 const noop = () => {};
 jest.mock(`../header/header`, () => `Header`);
 jest.mock(`../favorite-list/favorite-list`, () => `FavoriteList`);
-jest.mock(`../no-favorites-screen/no-favorites-screen`, () => `NoFavoritesScreen`);
 
 describe(`FavoritesScreen render`, () => {
   it(`Should FavoritesScreen render correctly`, () => {

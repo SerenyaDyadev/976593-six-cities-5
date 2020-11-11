@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MainNoOffer render Should MainNoOffer render correctly 1`] = `
+exports[`MainNoOffer render 1`] = `
 <main
   className="page__main page__main--index page__main--index-empty"
 >
@@ -15,88 +15,19 @@ exports[`MainNoOffer render Should MainNoOffer render correctly 1`] = `
     <section
       className="locations container"
     >
-      <ul
-        className="locations__list tabs__list"
-      >
-        <li
-          className="locations__item"
-        >
-          <a
-            className="locations__item-link tabs__item "
-            href="#"
-            onClick={[Function]}
-          >
-            <span>
-              Paris
-            </span>
-          </a>
-        </li>
-        <li
-          className="locations__item"
-        >
-          <a
-            className="locations__item-link tabs__item "
-            href="#"
-            onClick={[Function]}
-          >
-            <span>
-              Cologne
-            </span>
-          </a>
-        </li>
-        <li
-          className="locations__item"
-        >
-          <a
-            className="locations__item-link tabs__item "
-            href="#"
-            onClick={[Function]}
-          >
-            <span>
-              Brussels
-            </span>
-          </a>
-        </li>
-        <li
-          className="locations__item"
-        >
-          <a
-            className="locations__item-link tabs__item tabs__item--active"
-            href="#"
-            onClick={[Function]}
-          >
-            <span>
-              Amsterdam
-            </span>
-          </a>
-        </li>
-        <li
-          className="locations__item"
-        >
-          <a
-            className="locations__item-link tabs__item "
-            href="#"
-            onClick={[Function]}
-          >
-            <span>
-              Hamburg
-            </span>
-          </a>
-        </li>
-        <li
-          className="locations__item"
-        >
-          <a
-            className="locations__item-link tabs__item "
-            href="#"
-            onClick={[Function]}
-          >
-            <span>
-              Dusseldorf
-            </span>
-          </a>
-        </li>
-      </ul>
+      <CityList
+        cities={
+          Array [
+            "Paris",
+            "Cologne",
+            "Brussels",
+            "Amsterdam",
+            "Hamburg",
+            "Dusseldorf",
+          ]
+        }
+        currentCity="Amsterdam"
+      />
     </section>
   </div>
   <div
