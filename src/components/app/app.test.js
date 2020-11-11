@@ -1,43 +1,24 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import {Provider} from "react-redux";
-import configureStore from "redux-mock-store";
-import {offers, cities} from "../../mocks/data";
+import {BrowserRouter} from "react-router-dom";
 import App from "./app";
 
-const mockStore = configureStore([]);
+jest.mock(`../private-route/private-route`, () => `PrivateRoute`);
+jest.mock(`../auth-screen/auth-screen`, () => `AuthScreen`);
+jest.mock(`../favorites-screen/favorites-screen`, () => `FavoritesScreen`);
+jest.mock(`../offer-screen/offer-screen`, () => `OfferScreen`);
+jest.mock(`../main-screen/main-screen`, () => `MainScreen`);
 
-describe(`App render`, () => {
-  const initialState = {
-    CITIES: {
-      city: `Amsterdam`,
-      cities
-    },
-    ACTIONS: {
-      currentSort: `Popular`,
-      openSort: false,
-      activeOfferId: `0`
-    },
-    OFFERS: {
-      offers
-    },
-    USER: {
-      authorizationStatus: `NO_AUTH`,
-      email: ``
-    }
-  };
+it(`App render`, () => {
+  const tree = renderer
+    .create(
+        <BrowserRouter>
+          <App/>
+        </BrowserRouter>
+    )
 
-  const store = mockStore(initialState);
-  it(`App render`, () => {
-    const tree = renderer
-      .create(
-          <Provider store={store}>
-            <App />
-          </Provider>
-      )
-      .toJSON();
+  .toJSON();
 
-    expect(tree).toMatchSnapshot();
-  });
+  expect(tree).toMatchSnapshot();
 });
 

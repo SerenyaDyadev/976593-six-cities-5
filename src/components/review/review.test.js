@@ -6,9 +6,11 @@ import {reviews} from "../../mocks/data";
 describe(`Review render`, () => {
   it(`Should Comment render correctly`, () => {
     const tree = renderer
-    .create(<Review
-      review={reviews[0]}
-    />)
+    .create(
+        <Review
+          review={reviews[0]}
+        />)
+
     .toJSON();
 
     expect(tree).toMatchSnapshot();

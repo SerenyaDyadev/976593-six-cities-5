@@ -6,7 +6,7 @@ import {ReviewLength} from "../../const";
 import {sendReview} from "../../store/api-actions";
 import {updateErrorStatus} from '../../store/action';
 
-class reviewForm extends PureComponent {
+class ReviewForm extends PureComponent {
   constructor(props) {
     super(props);
     this._handleFormSubmit = this._handleFormSubmit.bind(this);
@@ -153,7 +153,7 @@ class reviewForm extends PureComponent {
   }
 }
 
-reviewForm.propTypes = {
+ReviewForm.propTypes = {
   rating: PropTypes.string.isRequired,
   review: PropTypes.string.isRequired,
   onReviewSubmit: PropTypes.func.isRequired,
@@ -179,5 +179,5 @@ const mapDispatchToProps = ((dispatch) => ({
   }
 }));
 
-export const form = withForm(reviewForm);
-export default connect(mapStateToProps, mapDispatchToProps)(withForm(reviewForm));
+export {ReviewForm};
+export default connect(mapStateToProps, mapDispatchToProps)(withForm(ReviewForm));

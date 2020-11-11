@@ -1,7 +1,7 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import {BrowserRouter} from "react-router-dom";
-import {FavoriteButton} from "./favorute-button";
+import {FavoriteButton} from "./favorite-button";
 import {offers} from "../../mocks/data";
 
 describe(`FavoriteButton render`, () => {

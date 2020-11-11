@@ -2,7 +2,7 @@ import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
 import {connect} from 'react-redux';
 import Header from "../header/header";
-import FavoriteButton from "../favorite-button/favorute-button";
+import FavoriteButton from "../favorite-button/favorite-button";
 import ReviewList from "../review-list/review-list";
 import ReviewForm from "../review-form/review-form";
 import {getCityOffers} from '../../utils';
