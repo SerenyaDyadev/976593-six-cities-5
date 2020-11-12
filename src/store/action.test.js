@@ -16,12 +16,7 @@ import {
   updateErrorStatus
 } from './action';
 
-import {offers, reviews} from "../mocks/data";
-
-const reviewData = {
-  "comment": `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
-  "rating": 4
-};
+import {offers, reviews, reviewData} from "../mocks/data";
 
 describe(`Action creators work correctly`, () => {
   it(`Action creator for changeCity returns correct action`, () => {
