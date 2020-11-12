@@ -3,7 +3,6 @@ import {ActionType} from "../../action";
 
 const initialState = {
   authorizationStatus: AuthorizationStatus.NO_AUTH,
-  // authorizationStatus: AuthorizationStatus.AUTH,
   email: ``,
   isErrorToSubmit: false
 };
