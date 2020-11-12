@@ -15,11 +15,12 @@ configure({adapter: new Adapter()});
 it(`Submit form in AuthScreen`, () => {
   const handleFormSubmit = jest.fn();
 
-  const wrapper = mount(<AuthScreen
-    city={`Amsterdam`}
-    onSubmit={handleFormSubmit}
-    authorizationStatus={`NO_AUTH`}
-  />);
+  const wrapper = mount(
+      <AuthScreen
+        city={`Amsterdam`}
+        onSubmit={handleFormSubmit}
+        authorizationStatus={`NO_AUTH`}
+      />);
 
   wrapper.instance().loginRef.current.value = enteredInfo.login;
   wrapper.instance().passwordRef.current.value = enteredInfo.password;
