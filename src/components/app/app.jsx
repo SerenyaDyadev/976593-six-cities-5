@@ -1,5 +1,5 @@
 import React from "react";
-import {Switch, Route, BrowserRouter} from "react-router-dom";
+import {Switch, Route, Router as BrowserRouter} from "react-router-dom";
 import MainScreen from "../main-screen/main-screen";
 import AuthScreen from "../auth-screen/auth-screen";
 import FavoritesScreen from "../favorites-screen/favorites-screen";

@@ -15,6 +15,7 @@ class ReviewForm extends PureComponent {
     this.ratingRef = createRef();
   }
 
+
   _handleFormSubmit(evt) {
     const {onReviewSubmit, rating, review, offerId, resetState} = this.props;
     evt.preventDefault();
@@ -25,7 +26,6 @@ class ReviewForm extends PureComponent {
     }, offerId);
 
     resetState();
-    this.formRef.current.reset();
   }
 
   render() {
