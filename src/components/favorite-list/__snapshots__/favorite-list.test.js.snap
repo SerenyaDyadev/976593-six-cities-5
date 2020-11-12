@@ -79,7 +79,7 @@ exports[`FavoriteList render 1`] = `
                   ],
                   "previewPictures": "img/apartment-small-01.jpg",
                   "price": 100,
-                  "rating": 3,
+                  "rating": 3.4,
                   "things": Array [
                     "Wifi",
                     "Heating",
@@ -126,7 +126,7 @@ exports[`FavoriteList render 1`] = `
                   ],
                   "previewPictures": "img/apartment-small-01.jpg",
                   "price": 200,
-                  "rating": 3,
+                  "rating": 4.5,
                   "things": Array [
                     "Wifi",
                     "Heating",
@@ -173,7 +173,7 @@ exports[`FavoriteList render 1`] = `
                   ],
                   "previewPictures": "img/apartment-small-01.jpg",
                   "price": 300,
-                  "rating": 5,
+                  "rating": 4.9,
                   "things": Array [
                     "Wifi",
                     "Heating",
@@ -220,7 +220,7 @@ exports[`FavoriteList render 1`] = `
                   ],
                   "previewPictures": "img/apartment-small-01.jpg",
                   "price": 400,
-                  "rating": 4,
+                  "rating": 2.1,
                   "things": Array [
                     "Wifi",
                     "Heating",

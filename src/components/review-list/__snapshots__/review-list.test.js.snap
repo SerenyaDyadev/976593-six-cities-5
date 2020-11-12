@@ -12,7 +12,7 @@ exports[`ReviewList render 1`] = `
         "name": "Spider Man",
         "picture": "img/avatar-max.jpg",
         "rating": 2,
-        "review": "Be Happy!",
+        "review": "She carefully took a crumpled, half-torn ten-dollar bill from her purse and handed it to him. He shoved a white",
         "super": true,
       }
     }
@@ -25,7 +25,7 @@ exports[`ReviewList render 1`] = `
         "name": "Aqua Man",
         "picture": "img/avatar-max.jpg",
         "rating": 5,
-        "review": "Be Happy! too",
+        "review": "Be Happy! too! She carefully took a crumpled, half-torn ten-dollar bill from her purse and handed it to him. He shoved a white",
         "super": true,
       }
     }

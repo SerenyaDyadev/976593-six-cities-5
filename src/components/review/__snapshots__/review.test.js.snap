@@ -50,7 +50,7 @@ exports[`Review render Should Comment render correctly 1`] = `
     <p
       className="reviews__text"
     >
-      Be Happy!
+      She carefully took a crumpled, half-torn ten-dollar bill from her purse and handed it to him. He shoved a white
     </p>
     <time
       className="reviews__time"

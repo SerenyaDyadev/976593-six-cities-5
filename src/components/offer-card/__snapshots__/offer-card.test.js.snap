@@ -80,7 +80,7 @@ exports[`OfferCard render 1`] = `
             ],
             "previewPictures": "img/apartment-small-01.jpg",
             "price": 100,
-            "rating": 3,
+            "rating": 3.4,
             "things": Array [
               "Wifi",
               "Heating",

@@ -1,26 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MainScreen render MainPage without offers 1`] = `
-<div
-  className="page page--gray page--main"
->
-  <Header />
-  <MainNoOffer
-    cities={
-      Array [
-        "Paris",
-        "Cologne",
-        "Brussels",
-        "Amsterdam",
-        "Hamburg",
-        "Dusseldorf",
-      ]
-    }
-    city="Amsterdam"
-  />
-</div>
-`;
-
 exports[`MainScreen render MainScreen with offers 1`] = `
 <div
   className="page page--gray page--main"
@@ -75,7 +54,7 @@ exports[`MainScreen render MainScreen with offers 1`] = `
           ],
           "previewPictures": "img/apartment-small-01.jpg",
           "price": 100,
-          "rating": 3,
+          "rating": 3.4,
           "things": Array [
             "Wifi",
             "Heating",
@@ -122,7 +101,7 @@ exports[`MainScreen render MainScreen with offers 1`] = `
           ],
           "previewPictures": "img/apartment-small-01.jpg",
           "price": 200,
-          "rating": 3,
+          "rating": 4.5,
           "things": Array [
             "Wifi",
             "Heating",
@@ -169,7 +148,7 @@ exports[`MainScreen render MainScreen with offers 1`] = `
           ],
           "previewPictures": "img/apartment-small-01.jpg",
           "price": 300,
-          "rating": 5,
+          "rating": 4.9,
           "things": Array [
             "Wifi",
             "Heating",
@@ -216,7 +195,7 @@ exports[`MainScreen render MainScreen with offers 1`] = `
           ],
           "previewPictures": "img/apartment-small-01.jpg",
           "price": 400,
-          "rating": 4,
+          "rating": 2.1,
           "things": Array [
             "Wifi",
             "Heating",
@@ -230,6 +209,27 @@ exports[`MainScreen render MainScreen with offers 1`] = `
         },
       ]
     }
+  />
+</div>
+`;
+
+exports[`MainScreen render MainScreen without offers 1`] = `
+<div
+  className="page page--gray page--main"
+>
+  <Header />
+  <MainNoOffer
+    cities={
+      Array [
+        "Paris",
+        "Cologne",
+        "Brussels",
+        "Amsterdam",
+        "Hamburg",
+        "Dusseldorf",
+      ]
+    }
+    city="Amsterdam"
   />
 </div>
 `;
