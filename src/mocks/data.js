@@ -256,3 +256,8 @@ export const authInfo = {
   "is_pro": false,
   "name": `Oliver.conner`
 };
+
+export const enteredInfo = {
+  login: `test@mail.ru`,
+  password: `qwerty12`
+};
