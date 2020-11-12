@@ -21,11 +21,6 @@ export const changeCity = (city) => ({
   payload: city,
 });
 
-export const updateOffers = () => ({
-  type: ActionType.UPDATE_OFFERS,
-  payload: []
-});
-
 export const updateSort = (sortType) => ({
   type: ActionType.UPDATE_SORT,
   payload: sortType,

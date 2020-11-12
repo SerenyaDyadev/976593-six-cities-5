@@ -6,7 +6,7 @@ import {ReviewLength} from "../../const";
 import {sendReview} from "../../store/api-actions";
 import {updateErrorStatus} from '../../store/action';
 
-class reviewForm extends PureComponent {
+class ReviewForm extends PureComponent {
   constructor(props) {
     super(props);
     this._handleFormSubmit = this._handleFormSubmit.bind(this);
@@ -14,6 +14,7 @@ class reviewForm extends PureComponent {
     this.reviewInputRef = createRef();
     this.ratingRef = createRef();
   }
+
 
   _handleFormSubmit(evt) {
     const {onReviewSubmit, rating, review, offerId, resetState} = this.props;
@@ -25,7 +26,6 @@ class reviewForm extends PureComponent {
     }, offerId);
 
     resetState();
-    this.formRef.current.reset();
   }
 
   render() {
@@ -133,6 +133,7 @@ class reviewForm extends PureComponent {
           ref={this.reviewInputRef}
           className="reviews__textarea form__textarea" id="review"
           name="review"
+          value={review}
           placeholder="Tell how was your stay, what you like and what can be improved"
           onChange={onTextFieldChange}>
         </textarea>
@@ -153,7 +154,7 @@ class reviewForm extends PureComponent {
   }
 }
 
-reviewForm.propTypes = {
+ReviewForm.propTypes = {
   rating: PropTypes.string.isRequired,
   review: PropTypes.string.isRequired,
   onReviewSubmit: PropTypes.func.isRequired,
@@ -179,5 +180,5 @@ const mapDispatchToProps = ((dispatch) => ({
   }
 }));
 
-export const form = withForm(reviewForm);
-export default connect(mapStateToProps, mapDispatchToProps)(withForm(reviewForm));
+export {ReviewForm};
+export default connect(mapStateToProps, mapDispatchToProps)(withForm(ReviewForm));

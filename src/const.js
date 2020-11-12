@@ -9,6 +9,13 @@ export const CITIES = {
   DUSELDORF: `Dusseldorf`,
 };
 
+export const AppRoute = {
+  ROOT: `/`,
+  LOGIN: `/login`,
+  FAVORITES: `/favorites`,
+  OFFER: `/offer/:id`
+};
+
 export const SortType = {
   POPULAR: `Popular`,
   PRICE_HIGH_TO_LOW: `Price: high to low`,

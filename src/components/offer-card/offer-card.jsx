@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import {connect} from 'react-redux';
 import {Link} from "react-router-dom";
-import FavoriteButton from "../favorite-button/favorute-button";
+import FavoriteButton from "../favorite-button/favorite-button";
 import {TO_PERCENT} from "../../const";
 
 const OfferCard = (props) => {

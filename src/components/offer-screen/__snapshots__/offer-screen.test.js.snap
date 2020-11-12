@@ -1,0 +1,1567 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OfferScreen render OfferScreen with authorization 1`] = `
+<div
+  className="page"
+>
+  <Header />
+  <main
+    className="page__main page__main--property"
+  >
+    <section
+      className="property"
+    >
+      <div
+        className="property__gallery-container container"
+      >
+        <div
+          className="property__gallery"
+        >
+          <div
+            className="property__image-wrapper"
+          >
+            <img
+              alt="Place image"
+              className="property__image"
+              src="img/apartment-small-03.jpg"
+            />
+          </div>
+          <div
+            className="property__image-wrapper"
+          >
+            <img
+              alt="Place image"
+              className="property__image"
+              src="img/apartment-small-04.jpg"
+            />
+          </div>
+          <div
+            className="property__image-wrapper"
+          >
+            <img
+              alt="Place image"
+              className="property__image"
+              src="img/room-small.jpg"
+            />
+          </div>
+          <div
+            className="property__image-wrapper"
+          >
+            <img
+              alt="Place image"
+              className="property__image"
+              src="img/studio-photos.jpg"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="property__container container"
+      >
+        <div
+          className="property__wrapper"
+        >
+          
+          <div
+            className="property__name-wrapper"
+          >
+            <h1
+              className="property__name"
+            >
+              TITLE
+            </h1>
+            <FavoriteButton
+              classCard="property"
+              offer={
+                Object {
+                  "city": "Amsterdam",
+                  "cityCoordinates": Array [
+                    52.38333,
+                    4.9,
+                  ],
+                  "coordinates": Array [
+                    52.3909553943508,
+                    4.85309666406198,
+                  ],
+                  "description": "The delusion emphasizes intelligent common sense, although the opposite is accepted in the official language.",
+                  "detailsMapZoom": 12,
+                  "features": Object {
+                    "adults": 2,
+                    "badrooms": 1,
+                    "type": "hotel",
+                  },
+                  "id": 0,
+                  "isFavorite": false,
+                  "isPremium": false,
+                  "mapZoom": 10,
+                  "owner": Object {
+                    "id": 0,
+                    "name": "Spider Man",
+                    "picture": "img/avatar-angelina.jpg",
+                    "super": true,
+                  },
+                  "pictures": Array [
+                    "img/apartment-small-03.jpg",
+                    "img/apartment-small-04.jpg",
+                    "img/room-small.jpg",
+                    "img/studio-photos.jpg",
+                  ],
+                  "previewPictures": "img/apartment-small-01.jpg",
+                  "price": 100,
+                  "rating": 3.4,
+                  "things": Array [
+                    "Wifi",
+                    "Heating",
+                    "Kitchen",
+                    "Cable TV",
+                    "Own bathroom",
+                    "Hair-dryer",
+                    "AC",
+                  ],
+                  "title": "TITLE",
+                }
+              }
+            />
+          </div>
+          <div
+            className="property__rating rating"
+          >
+            <div
+              className="property__stars rating__stars"
+            >
+              <span
+                style={
+                  Object {
+                    "width": "60%",
+                  }
+                }
+              />
+              <span
+                className="visually-hidden"
+              >
+                Rating
+              </span>
+            </div>
+            <span
+              className="property__rating-value rating__value"
+            >
+              3.4
+            </span>
+          </div>
+          <ul
+            className="property__features"
+          >
+            <li
+              className="property__feature property__feature--entire"
+            >
+              hotel
+            </li>
+            <li
+              className="property__feature property__feature--bedrooms"
+            >
+              1
+               Bedrooms
+            </li>
+            <li
+              className="property__feature property__feature--adults"
+            >
+              Max 
+              2
+               adults
+            </li>
+          </ul>
+          <div
+            className="property__price"
+          >
+            <b
+              className="property__price-value"
+            >
+              €
+              100
+            </b>
+            <span
+              className="property__price-text"
+            >
+               night
+            </span>
+          </div>
+          <div
+            className="property__inside"
+          >
+            <h2
+              className="property__inside-title"
+            >
+              What's inside
+            </h2>
+            <ul
+              className="property__inside-list"
+            >
+              <li
+                className="property__inside-item"
+              >
+                Wifi
+              </li>
+              <li
+                className="property__inside-item"
+              >
+                Heating
+              </li>
+              <li
+                className="property__inside-item"
+              >
+                Kitchen
+              </li>
+              <li
+                className="property__inside-item"
+              >
+                Cable TV
+              </li>
+              <li
+                className="property__inside-item"
+              >
+                Own bathroom
+              </li>
+              <li
+                className="property__inside-item"
+              >
+                Hair-dryer
+              </li>
+              <li
+                className="property__inside-item"
+              >
+                AC
+              </li>
+            </ul>
+          </div>
+          <div
+            className="property__host"
+          >
+            <h2
+              className="property__host-title"
+            >
+              Meet the host
+            </h2>
+            <div
+              className="property__host-user user"
+            >
+              <div
+                className="property__avatar-wrapper property__avatar-wrapper--pro user__avatar-wrapper"
+              >
+                <img
+                  alt="Host avatar"
+                  className="property__avatar user__avatar"
+                  height="74"
+                  src="img/avatar-angelina.jpg"
+                  width="74"
+                />
+              </div>
+              <span
+                className="property__user-name"
+              >
+                Spider Man
+              </span>
+            </div>
+            <div
+              className="property__description"
+            >
+              <p
+                className="property__text"
+              >
+                The delusion emphasizes intelligent common sense, although the opposite is accepted in the official language.
+              </p>
+              <p
+                className="property__text"
+              >
+                The delusion emphasizes intelligent common sense, although the opposite is accepted in the official language.
+              </p>
+            </div>
+          </div>
+          <section
+            className="property__reviews reviews"
+          >
+            <h2
+              className="reviews__title"
+            >
+              Reviews · 
+              <span
+                className="reviews__amount"
+              >
+                2
+              </span>
+            </h2>
+            <ReviewList
+              reviews={
+                Array [
+                  Object {
+                    "date": "2020-05-08T14:13:56.569Z",
+                    "id": 1,
+                    "name": "Spider Man",
+                    "picture": "img/avatar-max.jpg",
+                    "rating": 2,
+                    "review": "She carefully took a crumpled, half-torn ten-dollar bill from her purse and handed it to him. He shoved a white",
+                    "super": true,
+                  },
+                  Object {
+                    "date": "2020-06-08T14:30:56.569Z",
+                    "id": 2,
+                    "name": "Aqua Man",
+                    "picture": "img/avatar-max.jpg",
+                    "rating": 5,
+                    "review": "Be Happy! too! She carefully took a crumpled, half-torn ten-dollar bill from her purse and handed it to him. He shoved a white",
+                    "super": true,
+                  },
+                ]
+              }
+            />
+            <ReviewForm />
+          </section>
+        </div>
+      </div>
+      <Map
+        cityCoordinates={
+          Array [
+            52.38333,
+            4.9,
+          ]
+        }
+        classMap="property__map"
+        mainOffer={
+          Object {
+            "city": "Amsterdam",
+            "cityCoordinates": Array [
+              52.38333,
+              4.9,
+            ],
+            "coordinates": Array [
+              52.3909553943508,
+              4.85309666406198,
+            ],
+            "description": "The delusion emphasizes intelligent common sense, although the opposite is accepted in the official language.",
+            "detailsMapZoom": 12,
+            "features": Object {
+              "adults": 2,
+              "badrooms": 1,
+              "type": "hotel",
+            },
+            "id": 0,
+            "isFavorite": false,
+            "isPremium": false,
+            "mapZoom": 10,
+            "owner": Object {
+              "id": 0,
+              "name": "Spider Man",
+              "picture": "img/avatar-angelina.jpg",
+              "super": true,
+            },
+            "pictures": Array [
+              "img/apartment-small-03.jpg",
+              "img/apartment-small-04.jpg",
+              "img/room-small.jpg",
+              "img/studio-photos.jpg",
+            ],
+            "previewPictures": "img/apartment-small-01.jpg",
+            "price": 100,
+            "rating": 3.4,
+            "things": Array [
+              "Wifi",
+              "Heating",
+              "Kitchen",
+              "Cable TV",
+              "Own bathroom",
+              "Hair-dryer",
+              "AC",
+            ],
+            "title": "TITLE",
+          }
+        }
+        mapZoom={10}
+        offers={
+          Array [
+            Object {
+              "city": "Amsterdam",
+              "cityCoordinates": Array [
+                52.38333,
+                4.9,
+              ],
+              "coordinates": Array [
+                52.3909553943508,
+                4.85309666406198,
+              ],
+              "description": "The delusion emphasizes intelligent common sense, although the opposite is accepted in the official language.",
+              "detailsMapZoom": 12,
+              "features": Object {
+                "adults": 2,
+                "badrooms": 1,
+                "type": "hotel",
+              },
+              "id": 0,
+              "isFavorite": false,
+              "isPremium": false,
+              "mapZoom": 10,
+              "owner": Object {
+                "id": 0,
+                "name": "Spider Man",
+                "picture": "img/avatar-angelina.jpg",
+                "super": true,
+              },
+              "pictures": Array [
+                "img/apartment-small-03.jpg",
+                "img/apartment-small-04.jpg",
+                "img/room-small.jpg",
+                "img/studio-photos.jpg",
+              ],
+              "previewPictures": "img/apartment-small-01.jpg",
+              "price": 100,
+              "rating": 3.4,
+              "things": Array [
+                "Wifi",
+                "Heating",
+                "Kitchen",
+                "Cable TV",
+                "Own bathroom",
+                "Hair-dryer",
+                "AC",
+              ],
+              "title": "TITLE",
+            },
+            Object {
+              "city": "Amsterdam",
+              "cityCoordinates": Array [
+                52.38333,
+                4.9,
+              ],
+              "coordinates": Array [
+                52.3909553943508,
+                4.8530966640619,
+              ],
+              "description": "The delusion emphasizes intelligent common sense, although the opposite is accepted in the official language.",
+              "detailsMapZoom": 12,
+              "features": Object {
+                "adults": 4,
+                "badrooms": 2,
+                "type": "hotel",
+              },
+              "id": 2,
+              "isFavorite": true,
+              "isPremium": false,
+              "mapZoom": 10,
+              "owner": Object {
+                "id": 1,
+                "name": "Iron Man",
+                "picture": "img/avatar-angelina.jpg",
+                "super": false,
+              },
+              "pictures": Array [
+                "img/apartment-small-03.jpg",
+                "img/apartment-small-04.jpg",
+                "img/room-small.jpg",
+                "img/studio-photos.jpg",
+              ],
+              "previewPictures": "img/apartment-small-01.jpg",
+              "price": 200,
+              "rating": 4.5,
+              "things": Array [
+                "Wifi",
+                "Heating",
+                "Kitchen",
+                "Cable TV",
+                "Own bathroom",
+                "Hair-dryer",
+                "AC",
+              ],
+              "title": "TITLE - 2",
+            },
+            Object {
+              "city": "Amsterdam",
+              "cityCoordinates": Array [
+                52.38333,
+                4.9,
+              ],
+              "coordinates": Array [
+                52.390955394351,
+                4.85309666406201,
+              ],
+              "description": "The delusion emphasizes intelligent common sense, although the opposite is accepted in the official language.",
+              "detailsMapZoom": 12,
+              "features": Object {
+                "adults": 6,
+                "badrooms": 1,
+                "type": "private room",
+              },
+              "id": 3,
+              "isFavorite": false,
+              "isPremium": true,
+              "mapZoom": 10,
+              "owner": Object {
+                "id": 3,
+                "name": "Billi Willi",
+                "picture": "img/avatar-angelina.jpg",
+                "super": true,
+              },
+              "pictures": Array [
+                "img/apartment-small-03.jpg",
+                "img/apartment-small-04.jpg",
+                "img/room-small.jpg",
+                "img/studio-photos.jpg",
+              ],
+              "previewPictures": "img/apartment-small-01.jpg",
+              "price": 300,
+              "rating": 4.9,
+              "things": Array [
+                "Wifi",
+                "Heating",
+                "Kitchen",
+                "Cable TV",
+                "Own bathroom",
+                "Hair-dryer",
+                "AC",
+              ],
+              "title": "TITLE - 3",
+            },
+            Object {
+              "city": "Amsterdam",
+              "cityCoordinates": Array [
+                52.38333,
+                4.9,
+              ],
+              "coordinates": Array [
+                52.3909553943515,
+                4.85309666406196,
+              ],
+              "description": "The delusion emphasizes intelligent common sense, although the opposite is accepted in the official language.",
+              "detailsMapZoom": 12,
+              "features": Object {
+                "adults": 3,
+                "badrooms": 6,
+                "type": "house",
+              },
+              "id": 4,
+              "isFavorite": true,
+              "isPremium": true,
+              "mapZoom": 10,
+              "owner": Object {
+                "id": 4,
+                "name": "Agent 007",
+                "picture": "img/avatar-angelina.jpg",
+                "super": true,
+              },
+              "pictures": Array [
+                "img/apartment-small-03.jpg",
+                "img/apartment-small-04.jpg",
+                "img/room-small.jpg",
+                "img/studio-photos.jpg",
+              ],
+              "previewPictures": "img/apartment-small-01.jpg",
+              "price": 400,
+              "rating": 2.1,
+              "things": Array [
+                "Wifi",
+                "Heating",
+                "Kitchen",
+                "Cable TV",
+                "Own bathroom",
+                "Hair-dryer",
+                "AC",
+              ],
+              "title": "TITLE - 4",
+            },
+          ]
+        }
+      />
+    </section>
+    <div
+      className="container"
+    >
+      <section
+        className="near-places places"
+      >
+        <h2
+          className="near-places__title"
+        >
+          Other places in the neighbourhood
+        </h2>
+        <OfferList
+          classCard="near-places__card"
+          classImageWrapper="near-places__image-wrapper"
+          classList="near-places__list"
+          offers={
+            Array [
+              Object {
+                "city": "Amsterdam",
+                "cityCoordinates": Array [
+                  52.38333,
+                  4.9,
+                ],
+                "coordinates": Array [
+                  52.3909553943508,
+                  4.85309666406198,
+                ],
+                "description": "The delusion emphasizes intelligent common sense, although the opposite is accepted in the official language.",
+                "detailsMapZoom": 12,
+                "features": Object {
+                  "adults": 2,
+                  "badrooms": 1,
+                  "type": "hotel",
+                },
+                "id": 0,
+                "isFavorite": false,
+                "isPremium": false,
+                "mapZoom": 10,
+                "owner": Object {
+                  "id": 0,
+                  "name": "Spider Man",
+                  "picture": "img/avatar-angelina.jpg",
+                  "super": true,
+                },
+                "pictures": Array [
+                  "img/apartment-small-03.jpg",
+                  "img/apartment-small-04.jpg",
+                  "img/room-small.jpg",
+                  "img/studio-photos.jpg",
+                ],
+                "previewPictures": "img/apartment-small-01.jpg",
+                "price": 100,
+                "rating": 3.4,
+                "things": Array [
+                  "Wifi",
+                  "Heating",
+                  "Kitchen",
+                  "Cable TV",
+                  "Own bathroom",
+                  "Hair-dryer",
+                  "AC",
+                ],
+                "title": "TITLE",
+              },
+              Object {
+                "city": "Amsterdam",
+                "cityCoordinates": Array [
+                  52.38333,
+                  4.9,
+                ],
+                "coordinates": Array [
+                  52.3909553943508,
+                  4.8530966640619,
+                ],
+                "description": "The delusion emphasizes intelligent common sense, although the opposite is accepted in the official language.",
+                "detailsMapZoom": 12,
+                "features": Object {
+                  "adults": 4,
+                  "badrooms": 2,
+                  "type": "hotel",
+                },
+                "id": 2,
+                "isFavorite": true,
+                "isPremium": false,
+                "mapZoom": 10,
+                "owner": Object {
+                  "id": 1,
+                  "name": "Iron Man",
+                  "picture": "img/avatar-angelina.jpg",
+                  "super": false,
+                },
+                "pictures": Array [
+                  "img/apartment-small-03.jpg",
+                  "img/apartment-small-04.jpg",
+                  "img/room-small.jpg",
+                  "img/studio-photos.jpg",
+                ],
+                "previewPictures": "img/apartment-small-01.jpg",
+                "price": 200,
+                "rating": 4.5,
+                "things": Array [
+                  "Wifi",
+                  "Heating",
+                  "Kitchen",
+                  "Cable TV",
+                  "Own bathroom",
+                  "Hair-dryer",
+                  "AC",
+                ],
+                "title": "TITLE - 2",
+              },
+              Object {
+                "city": "Amsterdam",
+                "cityCoordinates": Array [
+                  52.38333,
+                  4.9,
+                ],
+                "coordinates": Array [
+                  52.390955394351,
+                  4.85309666406201,
+                ],
+                "description": "The delusion emphasizes intelligent common sense, although the opposite is accepted in the official language.",
+                "detailsMapZoom": 12,
+                "features": Object {
+                  "adults": 6,
+                  "badrooms": 1,
+                  "type": "private room",
+                },
+                "id": 3,
+                "isFavorite": false,
+                "isPremium": true,
+                "mapZoom": 10,
+                "owner": Object {
+                  "id": 3,
+                  "name": "Billi Willi",
+                  "picture": "img/avatar-angelina.jpg",
+                  "super": true,
+                },
+                "pictures": Array [
+                  "img/apartment-small-03.jpg",
+                  "img/apartment-small-04.jpg",
+                  "img/room-small.jpg",
+                  "img/studio-photos.jpg",
+                ],
+                "previewPictures": "img/apartment-small-01.jpg",
+                "price": 300,
+                "rating": 4.9,
+                "things": Array [
+                  "Wifi",
+                  "Heating",
+                  "Kitchen",
+                  "Cable TV",
+                  "Own bathroom",
+                  "Hair-dryer",
+                  "AC",
+                ],
+                "title": "TITLE - 3",
+              },
+              Object {
+                "city": "Amsterdam",
+                "cityCoordinates": Array [
+                  52.38333,
+                  4.9,
+                ],
+                "coordinates": Array [
+                  52.3909553943515,
+                  4.85309666406196,
+                ],
+                "description": "The delusion emphasizes intelligent common sense, although the opposite is accepted in the official language.",
+                "detailsMapZoom": 12,
+                "features": Object {
+                  "adults": 3,
+                  "badrooms": 6,
+                  "type": "house",
+                },
+                "id": 4,
+                "isFavorite": true,
+                "isPremium": true,
+                "mapZoom": 10,
+                "owner": Object {
+                  "id": 4,
+                  "name": "Agent 007",
+                  "picture": "img/avatar-angelina.jpg",
+                  "super": true,
+                },
+                "pictures": Array [
+                  "img/apartment-small-03.jpg",
+                  "img/apartment-small-04.jpg",
+                  "img/room-small.jpg",
+                  "img/studio-photos.jpg",
+                ],
+                "previewPictures": "img/apartment-small-01.jpg",
+                "price": 400,
+                "rating": 2.1,
+                "things": Array [
+                  "Wifi",
+                  "Heating",
+                  "Kitchen",
+                  "Cable TV",
+                  "Own bathroom",
+                  "Hair-dryer",
+                  "AC",
+                ],
+                "title": "TITLE - 4",
+              },
+            ]
+          }
+        />
+      </section>
+    </div>
+  </main>
+</div>
+`;
+
+exports[`OfferScreen render OfferScreen without authorization 1`] = `
+<div
+  className="page"
+>
+  <Header />
+  <main
+    className="page__main page__main--property"
+  >
+    <section
+      className="property"
+    >
+      <div
+        className="property__gallery-container container"
+      >
+        <div
+          className="property__gallery"
+        >
+          <div
+            className="property__image-wrapper"
+          >
+            <img
+              alt="Place image"
+              className="property__image"
+              src="img/apartment-small-03.jpg"
+            />
+          </div>
+          <div
+            className="property__image-wrapper"
+          >
+            <img
+              alt="Place image"
+              className="property__image"
+              src="img/apartment-small-04.jpg"
+            />
+          </div>
+          <div
+            className="property__image-wrapper"
+          >
+            <img
+              alt="Place image"
+              className="property__image"
+              src="img/room-small.jpg"
+            />
+          </div>
+          <div
+            className="property__image-wrapper"
+          >
+            <img
+              alt="Place image"
+              className="property__image"
+              src="img/studio-photos.jpg"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="property__container container"
+      >
+        <div
+          className="property__wrapper"
+        >
+          
+          <div
+            className="property__name-wrapper"
+          >
+            <h1
+              className="property__name"
+            >
+              TITLE
+            </h1>
+            <FavoriteButton
+              classCard="property"
+              offer={
+                Object {
+                  "city": "Amsterdam",
+                  "cityCoordinates": Array [
+                    52.38333,
+                    4.9,
+                  ],
+                  "coordinates": Array [
+                    52.3909553943508,
+                    4.85309666406198,
+                  ],
+                  "description": "The delusion emphasizes intelligent common sense, although the opposite is accepted in the official language.",
+                  "detailsMapZoom": 12,
+                  "features": Object {
+                    "adults": 2,
+                    "badrooms": 1,
+                    "type": "hotel",
+                  },
+                  "id": 0,
+                  "isFavorite": false,
+                  "isPremium": false,
+                  "mapZoom": 10,
+                  "owner": Object {
+                    "id": 0,
+                    "name": "Spider Man",
+                    "picture": "img/avatar-angelina.jpg",
+                    "super": true,
+                  },
+                  "pictures": Array [
+                    "img/apartment-small-03.jpg",
+                    "img/apartment-small-04.jpg",
+                    "img/room-small.jpg",
+                    "img/studio-photos.jpg",
+                  ],
+                  "previewPictures": "img/apartment-small-01.jpg",
+                  "price": 100,
+                  "rating": 3.4,
+                  "things": Array [
+                    "Wifi",
+                    "Heating",
+                    "Kitchen",
+                    "Cable TV",
+                    "Own bathroom",
+                    "Hair-dryer",
+                    "AC",
+                  ],
+                  "title": "TITLE",
+                }
+              }
+            />
+          </div>
+          <div
+            className="property__rating rating"
+          >
+            <div
+              className="property__stars rating__stars"
+            >
+              <span
+                style={
+                  Object {
+                    "width": "60%",
+                  }
+                }
+              />
+              <span
+                className="visually-hidden"
+              >
+                Rating
+              </span>
+            </div>
+            <span
+              className="property__rating-value rating__value"
+            >
+              3.4
+            </span>
+          </div>
+          <ul
+            className="property__features"
+          >
+            <li
+              className="property__feature property__feature--entire"
+            >
+              hotel
+            </li>
+            <li
+              className="property__feature property__feature--bedrooms"
+            >
+              1
+               Bedrooms
+            </li>
+            <li
+              className="property__feature property__feature--adults"
+            >
+              Max 
+              2
+               adults
+            </li>
+          </ul>
+          <div
+            className="property__price"
+          >
+            <b
+              className="property__price-value"
+            >
+              €
+              100
+            </b>
+            <span
+              className="property__price-text"
+            >
+               night
+            </span>
+          </div>
+          <div
+            className="property__inside"
+          >
+            <h2
+              className="property__inside-title"
+            >
+              What's inside
+            </h2>
+            <ul
+              className="property__inside-list"
+            >
+              <li
+                className="property__inside-item"
+              >
+                Wifi
+              </li>
+              <li
+                className="property__inside-item"
+              >
+                Heating
+              </li>
+              <li
+                className="property__inside-item"
+              >
+                Kitchen
+              </li>
+              <li
+                className="property__inside-item"
+              >
+                Cable TV
+              </li>
+              <li
+                className="property__inside-item"
+              >
+                Own bathroom
+              </li>
+              <li
+                className="property__inside-item"
+              >
+                Hair-dryer
+              </li>
+              <li
+                className="property__inside-item"
+              >
+                AC
+              </li>
+            </ul>
+          </div>
+          <div
+            className="property__host"
+          >
+            <h2
+              className="property__host-title"
+            >
+              Meet the host
+            </h2>
+            <div
+              className="property__host-user user"
+            >
+              <div
+                className="property__avatar-wrapper property__avatar-wrapper--pro user__avatar-wrapper"
+              >
+                <img
+                  alt="Host avatar"
+                  className="property__avatar user__avatar"
+                  height="74"
+                  src="img/avatar-angelina.jpg"
+                  width="74"
+                />
+              </div>
+              <span
+                className="property__user-name"
+              >
+                Spider Man
+              </span>
+            </div>
+            <div
+              className="property__description"
+            >
+              <p
+                className="property__text"
+              >
+                The delusion emphasizes intelligent common sense, although the opposite is accepted in the official language.
+              </p>
+              <p
+                className="property__text"
+              >
+                The delusion emphasizes intelligent common sense, although the opposite is accepted in the official language.
+              </p>
+            </div>
+          </div>
+          <section
+            className="property__reviews reviews"
+          >
+            <h2
+              className="reviews__title"
+            >
+              Reviews · 
+              <span
+                className="reviews__amount"
+              >
+                2
+              </span>
+            </h2>
+            <ReviewList
+              reviews={
+                Array [
+                  Object {
+                    "date": "2020-05-08T14:13:56.569Z",
+                    "id": 1,
+                    "name": "Spider Man",
+                    "picture": "img/avatar-max.jpg",
+                    "rating": 2,
+                    "review": "She carefully took a crumpled, half-torn ten-dollar bill from her purse and handed it to him. He shoved a white",
+                    "super": true,
+                  },
+                  Object {
+                    "date": "2020-06-08T14:30:56.569Z",
+                    "id": 2,
+                    "name": "Aqua Man",
+                    "picture": "img/avatar-max.jpg",
+                    "rating": 5,
+                    "review": "Be Happy! too! She carefully took a crumpled, half-torn ten-dollar bill from her purse and handed it to him. He shoved a white",
+                    "super": true,
+                  },
+                ]
+              }
+            />
+            
+          </section>
+        </div>
+      </div>
+      <Map
+        cityCoordinates={
+          Array [
+            52.38333,
+            4.9,
+          ]
+        }
+        classMap="property__map"
+        mainOffer={
+          Object {
+            "city": "Amsterdam",
+            "cityCoordinates": Array [
+              52.38333,
+              4.9,
+            ],
+            "coordinates": Array [
+              52.3909553943508,
+              4.85309666406198,
+            ],
+            "description": "The delusion emphasizes intelligent common sense, although the opposite is accepted in the official language.",
+            "detailsMapZoom": 12,
+            "features": Object {
+              "adults": 2,
+              "badrooms": 1,
+              "type": "hotel",
+            },
+            "id": 0,
+            "isFavorite": false,
+            "isPremium": false,
+            "mapZoom": 10,
+            "owner": Object {
+              "id": 0,
+              "name": "Spider Man",
+              "picture": "img/avatar-angelina.jpg",
+              "super": true,
+            },
+            "pictures": Array [
+              "img/apartment-small-03.jpg",
+              "img/apartment-small-04.jpg",
+              "img/room-small.jpg",
+              "img/studio-photos.jpg",
+            ],
+            "previewPictures": "img/apartment-small-01.jpg",
+            "price": 100,
+            "rating": 3.4,
+            "things": Array [
+              "Wifi",
+              "Heating",
+              "Kitchen",
+              "Cable TV",
+              "Own bathroom",
+              "Hair-dryer",
+              "AC",
+            ],
+            "title": "TITLE",
+          }
+        }
+        mapZoom={10}
+        offers={
+          Array [
+            Object {
+              "city": "Amsterdam",
+              "cityCoordinates": Array [
+                52.38333,
+                4.9,
+              ],
+              "coordinates": Array [
+                52.3909553943508,
+                4.85309666406198,
+              ],
+              "description": "The delusion emphasizes intelligent common sense, although the opposite is accepted in the official language.",
+              "detailsMapZoom": 12,
+              "features": Object {
+                "adults": 2,
+                "badrooms": 1,
+                "type": "hotel",
+              },
+              "id": 0,
+              "isFavorite": false,
+              "isPremium": false,
+              "mapZoom": 10,
+              "owner": Object {
+                "id": 0,
+                "name": "Spider Man",
+                "picture": "img/avatar-angelina.jpg",
+                "super": true,
+              },
+              "pictures": Array [
+                "img/apartment-small-03.jpg",
+                "img/apartment-small-04.jpg",
+                "img/room-small.jpg",
+                "img/studio-photos.jpg",
+              ],
+              "previewPictures": "img/apartment-small-01.jpg",
+              "price": 100,
+              "rating": 3.4,
+              "things": Array [
+                "Wifi",
+                "Heating",
+                "Kitchen",
+                "Cable TV",
+                "Own bathroom",
+                "Hair-dryer",
+                "AC",
+              ],
+              "title": "TITLE",
+            },
+            Object {
+              "city": "Amsterdam",
+              "cityCoordinates": Array [
+                52.38333,
+                4.9,
+              ],
+              "coordinates": Array [
+                52.3909553943508,
+                4.8530966640619,
+              ],
+              "description": "The delusion emphasizes intelligent common sense, although the opposite is accepted in the official language.",
+              "detailsMapZoom": 12,
+              "features": Object {
+                "adults": 4,
+                "badrooms": 2,
+                "type": "hotel",
+              },
+              "id": 2,
+              "isFavorite": true,
+              "isPremium": false,
+              "mapZoom": 10,
+              "owner": Object {
+                "id": 1,
+                "name": "Iron Man",
+                "picture": "img/avatar-angelina.jpg",
+                "super": false,
+              },
+              "pictures": Array [
+                "img/apartment-small-03.jpg",
+                "img/apartment-small-04.jpg",
+                "img/room-small.jpg",
+                "img/studio-photos.jpg",
+              ],
+              "previewPictures": "img/apartment-small-01.jpg",
+              "price": 200,
+              "rating": 4.5,
+              "things": Array [
+                "Wifi",
+                "Heating",
+                "Kitchen",
+                "Cable TV",
+                "Own bathroom",
+                "Hair-dryer",
+                "AC",
+              ],
+              "title": "TITLE - 2",
+            },
+            Object {
+              "city": "Amsterdam",
+              "cityCoordinates": Array [
+                52.38333,
+                4.9,
+              ],
+              "coordinates": Array [
+                52.390955394351,
+                4.85309666406201,
+              ],
+              "description": "The delusion emphasizes intelligent common sense, although the opposite is accepted in the official language.",
+              "detailsMapZoom": 12,
+              "features": Object {
+                "adults": 6,
+                "badrooms": 1,
+                "type": "private room",
+              },
+              "id": 3,
+              "isFavorite": false,
+              "isPremium": true,
+              "mapZoom": 10,
+              "owner": Object {
+                "id": 3,
+                "name": "Billi Willi",
+                "picture": "img/avatar-angelina.jpg",
+                "super": true,
+              },
+              "pictures": Array [
+                "img/apartment-small-03.jpg",
+                "img/apartment-small-04.jpg",
+                "img/room-small.jpg",
+                "img/studio-photos.jpg",
+              ],
+              "previewPictures": "img/apartment-small-01.jpg",
+              "price": 300,
+              "rating": 4.9,
+              "things": Array [
+                "Wifi",
+                "Heating",
+                "Kitchen",
+                "Cable TV",
+                "Own bathroom",
+                "Hair-dryer",
+                "AC",
+              ],
+              "title": "TITLE - 3",
+            },
+            Object {
+              "city": "Amsterdam",
+              "cityCoordinates": Array [
+                52.38333,
+                4.9,
+              ],
+              "coordinates": Array [
+                52.3909553943515,
+                4.85309666406196,
+              ],
+              "description": "The delusion emphasizes intelligent common sense, although the opposite is accepted in the official language.",
+              "detailsMapZoom": 12,
+              "features": Object {
+                "adults": 3,
+                "badrooms": 6,
+                "type": "house",
+              },
+              "id": 4,
+              "isFavorite": true,
+              "isPremium": true,
+              "mapZoom": 10,
+              "owner": Object {
+                "id": 4,
+                "name": "Agent 007",
+                "picture": "img/avatar-angelina.jpg",
+                "super": true,
+              },
+              "pictures": Array [
+                "img/apartment-small-03.jpg",
+                "img/apartment-small-04.jpg",
+                "img/room-small.jpg",
+                "img/studio-photos.jpg",
+              ],
+              "previewPictures": "img/apartment-small-01.jpg",
+              "price": 400,
+              "rating": 2.1,
+              "things": Array [
+                "Wifi",
+                "Heating",
+                "Kitchen",
+                "Cable TV",
+                "Own bathroom",
+                "Hair-dryer",
+                "AC",
+              ],
+              "title": "TITLE - 4",
+            },
+          ]
+        }
+      />
+    </section>
+    <div
+      className="container"
+    >
+      <section
+        className="near-places places"
+      >
+        <h2
+          className="near-places__title"
+        >
+          Other places in the neighbourhood
+        </h2>
+        <OfferList
+          classCard="near-places__card"
+          classImageWrapper="near-places__image-wrapper"
+          classList="near-places__list"
+          offers={
+            Array [
+              Object {
+                "city": "Amsterdam",
+                "cityCoordinates": Array [
+                  52.38333,
+                  4.9,
+                ],
+                "coordinates": Array [
+                  52.3909553943508,
+                  4.85309666406198,
+                ],
+                "description": "The delusion emphasizes intelligent common sense, although the opposite is accepted in the official language.",
+                "detailsMapZoom": 12,
+                "features": Object {
+                  "adults": 2,
+                  "badrooms": 1,
+                  "type": "hotel",
+                },
+                "id": 0,
+                "isFavorite": false,
+                "isPremium": false,
+                "mapZoom": 10,
+                "owner": Object {
+                  "id": 0,
+                  "name": "Spider Man",
+                  "picture": "img/avatar-angelina.jpg",
+                  "super": true,
+                },
+                "pictures": Array [
+                  "img/apartment-small-03.jpg",
+                  "img/apartment-small-04.jpg",
+                  "img/room-small.jpg",
+                  "img/studio-photos.jpg",
+                ],
+                "previewPictures": "img/apartment-small-01.jpg",
+                "price": 100,
+                "rating": 3.4,
+                "things": Array [
+                  "Wifi",
+                  "Heating",
+                  "Kitchen",
+                  "Cable TV",
+                  "Own bathroom",
+                  "Hair-dryer",
+                  "AC",
+                ],
+                "title": "TITLE",
+              },
+              Object {
+                "city": "Amsterdam",
+                "cityCoordinates": Array [
+                  52.38333,
+                  4.9,
+                ],
+                "coordinates": Array [
+                  52.3909553943508,
+                  4.8530966640619,
+                ],
+                "description": "The delusion emphasizes intelligent common sense, although the opposite is accepted in the official language.",
+                "detailsMapZoom": 12,
+                "features": Object {
+                  "adults": 4,
+                  "badrooms": 2,
+                  "type": "hotel",
+                },
+                "id": 2,
+                "isFavorite": true,
+                "isPremium": false,
+                "mapZoom": 10,
+                "owner": Object {
+                  "id": 1,
+                  "name": "Iron Man",
+                  "picture": "img/avatar-angelina.jpg",
+                  "super": false,
+                },
+                "pictures": Array [
+                  "img/apartment-small-03.jpg",
+                  "img/apartment-small-04.jpg",
+                  "img/room-small.jpg",
+                  "img/studio-photos.jpg",
+                ],
+                "previewPictures": "img/apartment-small-01.jpg",
+                "price": 200,
+                "rating": 4.5,
+                "things": Array [
+                  "Wifi",
+                  "Heating",
+                  "Kitchen",
+                  "Cable TV",
+                  "Own bathroom",
+                  "Hair-dryer",
+                  "AC",
+                ],
+                "title": "TITLE - 2",
+              },
+              Object {
+                "city": "Amsterdam",
+                "cityCoordinates": Array [
+                  52.38333,
+                  4.9,
+                ],
+                "coordinates": Array [
+                  52.390955394351,
+                  4.85309666406201,
+                ],
+                "description": "The delusion emphasizes intelligent common sense, although the opposite is accepted in the official language.",
+                "detailsMapZoom": 12,
+                "features": Object {
+                  "adults": 6,
+                  "badrooms": 1,
+                  "type": "private room",
+                },
+                "id": 3,
+                "isFavorite": false,
+                "isPremium": true,
+                "mapZoom": 10,
+                "owner": Object {
+                  "id": 3,
+                  "name": "Billi Willi",
+                  "picture": "img/avatar-angelina.jpg",
+                  "super": true,
+                },
+                "pictures": Array [
+                  "img/apartment-small-03.jpg",
+                  "img/apartment-small-04.jpg",
+                  "img/room-small.jpg",
+                  "img/studio-photos.jpg",
+                ],
+                "previewPictures": "img/apartment-small-01.jpg",
+                "price": 300,
+                "rating": 4.9,
+                "things": Array [
+                  "Wifi",
+                  "Heating",
+                  "Kitchen",
+                  "Cable TV",
+                  "Own bathroom",
+                  "Hair-dryer",
+                  "AC",
+                ],
+                "title": "TITLE - 3",
+              },
+              Object {
+                "city": "Amsterdam",
+                "cityCoordinates": Array [
+                  52.38333,
+                  4.9,
+                ],
+                "coordinates": Array [
+                  52.3909553943515,
+                  4.85309666406196,
+                ],
+                "description": "The delusion emphasizes intelligent common sense, although the opposite is accepted in the official language.",
+                "detailsMapZoom": 12,
+                "features": Object {
+                  "adults": 3,
+                  "badrooms": 6,
+                  "type": "house",
+                },
+                "id": 4,
+                "isFavorite": true,
+                "isPremium": true,
+                "mapZoom": 10,
+                "owner": Object {
+                  "id": 4,
+                  "name": "Agent 007",
+                  "picture": "img/avatar-angelina.jpg",
+                  "super": true,
+                },
+                "pictures": Array [
+                  "img/apartment-small-03.jpg",
+                  "img/apartment-small-04.jpg",
+                  "img/room-small.jpg",
+                  "img/studio-photos.jpg",
+                ],
+                "previewPictures": "img/apartment-small-01.jpg",
+                "price": 400,
+                "rating": 2.1,
+                "things": Array [
+                  "Wifi",
+                  "Heating",
+                  "Kitchen",
+                  "Cable TV",
+                  "Own bathroom",
+                  "Hair-dryer",
+                  "AC",
+                ],
+                "title": "TITLE - 4",
+              },
+            ]
+          }
+        />
+      </section>
+    </div>
+  </main>
+</div>
+`;

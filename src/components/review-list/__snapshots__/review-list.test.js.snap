@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReviewList render 1`] = `
+<ul
+  className="reviews__list"
+>
+  <Review
+    review={
+      Object {
+        "date": "2020-05-08T14:13:56.569Z",
+        "id": 1,
+        "name": "Spider Man",
+        "picture": "img/avatar-max.jpg",
+        "rating": 2,
+        "review": "She carefully took a crumpled, half-torn ten-dollar bill from her purse and handed it to him. He shoved a white",
+        "super": true,
+      }
+    }
+  />
+  <Review
+    review={
+      Object {
+        "date": "2020-06-08T14:30:56.569Z",
+        "id": 2,
+        "name": "Aqua Man",
+        "picture": "img/avatar-max.jpg",
+        "rating": 5,
+        "review": "Be Happy! too! She carefully took a crumpled, half-torn ten-dollar bill from her purse and handed it to him. He shoved a white",
+        "super": true,
+      }
+    }
+  />
+</ul>
+`;

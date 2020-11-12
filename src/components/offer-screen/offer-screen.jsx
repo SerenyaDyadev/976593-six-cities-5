@@ -2,7 +2,7 @@ import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
 import {connect} from 'react-redux';
 import Header from "../header/header";
-import FavoriteButton from "../favorite-button/favorute-button";
+import FavoriteButton from "../favorite-button/favorite-button";
 import ReviewList from "../review-list/review-list";
 import ReviewForm from "../review-form/review-form";
 import {getCityOffers} from '../../utils';
@@ -135,7 +135,7 @@ class OfferScreen extends PureComponent {
               offers={nearbyOffers}
               classMap={`property__map`}
               cityCoordinates={offer.cityCoordinates}
-              cityZoom={offer.сityZoom}
+              mapZoom={offer.mapZoom}
             />
 
           </section>

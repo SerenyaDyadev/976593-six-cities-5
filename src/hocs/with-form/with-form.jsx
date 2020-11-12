@@ -6,7 +6,7 @@ const withForm = (Component) => {
       super(props);
 
       this.state = {
-        rating: `0`,
+        rating: ``,
         review: ``
       };
 
@@ -29,7 +29,7 @@ const withForm = (Component) => {
 
     _resetState() {
       this.setState({
-        rating: `0`,
+        rating: ``,
         review: ``
       });
     }
