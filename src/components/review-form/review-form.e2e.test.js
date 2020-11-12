@@ -1,5 +1,5 @@
 import React from 'react';
-import {configure, mount} from 'enzyme';
+import {configure, shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import {ReviewForm} from './review-form';
 
@@ -13,7 +13,7 @@ configure({adapter: new Adapter()});
 
 it(`ReviewForm testing`, () => {
   const onReviewSubmit = jest.fn();
-  const wrapper = mount(
+  const wrapper = shallow(
       <ReviewForm
         rating={`3`}
         review={`A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`}
