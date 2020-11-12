@@ -138,6 +138,7 @@ exports[`ReviewForm render ReviewForm review field is long 1`] = `
     name="review"
     onChange={[Function]}
     placeholder="Tell how was your stay, what you like and what can be improved"
+    value="She carefully took a crumpled, half-torn ten-dollar bill from her purse and handed it to him. He shoved a white. She carefully took a crumpled, half-torn ten-dollar bill from her purse and handed it to him. He shoved a white. She carefully took a crumpled, half-torn ten-dollar bill from her purse and handed it to him. He shoved a white"
   />
   <div
     className="reviews__button-wrapper"
@@ -308,6 +309,7 @@ exports[`ReviewForm render ReviewForm review field is short 1`] = `
     name="review"
     onChange={[Function]}
     placeholder="Tell how was your stay, what you like and what can be improved"
+    value="She carefully took a crumpled"
   />
   <div
     className="reviews__button-wrapper"
@@ -478,6 +480,7 @@ exports[`ReviewForm render ReviewForm with fill fields 1`] = `
     name="review"
     onChange={[Function]}
     placeholder="Tell how was your stay, what you like and what can be improved"
+    value="She carefully took a crumpled, half-torn ten-dollar bill from her purse and handed it to him. He shoved a white"
   />
   <div
     className="reviews__button-wrapper"
@@ -648,6 +651,7 @@ exports[`ReviewForm render ReviewForm without rating field 1`] = `
     name="review"
     onChange={[Function]}
     placeholder="Tell how was your stay, what you like and what can be improved"
+    value="She carefully took a crumpled, half-torn ten-dollar bill from her purse and handed it to him. He shoved a white"
   />
   <div
     className="reviews__button-wrapper"
@@ -818,6 +822,7 @@ exports[`ReviewForm render ReviewForm without review field 1`] = `
     name="review"
     onChange={[Function]}
     placeholder="Tell how was your stay, what you like and what can be improved"
+    value=""
   />
   <div
     className="reviews__button-wrapper"
