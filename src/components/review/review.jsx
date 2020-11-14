@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {dateFormat} from "../../utils";
-import {TO_PERCENT} from "../../const";
+import {dateFormat} from "../../utils/utils";
+import {TO_PERCENT} from "../../utils/const";
 
 
 const Review = (props) => {

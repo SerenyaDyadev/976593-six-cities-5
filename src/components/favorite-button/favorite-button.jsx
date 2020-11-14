@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import {connect} from 'react-redux';
 import {Link} from "react-router-dom";
-import {checkFavorite, getWidthIconFavorite, getHeightIconFavorite} from "../../utils";
+import {checkFavorite, getWidthIconFavorite, getHeightIconFavorite} from "../../utils/utils";
 import {changeFavorite} from "../../store/api-actions";
-import {AuthorizationStatus} from "../../const";
+import {AuthorizationStatus} from "../../utils/const";
 
 const FavoriteButton = (props) => {
   const {offer, classCard, authorizationStatus, changeFavoriteStatusAction} = props;

@@ -34,6 +34,6 @@ export const AuthorizationStatus = {
 };
 
 export const ReviewLength = {
-  MIN: 10,
+  MIN: 50,
   MAX: 300
 };

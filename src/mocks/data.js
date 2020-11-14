@@ -1,4 +1,4 @@
-import {adaptReviewToApp, adaptOfferToApp} from "../utils";
+import {adaptReviewToApp, adaptOfferToApp} from "../utils/const";
 
 export const cities = [`Paris`, `Cologne`, `Brussels`, `Amsterdam`, `Hamburg`, `Dusseldorf`];
 

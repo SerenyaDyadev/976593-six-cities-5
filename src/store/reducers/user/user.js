@@ -1,4 +1,4 @@
-import {AuthorizationStatus} from "../../../const";
+import {AuthorizationStatus} from "../../../utils/const";
 import {ActionType} from "../../action";
 
 const initialState = {

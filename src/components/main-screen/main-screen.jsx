@@ -4,7 +4,7 @@ import MainNoOffer from "../main-no-offer/main-no-offer";
 import MainWithOffer from "../main-with-offer/main-with-offer";
 import Header from "../header/header";
 import {connect} from 'react-redux';
-import {getCityOffers} from '../../utils';
+import {getCityOffers} from '../../utils/utils';
 
 const MainScreen = (props) => {
 

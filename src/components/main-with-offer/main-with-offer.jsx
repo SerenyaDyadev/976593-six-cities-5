@@ -6,7 +6,7 @@ import Map from "../map/map";
 import Sort from "../sort/sort";
 import {updateActiveOfferId, openSortList} from '../../store/action';
 import {connect} from 'react-redux';
-import {getSortedOffers} from "../../utils";
+import {getSortedOffers} from "../../utils/utils";
 
 
 const MainWithOffer = (props) => {

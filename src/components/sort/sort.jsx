@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import {updateSort} from '../../store/action';
 import {connect} from 'react-redux';
-import {SortType} from "../../const";
+import {SortType} from "../../utils/const";
 
 
 const Sort = (props) => {

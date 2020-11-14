@@ -4,7 +4,7 @@ import Header from "../header/header";
 import {connect} from "react-redux";
 import {login} from "../../store/api-actions";
 import {Redirect} from 'react-router-dom';
-import {AuthorizationStatus} from '../../const';
+import {AuthorizationStatus} from '../../utils/const';
 
 class AuthScreen extends PureComponent {
   constructor(props) {
