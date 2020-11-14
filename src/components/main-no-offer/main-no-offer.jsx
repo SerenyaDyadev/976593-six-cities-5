@@ -3,10 +3,8 @@ import PropTypes from "prop-types";
 import CityList from "../city-list/city-list";
 
 
-const MainNoOffer = (props) => {
-  const {cities, city} = props;
-
-  return (
+const MainNoOffer = ({cities, city}) => (
+  <>
     <main className="page__main page__main--index page__main--index-empty">
       <h1 className="visually-hidden">Cities</h1>
       <div className="tabs">
@@ -31,8 +29,8 @@ const MainNoOffer = (props) => {
         </div>
       </div>
     </main>
-  );
-};
+  </>
+);
 
 MainNoOffer.propTypes = {
   cities: PropTypes.array.isRequired,
