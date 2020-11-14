@@ -13,6 +13,7 @@ class Map extends PureComponent {
 
     const activeOffer = mainOffer ? mainOffer : hoverOffers[0];
 
+
     const icon = leaflet.icon({
       iconUrl: pins.icon,
       iconSize: [27, 39]

@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import {connect} from 'react-redux';
 import {Link} from "react-router-dom";
 import FavoriteButton from "../favorite-button/favorite-button";
-import {TO_PERCENT} from "../../utils/const";
+import {TO_PERCENT, AppRoute} from "../../utils/const";
+import {OfferPropTypes} from "../../utils/property-types";
 
 const OfferCard = (props) => {
 
@@ -22,9 +23,9 @@ const OfferCard = (props) => {
         </div> :
         ``}
       <div className={`${classImageWrapper} place-card__image-wrapper`}>
-        <a href="#">
+        <Link to={`${AppRoute.OFFER}${offer.id}`}>
           <img className="place-card__image" src={offer.previewPictures} width={widthImg} height={heightImg} alt="Place image" />
-        </a>
+        </Link>
       </div>
       <div className={`${classCard === `favorites__card` ? `favorites__card-info` : ``} place-card__info`}>
         <div className="place-card__price-wrapper">
@@ -46,7 +47,7 @@ const OfferCard = (props) => {
           </div>
         </div>
         <h2 className="place-card__name">
-          <Link to={`offer/${offer.id}`}>
+          <Link to={`${AppRoute.OFFER}${offer.id}`}>
             ${offer.title}
           </Link>
         </h2>
@@ -60,18 +61,7 @@ OfferCard.propTypes = {
   onHover: PropTypes.func,
   classCard: PropTypes.string.isRequired,
   classImageWrapper: PropTypes.string.isRequired,
-  offer: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    features: PropTypes.shape({
-      type: PropTypes.string.isRequired,
-    }).isRequired,
-    isPremium: PropTypes.bool.isRequired,
-    isFavorite: PropTypes.bool.isRequired,
-    price: PropTypes.number.isRequired,
-    rating: PropTypes.number.isRequired,
-    previewPictures: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-  }).isRequired
+  offer: OfferPropTypes
 };
 
 
