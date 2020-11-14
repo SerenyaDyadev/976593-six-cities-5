@@ -2,7 +2,7 @@ import React from "react";
 import {configure, shallow} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import {MainWithOffer} from "./main-with-offer";
-import {offers, cities} from "../../mocks/data";
+import {offers} from "../../mocks/data";
 
 configure({adapter: new Adapter()});
 
@@ -18,7 +18,6 @@ it(`Click by sorting element in MainWithOffer`, () => {
   const wrapper = shallow(
       <MainWithOffer
         city={`Amsterdam`}
-        cities={cities}
         offers={offers}
         currentSort={`Popular`}
         updateActiveOfferIdAction={noop}

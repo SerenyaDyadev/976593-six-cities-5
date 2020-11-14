@@ -1,7 +1,7 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import {MainScreen} from "./main-screen";
-import {offers, cities} from "../../mocks/data";
+import {offers} from "../../mocks/data";
 
 
 jest.mock(`../header/header`, () => `Header`);
@@ -14,7 +14,6 @@ describe(`MainScreen render`, () => {
       .create(
           <MainScreen
             city={`Amsterdam`}
-            cities={cities}
             offers={[]}
           />
       )
@@ -29,7 +28,6 @@ describe(`MainScreen render`, () => {
       .create(
           <MainScreen
             city={`Amsterdam`}
-            cities={cities}
             offers={offers}
           />
       )

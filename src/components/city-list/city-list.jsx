@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {changeCity} from '../../store/action';
-import {connect} from 'react-redux';
+import {changeCity} from "../../store/action";
+import {connect} from "react-redux";
 import City from "../city/city";
 
 const CityList = (props) => {
-  const {cities, currentCity, changeCityAction} = props;
+  const {currentCity, cities, changeCityAction} = props;
 
   const onCityClick = (evt) => {
     evt.preventDefault();

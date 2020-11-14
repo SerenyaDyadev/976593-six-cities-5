@@ -10,7 +10,7 @@ describe(`ReviewForm render`, () => {
       .create(
           <ReviewForm
             rating={`4`}
-            review={`She carefully took a crumpled, half-torn ten-dollar bill from her purse and handed it to him. He shoved a white`}
+            review={`She carefully took a crumpled, half-torn ten-dollar bill from her purse and handed it to him. He shovs odfosdof osd fodsed a white`}
             onReviewSubmit={noop}
             onTextFieldChange={noop}
             onRatingChange={noop}

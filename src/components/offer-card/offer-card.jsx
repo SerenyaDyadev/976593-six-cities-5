@@ -6,9 +6,7 @@ import FavoriteButton from "../favorite-button/favorite-button";
 import {TO_PERCENT, AppRoute} from "../../utils/const";
 import {OfferPropTypes} from "../../utils/property-types";
 
-const OfferCard = (props) => {
-
-  const {offer, classCard, classImageWrapper} = props;
+const OfferCard = ({offer, classCard, classImageWrapper}) => {
 
   const ratingOfferPercentege = Math.round(offer.rating) * TO_PERCENT;
   const widthImg = classCard !== `favorites__card` ? 260 : 150;
@@ -18,16 +16,27 @@ const OfferCard = (props) => {
   return (
     <article className={`place-card ${classCard}`} id={offer.id}>
       {offer.isPremium ?
-        <div className="place-card__mark">
-          <span>Premium</span>
+        <div
+          className="place-card__mark">
+          <span>
+            Premium
+          </span>
         </div> :
         ``}
       <div className={`${classImageWrapper} place-card__image-wrapper`}>
-        <Link to={`${AppRoute.OFFER}${offer.id}`}>
-          <img className="place-card__image" src={offer.previewPictures} width={widthImg} height={heightImg} alt="Place image" />
+        <Link
+          to={`${AppRoute.OFFER}${offer.id}`}>
+          <img
+            className="place-card__image"
+            src={offer.previewPictures}
+            width={widthImg}
+            height={heightImg}
+            alt="Place image"
+          />
         </Link>
       </div>
-      <div className={`${classCard === `favorites__card` ? `favorites__card-info` : ``} place-card__info`}>
+      <div
+        className={`${classCard === `favorites__card` ? `favorites__card-info` : ``} place-card__info`}>
         <div className="place-card__price-wrapper">
           <div className="place-card__price">
             <b className="place-card__price-value">&euro;{offer.price}</b>
@@ -47,11 +56,15 @@ const OfferCard = (props) => {
           </div>
         </div>
         <h2 className="place-card__name">
-          <Link to={`${AppRoute.OFFER}${offer.id}`}>
-            ${offer.title}
+          <Link
+            to={`${AppRoute.OFFER}${offer.id}`}>
+              ${offer.title}
           </Link>
         </h2>
-        <p className="place-card__type">{offer.features.type[0].toUpperCase() + offer.features.type.slice(1)}</p>
+        <p
+          className="place-card__type">
+          {offer.features.type[0].toUpperCase() + offer.features.type.slice(1)}
+        </p>
       </div>
     </article>
   );
