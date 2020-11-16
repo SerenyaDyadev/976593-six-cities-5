@@ -6,8 +6,7 @@ import {AuthorizationStatus} from "../../utils/const";
 import {AppRoute} from "../../utils/const";
 
 
-const PrivateRoute = (props) => {
-  const {render, path, exact, authorizationStatus} = props;
+const PrivateRoute = ({render, path, exact, authorizationStatus}) => {
 
   return (
     <Route
