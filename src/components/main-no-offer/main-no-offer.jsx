@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import CityList from "../city-list/city-list";
 
 
-const MainNoOffer = ({city}) => (
-  <>
+const MainNoOffer = ({city}) => {
+  return (
     <main className="page__main page__main--index page__main--index-empty">
       <h1 className="visually-hidden">Cities</h1>
       <div className="tabs">
@@ -28,8 +28,8 @@ const MainNoOffer = ({city}) => (
         </div>
       </div>
     </main>
-  </>
-);
+  );
+};
 
 MainNoOffer.propTypes = {
   city: PropTypes.string.isRequired,
