@@ -6,8 +6,7 @@ import {checkFavorite, getWidthIconFavorite, getHeightIconFavorite} from "../../
 import {changeFavorite} from "../../store/api-actions";
 import {AuthorizationStatus} from "../../utils/const";
 
-const FavoriteButton = (props) => {
-  const {offer, classCard, authorizationStatus, changeFavoriteStatusAction} = props;
+const FavoriteButton = ({offer, classCard, authorizationStatus, changeFavoriteStatusAction}) => {
 
   const onFavoriteButtonClick = () => {
 

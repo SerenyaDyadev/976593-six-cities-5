@@ -4,7 +4,7 @@ import Header from "../header/header";
 import {connect} from "react-redux";
 import {login} from "../../store/api-actions";
 import {Redirect} from 'react-router-dom';
-import {AuthorizationStatus} from '../../utils/const';
+import {AuthorizationStatus, AppRoute} from '../../utils/const';
 
 class AuthScreen extends PureComponent {
   constructor(props) {
@@ -31,7 +31,7 @@ class AuthScreen extends PureComponent {
     const {city, authorizationStatus} = this.props;
 
     if (authorizationStatus === AuthorizationStatus.AUTH) {
-      return <Redirect to={`/`} />;
+      return <Redirect to={AppRoute.ROOT} />;
     }
 
     return (
@@ -58,7 +58,7 @@ class AuthScreen extends PureComponent {
                     ref={this.loginRef}
                     className="login__input form__input"
                     type="email" name="email"
-                    placeholder="Email" required=""
+                    placeholder="Email" required
                   />
 
                 </div>
@@ -70,7 +70,7 @@ class AuthScreen extends PureComponent {
                     className="login__input form__input"
                     type="password" name="password"
                     placeholder="Password"
-                    required=""
+                    required
                   />
 
                 </div>
@@ -80,7 +80,7 @@ class AuthScreen extends PureComponent {
             </section>
             <section className="locations locations--login locations--current">
               <div className="locations__item">
-                <a className="locations__item-link" href="/" >
+                <a className="locations__item-link" href="#" >
                   <span>{city}</span>
                 </a>
               </div>

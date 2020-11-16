@@ -4,8 +4,7 @@ import {changeCity} from "../../store/action";
 import {connect} from "react-redux";
 import City from "../city/city";
 
-const CityList = (props) => {
-  const {currentCity, cities, changeCityAction} = props;
+const CityList = ({currentCity, cities, changeCityAction}) => {
 
   const onCityClick = (evt) => {
     evt.preventDefault();
