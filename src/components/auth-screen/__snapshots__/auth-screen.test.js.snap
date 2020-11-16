@@ -39,7 +39,7 @@ exports[`AuthScreen render AuthScreen without authorization 1`] = `
               className="login__input form__input"
               name="email"
               placeholder="Email"
-              required=""
+              required={true}
               type="email"
             />
           </div>
@@ -55,7 +55,7 @@ exports[`AuthScreen render AuthScreen without authorization 1`] = `
               className="login__input form__input"
               name="password"
               placeholder="Password"
-              required=""
+              required={true}
               type="password"
             />
           </div>
@@ -75,7 +75,7 @@ exports[`AuthScreen render AuthScreen without authorization 1`] = `
         >
           <a
             className="locations__item-link"
-            href="/"
+            href="#"
           >
             <span>
               Paris
