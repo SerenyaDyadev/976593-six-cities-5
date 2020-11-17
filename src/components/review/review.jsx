@@ -30,7 +30,7 @@ const Review = ({review}) => {
         </p>
         <time
           className="reviews__time"
-          dateTime="2019-04-24">
+          dateTime={review.date}>
           {dateFormat(review.date)}
         </time>
       </div>

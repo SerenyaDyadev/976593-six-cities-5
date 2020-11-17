@@ -28,7 +28,7 @@ const App = () => {
             );
           }}
         />
-        <Route exact path={`${AppRoute.OFFER}:id`}>
+        <Route exact path={AppRoute.OFFER_ID}>
           <OfferScreen />
         </Route>
       </Switch>
