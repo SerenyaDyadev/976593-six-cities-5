@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 import FavoriteList from "../favorite-list/favorite-list";
 import {fetchFavoriteOffersList} from "../../store/api-actions";
 import {connect} from 'react-redux';
-
+import {AppRoute} from '../../utils/const';
 
 class FavoritesScreen extends PureComponent {
   constructor(props) {
@@ -45,7 +45,7 @@ class FavoritesScreen extends PureComponent {
           />
         }
         <footer className="footer container">
-          <Link to="/login" className="footer__logo-link" href="/">
+          <Link to={AppRoute.LOGIN} className="footer__logo-link" href="#">
             <img className="footer__logo" src="img/logo.svg" alt="6 cities logo" width="64" height="33" />
           </Link>
         </footer>

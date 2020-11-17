@@ -333,7 +333,7 @@ exports[`ReviewForm render ReviewForm review field is short 1`] = `
     </p>
     <button
       className="reviews__submit form__submit button"
-      disabled={false}
+      disabled={true}
       type="submit"
     >
       Submit
@@ -480,7 +480,7 @@ exports[`ReviewForm render ReviewForm with fill fields 1`] = `
     name="review"
     onChange={[Function]}
     placeholder="Tell how was your stay, what you like and what can be improved"
-    value="She carefully took a crumpled, half-torn ten-dollar bill from her purse and handed it to him. He shoved a white"
+    value="She carefully took a crumpled, half-torn ten-dollar bill from her purse and handed it to him. He shovs odfosdof osd fodsed a white"
   />
   <div
     className="reviews__button-wrapper"

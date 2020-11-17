@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {dateFormat} from "../../utils";
-import {TO_PERCENT} from "../../const";
+import {dateFormat} from "../../utils/utils";
+import {TO_PERCENT} from "../../utils/const";
 
 
-const Review = (props) => {
-  const {review} = props;
+const Review = ({review}) => {
 
   const ratingUserPercent = Math.round(review.rating) * TO_PERCENT;
+
   return (
     <li className = "reviews__item" >
       <div className="reviews__user user">
@@ -28,7 +28,11 @@ const Review = (props) => {
         <p className="reviews__text">
           {review.review}
         </p>
-        <time className="reviews__time" dateTime="2019-04-24">{dateFormat(review.date)}</time>
+        <time
+          className="reviews__time"
+          dateTime="2019-04-24">
+          {dateFormat(review.date)}
+        </time>
       </div>
     </li>
   );

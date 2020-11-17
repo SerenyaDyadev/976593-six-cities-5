@@ -1,6 +1,6 @@
-import {extend} from "../../../utils";
+import {extend} from "../../../utils/utils";
 import {ActionType} from "../../action";
-import {CITIES} from "../../../const";
+import {CITIES} from "../../../utils/const";
 
 const initialState = {
   cities: Object.values(CITIES),

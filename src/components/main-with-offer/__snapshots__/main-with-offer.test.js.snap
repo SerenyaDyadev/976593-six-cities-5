@@ -16,16 +16,6 @@ exports[`MainWithOffer render 1`] = `
       className="locations container"
     >
       <CityList
-        cities={
-          Array [
-            "Paris",
-            "Cologne",
-            "Brussels",
-            "Amsterdam",
-            "Hamburg",
-            "Dusseldorf",
-          ]
-        }
         currentCity="Amsterdam"
       />
     </section>

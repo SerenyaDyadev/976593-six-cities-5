@@ -1,6 +1,6 @@
-import {extend} from "../../../utils";
+import {extend} from "../../../utils/utils";
 import {ActionType} from "../../action";
-import {SortType} from "../../../const";
+import {SortType} from "../../../utils/const";
 
 const initialState = {
   currentSort: SortType.POPULAR,

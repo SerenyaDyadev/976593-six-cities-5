@@ -2,7 +2,7 @@ import React, {PureComponent, createRef} from "react";
 import PropTypes from "prop-types";
 import withForm from "../../hocs/with-form/with-form";
 import {connect} from "react-redux";
-import {ReviewLength} from "../../const";
+import {ReviewLength} from "../../utils/const";
 import {sendReview} from "../../store/api-actions";
 import {updateErrorStatus} from '../../store/action';
 

@@ -45,7 +45,7 @@ exports[`Header render Header with authorization 1`] = `
                 className="header__avatar-wrapper user__avatar-wrapper"
               />
               <span
-                className="header__user-name user__name"
+                className="header__login"
               >
                 test@mail.ru
               </span>

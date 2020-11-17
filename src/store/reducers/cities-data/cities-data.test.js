@@ -1,13 +1,12 @@
 import {citiesData} from "./cities-data";
 import {ActionType} from "../../action";
-import {CITIES} from "../../../const";
+import {cities} from "../../../mocks/data";
 
 describe(`Reducer citiesData work correctly`, () => {
-  const cities = Object.values(CITIES);
 
   const initialState = {
     cities,
-    city: CITIES.AMSTERDAM,
+    city: `Amsterdam`,
   };
 
   it(`Reducer citiesData work correctly`, () => {

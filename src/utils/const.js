@@ -13,7 +13,7 @@ export const AppRoute = {
   ROOT: `/`,
   LOGIN: `/login`,
   FAVORITES: `/favorites`,
-  OFFER: `/offer/:id`
+  OFFER: `/offer/`
 };
 
 export const SortType = {
@@ -34,6 +34,6 @@ export const AuthorizationStatus = {
 };
 
 export const ReviewLength = {
-  MIN: 10,
+  MIN: 50,
   MAX: 300
 };

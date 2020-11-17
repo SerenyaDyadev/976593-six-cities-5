@@ -5,11 +5,11 @@ import Header from "../header/header";
 import FavoriteButton from "../favorite-button/favorite-button";
 import ReviewList from "../review-list/review-list";
 import ReviewForm from "../review-form/review-form";
-import {getCityOffers} from '../../utils';
+import {getCityOffers} from '../../utils/utils';
 import OfferList from "../offer-list/offer-list";
 import Map from "../map/map";
 import {fetchNearbyOffersList, fetchReviewsList} from "../../store/api-actions";
-import {AuthorizationStatus, TO_PERCENT} from "../../const";
+import {AuthorizationStatus, TO_PERCENT} from "../../utils/const";
 
 class OfferScreen extends PureComponent {
   constructor(props) {

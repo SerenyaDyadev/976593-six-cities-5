@@ -1,6 +1,6 @@
 
-import {adaptOfferToApp, adaptReviewToApp} from "../utils";
-import {AuthorizationStatus} from "../const";
+import {adaptOfferToApp, adaptReviewToApp} from "../utils/common";
+import {AuthorizationStatus} from "../utils/const";
 import {
   getOffers,
   getReviews,

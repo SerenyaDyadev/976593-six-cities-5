@@ -2,7 +2,7 @@ import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
 import {connect} from 'react-redux';
 import leaflet from "leaflet";
-import {pins} from "../../const";
+import {pins} from "../../utils/const";
 
 class Map extends PureComponent {
   _dataMap() {
@@ -12,6 +12,7 @@ class Map extends PureComponent {
     const otherOffers = offers.slice().filter((item) => item.id !== +activeOfferId);
 
     const activeOffer = mainOffer ? mainOffer : hoverOffers[0];
+
 
     const icon = leaflet.icon({
       iconUrl: pins.icon,

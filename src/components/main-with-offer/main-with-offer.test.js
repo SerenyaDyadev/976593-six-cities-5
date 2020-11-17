@@ -1,7 +1,7 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import {MainWithOffer} from "./main-with-offer";
-import {offers, cities} from "../../mocks/data";
+import {offers} from "../../mocks/data";
 
 const noop = () => { };
 
@@ -15,7 +15,6 @@ it(`MainWithOffer render`, () => {
     .create(
         <MainWithOffer
           city={`Amsterdam`}
-          cities={cities}
           offers={offers}
           currentSort={`Popular`}
           updateActiveOfferIdAction={noop}

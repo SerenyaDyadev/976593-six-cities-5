@@ -3,9 +3,7 @@ import PropTypes from "prop-types";
 import CityList from "../city-list/city-list";
 
 
-const MainNoOffer = (props) => {
-  const {cities, city} = props;
-
+const MainNoOffer = ({city}) => {
   return (
     <main className="page__main page__main--index page__main--index-empty">
       <h1 className="visually-hidden">Cities</h1>
@@ -13,7 +11,6 @@ const MainNoOffer = (props) => {
         <section className="locations container">
 
           <CityList
-            cities={cities}
             currentCity={city}
           />
 
@@ -35,7 +32,6 @@ const MainNoOffer = (props) => {
 };
 
 MainNoOffer.propTypes = {
-  cities: PropTypes.array.isRequired,
   city: PropTypes.string.isRequired,
 };
 

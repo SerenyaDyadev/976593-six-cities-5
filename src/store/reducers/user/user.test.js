@@ -4,7 +4,7 @@ import {user} from "./user";
 import {ActionType} from "../../action";
 import {userData, authInfo} from "../../../mocks/data";
 import {login} from "../../api-actions";
-import {AuthorizationStatus} from "../../../const";
+import {AuthorizationStatus} from "../../../utils/const";
 
 const api = createAPI(() => {});
 

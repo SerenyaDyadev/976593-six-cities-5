@@ -6,7 +6,7 @@ import FavoritesScreen from "../favorites-screen/favorites-screen";
 import OfferScreen from "../offer-screen/offer-screen";
 import history from "../../browser-history";
 import PrivateRoute from "../private-route/private-route";
-import {AppRoute} from "../../const";
+import {AppRoute} from "../../utils/const";
 
 
 const App = () => {
@@ -28,7 +28,7 @@ const App = () => {
             );
           }}
         />
-        <Route exact path={AppRoute.OFFER}>
+        <Route exact path={`${AppRoute.OFFER}:id`}>
           <OfferScreen />
         </Route>
       </Switch>

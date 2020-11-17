@@ -6,12 +6,11 @@ import Map from "../map/map";
 import Sort from "../sort/sort";
 import {updateActiveOfferId, openSortList} from '../../store/action';
 import {connect} from 'react-redux';
-import {getSortedOffers} from "../../utils";
+import {getSortedOffers} from "../../utils/utils";
 
 
 const MainWithOffer = (props) => {
   const {
-    cities,
     city,
     offers,
     currentSort,
@@ -37,7 +36,6 @@ const MainWithOffer = (props) => {
         <section className="locations container">
 
           <CityList
-            cities={cities}
             currentCity={city}
           />
 
@@ -87,7 +85,6 @@ const MainWithOffer = (props) => {
 
 MainWithOffer.propTypes = {
   offers: PropTypes.array.isRequired,
-  cities: PropTypes.array.isRequired,
   city: PropTypes.string.isRequired,
   currentSort: PropTypes.string.isRequired,
   updateActiveOfferIdAction: PropTypes.func.isRequired,

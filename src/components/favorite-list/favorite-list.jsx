@@ -2,10 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import {Link} from "react-router-dom";
 import OfferList from "../offer-list/offer-list";
+import {AppRoute} from "../../utils/const";
+import {getCityOffers} from "../../utils/utils";
 
 
-const FavoriteList = (props) => {
-  const {offers} = props;
+const FavoriteList = ({offers}) => {
 
   const cities = [...new Set(offers.map((offer) => offer.city))];
 
@@ -20,14 +21,19 @@ const FavoriteList = (props) => {
               <li className="favorites__locations-items" key={`${city}-${i}`}>
                 <div className="favorites__locations locations locations--current">
                   <div className="locations__item">
-                    <Link to="/" className="locations__item-link" href="#">
-                      <span>{city}</span>
+                    <Link
+                      to={AppRoute.ROOT}
+                      className="locations__item-link"
+                      href="#">
+                      <span>
+                        {city}
+                      </span>
                     </Link>
                   </div>
                 </div>
 
                 <OfferList
-                  offers={offers.slice().filter((offer) => offer.city === city)}
+                  offers={getCityOffers(offers, city)}
                   classList={`favorites__places`}
                   classCard={`favorites__card`}
                   classImageWrapper={`favorites__image-wrapper`}

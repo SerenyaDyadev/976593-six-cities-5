@@ -6,16 +6,6 @@ exports[`MainScreen render MainScreen with offers 1`] = `
 >
   <Header />
   <MainWithOffer
-    cities={
-      Array [
-        "Paris",
-        "Cologne",
-        "Brussels",
-        "Amsterdam",
-        "Hamburg",
-        "Dusseldorf",
-      ]
-    }
     city="Amsterdam"
     offers={
       Array [
@@ -219,16 +209,6 @@ exports[`MainScreen render MainScreen without offers 1`] = `
 >
   <Header />
   <MainNoOffer
-    cities={
-      Array [
-        "Paris",
-        "Cologne",
-        "Brussels",
-        "Amsterdam",
-        "Hamburg",
-        "Dusseldorf",
-      ]
-    }
     city="Amsterdam"
   />
 </div>
