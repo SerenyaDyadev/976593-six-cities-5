@@ -13,7 +13,8 @@ export const AppRoute = {
   ROOT: `/`,
   LOGIN: `/login`,
   FAVORITES: `/favorites`,
-  OFFER: `/offer/`
+  OFFER: `/offer/`,
+  OFFER_ID: `/offer/:0`,
 };
 
 export const SortType = {
