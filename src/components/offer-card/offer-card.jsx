@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import {connect} from 'react-redux';
-import {Link} from "react-router-dom";
+import history from "../../browser-history";
 import FavoriteButton from "../favorite-button/favorite-button";
 import {TO_PERCENT, AppRoute} from "../../utils/const";
 import {OfferPropTypes} from "../../utils/property-types";
@@ -12,6 +12,10 @@ const OfferCard = ({offer, classCard, classImageWrapper}) => {
   const widthImg = classCard !== `favorites__card` ? 260 : 150;
   const heightImg = classCard !== `favorites__card` ? 200 : 110;
 
+  const onOfferCardClick = () => {
+    history.push(`${AppRoute.OFFER}${offer.id}`);
+    window.scroll(0, 0);
+  };
 
   return (
     <article className={`place-card ${classCard}`} id={offer.id}>
@@ -24,8 +28,8 @@ const OfferCard = ({offer, classCard, classImageWrapper}) => {
         </div> :
         ``}
       <div className={`${classImageWrapper} place-card__image-wrapper`}>
-        <Link
-          to={`${AppRoute.OFFER}${offer.id}`}>
+        <a
+          onClick={onOfferCardClick}>
           <img
             className="place-card__image"
             src={offer.previewPictures}
@@ -33,7 +37,7 @@ const OfferCard = ({offer, classCard, classImageWrapper}) => {
             height={heightImg}
             alt="Place image"
           />
-        </Link>
+        </a>
       </div>
       <div
         className={`${classCard === `favorites__card` ? `favorites__card-info` : ``} place-card__info`}>
@@ -56,10 +60,9 @@ const OfferCard = ({offer, classCard, classImageWrapper}) => {
           </div>
         </div>
         <h2 className="place-card__name">
-          <Link
-            to={`${AppRoute.OFFER}${offer.id}`}>
+          <a onClick={onOfferCardClick}>
               ${offer.title}
-          </Link>
+          </a>
         </h2>
         <p
           className="place-card__type">

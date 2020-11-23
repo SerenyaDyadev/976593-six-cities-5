@@ -8,7 +8,7 @@ import {AuthorizationStatus} from "../../utils/const";
 
 const FavoriteButton = ({offer, classCard, authorizationStatus, changeFavoriteStatusAction}) => {
 
-  const onFavoriteButtonClick = () => {
+  const handleFavoriteButtonClick = () => {
 
     changeFavoriteStatusAction(offer.id, checkFavorite(!offer.isFavorite));
   };
@@ -20,7 +20,7 @@ const FavoriteButton = ({offer, classCard, authorizationStatus, changeFavoriteSt
   return (
     <div>
       {authorizationStatus === AuthorizationStatus.AUTH ?
-        <button onClick={onFavoriteButtonClick} className={`button ${classCard}__bookmark-button ${offer.isFavorite ? `place-card__bookmark-button--active` : ``}`} type="button">
+        <button onClick={handleFavoriteButtonClick} className={`button ${classCard}__bookmark-button ${offer.isFavorite ? `place-card__bookmark-button--active` : ``}`} type="button">
           <svg className={`place-card__bookmark-icon`} width={widthIcon} height={heightIcon}>
             <use xlinkHref="#icon-bookmark"></use>
           </svg>

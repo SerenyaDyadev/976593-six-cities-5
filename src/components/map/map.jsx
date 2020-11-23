@@ -2,7 +2,7 @@ import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
 import {connect} from 'react-redux';
 import leaflet from "leaflet";
-import {pins} from "../../utils/const";
+import {Pins} from "../../utils/const";
 
 class Map extends PureComponent {
   _dataMap() {
@@ -15,12 +15,12 @@ class Map extends PureComponent {
 
 
     const icon = leaflet.icon({
-      iconUrl: pins.icon,
+      iconUrl: Pins.icon,
       iconSize: [27, 39]
     });
 
     const activeIcon = leaflet.icon({
-      iconUrl: pins.activeIcon,
+      iconUrl: Pins.activeIcon,
       iconSize: [27, 39]
     });
 

@@ -24,7 +24,7 @@ export const SortType = {
   RATING: `Top rated first`
 };
 
-export const pins = {
+export const Pins = {
   icon: `img/pin.svg`,
   activeIcon: `img/pin-active.svg`
 };

@@ -10,7 +10,6 @@ exports[`OfferCard render 1`] = `
     className="cities__image-wrapper place-card__image-wrapper"
   >
     <a
-      href="/offer/0"
       onClick={[Function]}
     >
       <img
@@ -120,7 +119,6 @@ exports[`OfferCard render 1`] = `
       className="place-card__name"
     >
       <a
-        href="/offer/0"
         onClick={[Function]}
       >
         $

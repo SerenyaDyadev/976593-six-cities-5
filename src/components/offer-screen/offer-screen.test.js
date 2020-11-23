@@ -17,7 +17,7 @@ describe(`OfferScreen render`, () => {
     const tree = renderer
       .create(
           <OfferScreen
-            offers={offers}
+            offer={offers[0]}
             nearbyOffers={offers}
             reviews={reviews}
             activeOfferId={`0`}
@@ -36,7 +36,7 @@ describe(`OfferScreen render`, () => {
     const tree = renderer
       .create(
           <OfferScreen
-            offers={offers}
+            offer={offers[0]}
             nearbyOffers={offers}
             reviews={reviews}
             activeOfferId={`0`}

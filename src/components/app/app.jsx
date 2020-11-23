@@ -1,5 +1,7 @@
 import React from "react";
 import {Switch, Route, Router as BrowserRouter} from "react-router-dom";
+import {connect} from 'react-redux';
+import PropTypes from "prop-types";
 import MainScreen from "../main-screen/main-screen";
 import AuthScreen from "../auth-screen/auth-screen";
 import FavoritesScreen from "../favorites-screen/favorites-screen";
@@ -9,7 +11,7 @@ import PrivateRoute from "../private-route/private-route";
 import {AppRoute} from "../../utils/const";
 
 
-const App = () => {
+const App = ({offers}) => {
 
   return (
     <BrowserRouter history={history}>
@@ -28,12 +30,25 @@ const App = () => {
             );
           }}
         />
-        <Route exact path={AppRoute.OFFER_ID}>
-          <OfferScreen />
-        </Route>
+        <Route exact path={AppRoute.OFFER_ID}
+          render={({match}) => {
+            const offer = offers.find((item) => +item.id === +match.params.id);
+            return <OfferScreen
+              offer={offer} />;
+          }} />
       </Switch>
     </BrowserRouter>
   );
 };
 
-export default App;
+
+App.propTypes = {
+  offers: PropTypes.array.isRequired,
+};
+
+const mapStateToProps = ({OFFERS}) => ({
+  offers: OFFERS.offers
+});
+
+export {App};
+export default connect(mapStateToProps)(App);

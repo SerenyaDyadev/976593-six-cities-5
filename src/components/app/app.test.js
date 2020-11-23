@@ -1,7 +1,9 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import {BrowserRouter} from "react-router-dom";
-import App from "./app";
+import {App} from "./app";
+import {offers} from "../../mocks/data";
+
 
 jest.mock(`../private-route/private-route`, () => `PrivateRoute`);
 jest.mock(`../auth-screen/auth-screen`, () => `AuthScreen`);
@@ -13,7 +15,9 @@ it(`App render`, () => {
   const tree = renderer
     .create(
         <BrowserRouter>
-          <App/>
+          <App
+            offers={offers}
+          />
         </BrowserRouter>
     )
 

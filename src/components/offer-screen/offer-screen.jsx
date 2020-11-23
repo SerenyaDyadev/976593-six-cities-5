@@ -5,7 +5,7 @@ import Header from "../header/header";
 import FavoriteButton from "../favorite-button/favorite-button";
 import ReviewList from "../review-list/review-list";
 import ReviewForm from "../review-form/review-form";
-import {getCityOffers} from '../../utils/utils';
+import {OfferPropTypes} from "../../utils/property-types";
 import OfferList from "../offer-list/offer-list";
 import Map from "../map/map";
 import {fetchNearbyOffersList, fetchReviewsList} from "../../store/api-actions";
@@ -17,15 +17,14 @@ class OfferScreen extends PureComponent {
   }
 
   componentDidMount() {
-    const {getNearbyOffers, getReviewsAction, activeOfferId} = this.props;
-    getNearbyOffers(activeOfferId);
-    getReviewsAction(activeOfferId);
+    const {getNearbyOffers, getReviewsAction, offer} = this.props;
+    getNearbyOffers(offer.id);
+    getReviewsAction(offer.id);
   }
 
-  render() {
-    const {offers, reviews, activeOfferId, nearbyOffers, authorizationStatus} = this.props;
 
-    const offer = offers.find((item) => item.id === +activeOfferId);
+  render() {
+    const {offer, reviews, nearbyOffers, authorizationStatus} = this.props;
 
     const ratingOfferPercent = Math.round(offer.rating) * TO_PERCENT;
 
@@ -159,7 +158,7 @@ class OfferScreen extends PureComponent {
 }
 
 OfferScreen.propTypes = {
-  offers: PropTypes.array.isRequired,
+  offer: OfferPropTypes,
   nearbyOffers: PropTypes.array.isRequired,
   activeOfferId: PropTypes.string.isRequired,
   reviews: PropTypes.array.isRequired,
@@ -168,8 +167,7 @@ OfferScreen.propTypes = {
   authorizationStatus: PropTypes.string.isRequired
 };
 
-const mapStateToProps = (({OFFERS, CITIES, ACTIONS, USER}) => ({
-  offers: getCityOffers(OFFERS.offers, CITIES.city),
+const mapStateToProps = (({ACTIONS, USER}) => ({
   nearbyOffers: ACTIONS.nearbyOffers,
   activeOfferId: ACTIONS.activeOfferId,
   reviews: ACTIONS.reviews,
