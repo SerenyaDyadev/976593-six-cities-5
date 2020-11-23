@@ -40,7 +40,7 @@ const mapDispatchToProps = ((dispatch) => ({
 }));
 
 CityList.propTypes = {
-  cities: PropTypes.array.isRequired,
+  cities: PropTypes.arrayOf(PropTypes.string).isRequired,
   currentCity: PropTypes.string.isRequired,
   changeCityAction: PropTypes.func.isRequired,
 };

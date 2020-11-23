@@ -36,7 +36,7 @@ const OfferList = (props) => {
 };
 
 OfferList.propTypes = {
-  offers: PropTypes.array,
+  offers: PropTypes.arrayOf(PropTypes.object),
   updateActiveOfferIdAction: PropTypes.func,
   classList: PropTypes.string.isRequired,
   classCard: PropTypes.string.isRequired,

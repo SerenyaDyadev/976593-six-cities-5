@@ -14,7 +14,6 @@ const OfferCard = ({offer, classCard, classImageWrapper}) => {
 
   const onOfferCardClick = () => {
     history.push(`${AppRoute.OFFER}${offer.id}`);
-    window.scroll(0, 0);
   };
 
   return (

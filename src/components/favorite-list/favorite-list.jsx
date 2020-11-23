@@ -50,7 +50,7 @@ const FavoriteList = ({offers}) => {
 };
 
 FavoriteList.propTypes = {
-  offers: PropTypes.array.isRequired
+  offers: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default FavoriteList;

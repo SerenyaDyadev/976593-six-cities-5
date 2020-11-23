@@ -27,7 +27,7 @@ const MainScreen = ({city, offers}) => {
 };
 
 MainScreen.propTypes = {
-  offers: PropTypes.array.isRequired,
+  offers: PropTypes.arrayOf(PropTypes.object).isRequired,
   city: PropTypes.string.isRequired,
 };
 
