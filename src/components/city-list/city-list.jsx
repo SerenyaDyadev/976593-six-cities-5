@@ -6,7 +6,7 @@ import City from "../city/city";
 
 const CityList = ({currentCity, cities, changeCityAction}) => {
 
-  const onCityClick = (evt) => {
+  const handleCityClick = (evt) => {
     evt.preventDefault();
     changeCityAction(evt.target.textContent);
   };
@@ -18,7 +18,7 @@ const CityList = ({currentCity, cities, changeCityAction}) => {
         <City
           key={`${city}-${i}`}
           city={city}
-          onCityClick={onCityClick}
+          handleCityClick={handleCityClick}
           isCurrent={currentCity === city}
         />
 

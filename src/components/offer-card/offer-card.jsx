@@ -12,7 +12,7 @@ const OfferCard = ({offer, classCard, classImageWrapper}) => {
   const widthImg = classCard !== `favorites__card` ? 260 : 150;
   const heightImg = classCard !== `favorites__card` ? 200 : 110;
 
-  const onOfferCardClick = () => {
+  const handleOfferCardClick = () => {
     history.push(`${AppRoute.OFFER}${offer.id}`);
   };
 
@@ -28,7 +28,7 @@ const OfferCard = ({offer, classCard, classImageWrapper}) => {
         ``}
       <div className={`${classImageWrapper} place-card__image-wrapper`}>
         <a
-          onClick={onOfferCardClick}>
+          onClick={handleOfferCardClick}>
           <img
             className="place-card__image"
             src={offer.previewPictures}
@@ -59,7 +59,7 @@ const OfferCard = ({offer, classCard, classImageWrapper}) => {
           </div>
         </div>
         <h2 className="place-card__name">
-          <a onClick={onOfferCardClick}>
+          <a onClick={handleOfferCardClick}>
               ${offer.title}
           </a>
         </h2>

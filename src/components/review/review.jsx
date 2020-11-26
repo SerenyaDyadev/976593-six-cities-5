@@ -1,8 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
+import {ReviewPropTypes} from "../../utils/property-types";
 import {dateFormat} from "../../utils/utils";
 import {TO_PERCENT} from "../../utils/const";
-
 
 const Review = ({review}) => {
 
@@ -39,7 +38,7 @@ const Review = ({review}) => {
 };
 
 Review.propTypes = {
-  review: PropTypes.object.isRequired
+  review: ReviewPropTypes
 };
 
 export default Review;
