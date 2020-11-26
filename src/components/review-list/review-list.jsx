@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import {ReviewPropTypes} from "../../utils/property-types";
 import Review from "../review/review";
 import {getSortedNewReviews} from "../../utils/utils";
 
@@ -20,7 +21,7 @@ const ReviewList = ({reviews}) => {
 };
 
 ReviewList.propTypes = {
-  reviews: PropTypes.arrayOf(PropTypes.object).isRequired,
+  reviews: PropTypes.arrayOf(ReviewPropTypes).isRequired,
 };
 
 export default ReviewList;

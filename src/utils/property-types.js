@@ -11,7 +11,7 @@ export const OfferPropTypes = PropTypes.shape({
   rating: PropTypes.number.isRequired,
   previewPictures: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-}).isRequired;
+});
 
 
 export const ReviewPropTypes = PropTypes.shape({

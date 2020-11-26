@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import {OfferPropTypes} from "../../utils/property-types";
 import {Link} from "react-router-dom";
 import OfferList from "../offer-list/offer-list";
 import {AppRoute} from "../../utils/const";
@@ -50,7 +51,7 @@ const FavoriteList = ({offers}) => {
 };
 
 FavoriteList.propTypes = {
-  offers: PropTypes.arrayOf(PropTypes.object).isRequired,
+  offers: PropTypes.arrayOf(OfferPropTypes).isRequired,
 };
 
 export default FavoriteList;

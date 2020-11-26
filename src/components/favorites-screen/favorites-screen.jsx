@@ -1,5 +1,6 @@
 import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
+import {OfferPropTypes} from "../../utils/property-types";
 import Header from "../header/header";
 import {Link} from "react-router-dom";
 import FavoriteList from "../favorite-list/favorite-list";
@@ -55,7 +56,7 @@ class FavoritesScreen extends PureComponent {
 }
 
 FavoritesScreen.propTypes = {
-  favoriteOffers: PropTypes.arrayOf(PropTypes.object).isRequired,
+  favoriteOffers: PropTypes.arrayOf(OfferPropTypes).isRequired,
   getFavoriteOffers: PropTypes.func.isRequired,
 };
 

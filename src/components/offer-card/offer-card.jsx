@@ -76,7 +76,7 @@ OfferCard.propTypes = {
   onHover: PropTypes.func,
   classCard: PropTypes.string.isRequired,
   classImageWrapper: PropTypes.string.isRequired,
-  offer: OfferPropTypes
+  offer: OfferPropTypes.isRequired
 };
 
 

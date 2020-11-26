@@ -10,14 +10,8 @@ export const dateFormat = (date) => {
 };
 
 export const getSortedNewReviews = (reviews) =>
-  reviews.slice(0, 10)
-  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-
-export const sortCommentsByDate = (comments) => {
-  return comments.slice().sort((a, b) => {
-    return new Date(b.date).getTime() - new Date(a.date).getTime();
-  });
-};
+  reviews.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  .slice(0, 10);
 
 export const getCityOffers = (offers, city) => offers.slice().filter((offer) => offer.city === city);
 

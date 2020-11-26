@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import {OfferPropTypes} from "../../utils/property-types";
 import {connect} from 'react-redux';
 import {Link} from "react-router-dom";
 import {checkFavorite, getWidthIconFavorite, getHeightIconFavorite} from "../../utils/utils";
@@ -39,7 +40,7 @@ const FavoriteButton = ({offer, classCard, authorizationStatus, changeFavoriteSt
 };
 
 FavoriteButton.propTypes = {
-  offer: PropTypes.object.isRequired,
+  offer: OfferPropTypes.isRequired,
   classCard: PropTypes.string.isRequired,
   authorizationStatus: PropTypes.string.isRequired,
   changeFavoriteStatusAction: PropTypes.func.isRequired,

@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import {OfferPropTypes} from "../../utils/property-types";
 import OfferList from "../offer-list/offer-list";
 import CityList from "../city-list/city-list";
 import Map from "../map/map";
@@ -84,7 +85,7 @@ const MainWithOffer = (props) => {
 };
 
 MainWithOffer.propTypes = {
-  offers: PropTypes.arrayOf(PropTypes.object).isRequired,
+  offers: PropTypes.arrayOf(OfferPropTypes).isRequired,
   city: PropTypes.string.isRequired,
   currentSort: PropTypes.string.isRequired,
   updateActiveOfferIdAction: PropTypes.func.isRequired,

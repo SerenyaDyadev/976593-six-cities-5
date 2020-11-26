@@ -5,7 +5,7 @@ import Header from "../header/header";
 import FavoriteButton from "../favorite-button/favorite-button";
 import ReviewList from "../review-list/review-list";
 import ReviewForm from "../review-form/review-form";
-import {OfferPropTypes} from "../../utils/property-types";
+import {OfferPropTypes, ReviewPropTypes} from "../../utils/property-types";
 import OfferList from "../offer-list/offer-list";
 import Map from "../map/map";
 import {fetchNearbyOffersList, fetchReviewsList} from "../../store/api-actions";
@@ -21,7 +21,6 @@ class OfferScreen extends PureComponent {
     getNearbyOffers(offer.id);
     getReviewsAction(offer.id);
   }
-
 
   render() {
     const {offer, reviews, nearbyOffers, authorizationStatus} = this.props;
@@ -158,10 +157,10 @@ class OfferScreen extends PureComponent {
 }
 
 OfferScreen.propTypes = {
-  offer: OfferPropTypes,
-  nearbyOffers: PropTypes.arrayOf(PropTypes.object).isRequired,
+  offer: OfferPropTypes.isRequired,
+  nearbyOffers: PropTypes.arrayOf(OfferPropTypes).isRequired,
   activeOfferId: PropTypes.string.isRequired,
-  reviews: PropTypes.arrayOf(PropTypes.object).isRequired,
+  reviews: PropTypes.arrayOf(ReviewPropTypes).isRequired,
   getNearbyOffers: PropTypes.func.isRequired,
   getReviewsAction: PropTypes.func.isRequired,
   authorizationStatus: PropTypes.string.isRequired

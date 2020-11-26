@@ -1,5 +1,6 @@
 import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
+import {OfferPropTypes} from "../../utils/property-types";
 import {connect} from 'react-redux';
 import leaflet from "leaflet";
 import {Pins} from "../../utils/const";
@@ -74,8 +75,8 @@ class Map extends PureComponent {
 }
 
 Map.propTypes = {
-  mainOffer: PropTypes.object,
-  offers: PropTypes.arrayOf(PropTypes.object).isRequired,
+  mainOffer: OfferPropTypes,
+  offers: PropTypes.arrayOf(OfferPropTypes).isRequired,
   classMap: PropTypes.string.isRequired,
   mapZoom: PropTypes.number.isRequired,
   cityCoordinates: PropTypes.arrayOf(PropTypes.number).isRequired,

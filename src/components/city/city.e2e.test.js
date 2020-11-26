@@ -6,10 +6,10 @@ import City from './city';
 configure({adapter: new Adapter()});
 
 it(`City link works correct`, () => {
-  const onCityClick = jest.fn();
+  const handleCityClick = jest.fn();
   const screen = shallow(
       <City
-        onCityClick={onCityClick}
+        handleCityClick={handleCityClick}
         city={`Amsterdam`}
         isCurrent={true}
       />);
@@ -18,5 +18,5 @@ it(`City link works correct`, () => {
 
   linkElement.simulate(`click`);
 
-  expect(onCityClick).toHaveBeenCalledTimes(1);
+  expect(handleCityClick).toHaveBeenCalledTimes(1);
 });

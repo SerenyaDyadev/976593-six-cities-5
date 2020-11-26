@@ -8,7 +8,7 @@ it(`City render`, () => {
         <City
           city={`Amsterdam`}
           isCurrent={true}
-          onCityClick={() => { }}
+          handleCityClick={() => { }}
         />
     )
 

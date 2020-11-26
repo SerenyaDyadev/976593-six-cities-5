@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import {OfferPropTypes} from "../../utils/property-types";
 import MainNoOffer from "../main-no-offer/main-no-offer";
 import MainWithOffer from "../main-with-offer/main-with-offer";
 import Header from "../header/header";
@@ -27,7 +28,7 @@ const MainScreen = ({city, offers}) => {
 };
 
 MainScreen.propTypes = {
-  offers: PropTypes.arrayOf(PropTypes.object).isRequired,
+  offers: PropTypes.arrayOf(OfferPropTypes).isRequired,
   city: PropTypes.string.isRequired,
 };
 

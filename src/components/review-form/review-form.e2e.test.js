@@ -27,7 +27,7 @@ it(`ReviewForm testing`, () => {
       />
   );
 
-  wrapper.find(`.reviews__form`).simulate(`submit`, mockEvent);
+  wrapper.find(`.form`).simulate(`submit`, mockEvent);
 
   expect(onReviewSubmit).toHaveBeenCalledTimes(1);
   expect(wrapper.find(`.reviews__textarea`).props().value).toEqual(`A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`);

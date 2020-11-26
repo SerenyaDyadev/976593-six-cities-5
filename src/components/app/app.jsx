@@ -2,6 +2,7 @@ import React from "react";
 import {Switch, Route, Router as BrowserRouter} from "react-router-dom";
 import {connect} from 'react-redux';
 import PropTypes from "prop-types";
+import {OfferPropTypes} from "../../utils/property-types";
 import MainScreen from "../main-screen/main-screen";
 import AuthScreen from "../auth-screen/auth-screen";
 import FavoritesScreen from "../favorites-screen/favorites-screen";
@@ -43,7 +44,7 @@ const App = ({offers}) => {
 
 
 App.propTypes = {
-  offers: PropTypes.arrayOf(PropTypes.object).isRequired,
+  offers: PropTypes.arrayOf(OfferPropTypes).isRequired,
 };
 
 const mapStateToProps = ({OFFERS}) => ({
